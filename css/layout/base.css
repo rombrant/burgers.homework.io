@@ -22,8 +22,8 @@
       text-transform: uppercase; }
 
 .offer-button__form {
-  width: 97px;
-  height: 35px;
+  min-width: 97px;
+  min-height: 35px;
   margin-top: 15px;
   margin-left: 10px;
   border-style: none;
@@ -35,7 +35,7 @@
 .logo {
   width: 95px;
   height: 70px;
-  margin-left: 10%;
+  margin-left: 5%;
   background-image: url("../../img/logo.png");
   background-repeat: no-repeat; }
 
