@@ -64,7 +64,8 @@
 .main {
   display: flex;
   flex-flow: row;
-  justify-content: space-around; }
+  justify-content: space-around;
+  margin-left: 5%; }
 
 .main-image {
   position: relative;
