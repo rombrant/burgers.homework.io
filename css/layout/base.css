@@ -1,0 +1,88 @@
+.wrapper {
+  margin: 0 auto;
+  max-width: 1100px;
+  background-image: url("../../img/video-bg.png");
+  background-repeat: no-repeat; }
+  .wrapper-texture {
+    min-height: 651px;
+    background-image: url("../../img/texture.png"); }
+
+.header {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around; }
+  .header-menu {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between; }
+    .header-menu__item {
+      padding: 15px;
+      color: #ffffff;
+      font-family: ubunturegulars;
+      font-size: 11px;
+      text-transform: uppercase; }
+      .header-menu__item:nth-last-child(1) {
+        padding-right: 0; }
+
+.logo {
+  width: 95px;
+  height: 70px;
+  float: left;
+  background-image: url("../../img/logo.png");
+  background-repeat: no-repeat; }
+
+.container {
+  display: flex;
+  flex-flow: row-reverse; }
+
+.sidebar {
+  color: #ffffff; }
+
+.main {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around; }
+
+.main-image {
+  position: relative;
+  min-width: 417px;
+  width: 40%;
+  height: 424px;
+  background-image: url("../../img/burger.png");
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .main-image__modified {
+    position: absolute;
+    width: 451px;
+    height: 241px;
+    top: 50px;
+    left: -20px;
+    content: "";
+    display: block;
+    background-image: url("../../img/drops.png"); }
+
+.wellcome-block {
+  width: 40%; }
+  .wellcome-block__first {
+    color: #f9b43b;
+    font-family: gagalinregular;
+    font-size: 65px; }
+  .wellcome-block__second {
+    color: #ffffff;
+    font-family: lifehackmedium;
+    font-weight: 500;
+    letter-spacing: -1.63px;
+    font-size: 72px; }
+
+.scroll-button {
+  margin: 80px auto;
+  content: "";
+  width: 29px;
+  height: 14px;
+  display: block;
+  background-image: url("../../img/arrow-scroll.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer; }
+
+/*# sourceMappingURL=base.css.map */
