@@ -1,80 +1,107 @@
 .wrapper {
     margin: 0 auto;
-    max-width: 1100px;
+    width: 100%;
     background-image: url('../../img/video-bg.png');
     background-repeat:no-repeat;
+    background-position: center center;
+    background-size: cover;
     &-texture {
+        margin: 0 auto;
         min-height: 651px;
         background-image: url('../../img/texture.png');
     }
 }
+@mixin menu-buttons {
+        font-family: ubunturegular;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: #ffffff;
+    }
 .header {
+    margin: 0 auto;
+    max-width: 1100px;
     display: flex;
     flex-flow: row;
     &-menu {
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
+        margin-left: 5%;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
         &__item {
-            padding: 30px 0px 0px 30px;
-            color: #ffffff;
-            font-family: ubunturegulars;
-            font-size: 11px;
-            text-transform: uppercase;
+            @include menu-buttons;
+            padding: 30px 0px 0px 20px;
         }
     }
 }
 .offer-button__form {
     min-width: 97px;
     min-height: 35px;
-    margin-top: 15px;
+    margin-top: 27px;
     margin-left: 10px;
     border-style: none;
     background-color:#e45028;
     border-radius: 5px ;
     &__named {
-        color: #ffffff;
+        @include menu-buttons;
     }
 }
 .logo {
     width: 95px;
     height: 70px;
-    margin-left: 5%;
     background-image: url('../../img/logo.png');
     background-repeat:  no-repeat;
 }
 .container {
+    margin: 0 auto;
+    max-width: 1100px;
     display: flex;
     flex-flow: row-reverse;
 }
+@mixin point-bar {
+        content: "";
+        display: inline-block;
+        background-color: #ffffff;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        height: 6px;
+        width: 6px;
+        border-radius: 100%;
+}
 .sidebar {
-    color: #ffffff;
     &__list {
+        display: flex;
+        flex-flow: column;
         &-item {
-            display: flex;
-            flex-flow: column;
-            background-color: #ffffff;
+            display: inline-block;
+            position: relative;
             list-style: none;
             margin-right: 50px;
-            margin-bottom: 15px;
-            width: 6px;
-            height: 6px;
+            margin-bottom: 10px;
+            width: 14px;
+            height: 14px;
             border-radius: 100%;
             cursor: pointer;
-            &--active::after {
-                width: 8px;
-                height: 8px;
-                border-radius: 3px   #ffffff;
+            &::before {
+                @include point-bar;
             }
         }
-    
+        &-item--active {
+            display: inline-block;
+            position: relative;
+            border: 1px solid #ffffff;
+            &::before {
+                @include point-bar;
+            }
+        }
     }
 }
 .main {
     display: flex;
     flex-flow: row;
     justify-content: space-around;
-    margin-left: 5%;
 }
 .main-image {
     position: relative;
