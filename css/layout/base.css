@@ -1,13 +1,18 @@
 .wrapper {
   margin: 0 auto;
   width: 100%;
-  background-image: url("../../img/video-bg.png");
+  min-height: 650px;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover; }
+  background-size: cover;
+  background-image: url("../../img/video-bg.png"); }
   .wrapper-texture {
     margin: 0 auto;
-    min-height: 651px;
+    width: 100%;
+    min-height: 650px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     background-image: url("../../img/texture.png"); }
 
 .header {
@@ -123,7 +128,9 @@
   .wellcome-block__first {
     color: #f9b43b;
     font-family: gagalinregular;
-    font-size: 65px; }
+    font-size: 72px;
+    font-weight: 500;
+    text-transform: uppercase; }
   .wellcome-block__second {
     color: #ffffff;
     font-family: lifehackmedium;
@@ -141,5 +148,137 @@
   background-repeat: no-repeat;
   background-size: cover;
   cursor: pointer; }
+
+.wrapper-webest {
+  margin: 0 auto;
+  width: 100%;
+  min-height: 650px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url("../../img/bg.png"); }
+
+.main-content {
+  min-height: 650px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1100px; }
+
+.headline-webest {
+  margin: 0 auto;
+  font-family: gagalinregular;
+  font-size: 72px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #2f3234; }
+
+.ingredients {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around; }
+
+.ingredients__meat-img {
+  margin: 0 auto;
+  content: "";
+  display: block;
+  background-image: url("../../img/meat_hand_nature.png");
+  background-repeat: no-repeat; }
+
+.ingredients__made-img {
+  margin: 0 auto;
+  content: "";
+  display: block;
+  background-image: url("../../img/meat_hand_nature.png");
+  background-repeat: no-repeat; }
+
+.ingredients__nature-img {
+  margin: 0 auto;
+  content: "";
+  display: block;
+  background-image: url("../../img/meat_hand_nature.png");
+  background-repeat: no-repeat; }
+
+.ingredients__meat-img {
+  width: 97px;
+  height: 89px;
+  background-position: -88px -5px; }
+
+.ingredients__made-img {
+  width: 73px;
+  height: 85px;
+  background-position: -5px -5px; }
+
+.ingredients__nature-img {
+  width: 88px;
+  height: 75px;
+  background-position: -195px -5px; }
+
+.ingredients__meat-headline {
+  color: #2f3234;
+  font-family: lifehackmedium;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.14px;
+  letter-spacing: -0.6px; }
+
+.ingredients__made-headline {
+  color: #2f3234;
+  font-family: lifehackmedium;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.14px;
+  letter-spacing: -0.6px; }
+
+.ingredients__nature-headline {
+  color: #2f3234;
+  font-family: lifehackmedium;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.14px;
+  letter-spacing: -0.6px; }
+
+.ingredients__meat-content {
+  opacity: 0.8;
+  color: #2f3234;
+  font-family: ubunturegular;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24.07px; }
+
+.ingredients__made-content {
+  opacity: 0.8;
+  color: #2f3234;
+  font-family: ubunturegular;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24.07px; }
+
+.ingredients__nature-content {
+  opacity: 0.8;
+  color: #2f3234;
+  font-family: ubunturegular;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24.07px; }
+
+.ingredients__meat {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  margin-top: 55px; }
+
+.ingredients__made {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  margin-top: 55px; }
+
+.ingredients__nature {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  margin-top: 55px; }
 
 /*# sourceMappingURL=base.css.map */
