@@ -31,19 +31,16 @@
 
 .header {
   margin: 0 auto;
-  max-width: 1100px;
   display: flex;
-  flex-flow: row;
   justify-content: center; }
   .header-menu {
+    width: 50%;
     margin-top: 2%;
     margin-left: 5%; }
     .header-menu__list {
-      margin: 0;
-      padding: 0;
       display: flex;
-      flex-flow: row;
-      justify-content: space-between; }
+      align-items: center;
+      margin-left: auto; }
       .header-menu__list__item {
         display: block;
         width: 80px;
@@ -59,20 +56,22 @@
         .header-menu__list__item:nth-child(6) {
           width: 130px; }
         .header-menu__list__item::before {
+          vertical-align: sub;
           margin-right: 15%;
           content: "";
           display: inline-block;
           background-color: #ffffff;
           position: absolute;
-          top: 4px;
-          left: 4px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
           height: 6px;
           width: 6px;
-          border-radius: 100%;
+          border-radius: 50%;
           position: static; }
 
 .offer-button {
-  margin-top: 2%;
+  margin-top: 3%;
   margin-left: 1%; }
   .offer-button__form {
     min-width: 97px;
@@ -96,64 +95,67 @@
 
 .container {
   margin: 0 auto;
-  max-width: 1100px;
-  display: flex;
-  flex-flow: row-reverse;
-  justify-content: flex-end; }
+  width: 940px; }
 
-.sidebar__list {
-  padding: 0;
-  display: flex;
-  flex-flow: column; }
-  .sidebar__list-item {
-    display: inline-block;
-    position: relative;
-    list-style: none;
-    margin-right: 50px;
-    margin-bottom: 10px;
-    width: 14px;
-    height: 14px;
-    border-radius: 100%;
-    cursor: pointer; }
-    .sidebar__list-item::before {
-      content: "";
+.sidebar {
+  position: fixed;
+  top: 80px;
+  right: 45px; }
+  .sidebar__list {
+    padding: 0;
+    display: flex;
+    flex-flow: column; }
+    .sidebar__list-item {
       display: inline-block;
-      background-color: #ffffff;
-      position: absolute;
-      top: 4px;
-      left: 4px;
-      height: 6px;
-      width: 6px;
-      border-radius: 100%; }
-  .sidebar__list-item--active {
-    display: inline-block;
-    position: relative;
-    border: 1px solid #ffffff; }
-    .sidebar__list-item--active::before {
-      content: "";
+      position: relative;
+      list-style: none;
+      margin-bottom: 10px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 1px solid transparent;
+      cursor: pointer; }
+      .sidebar__list-item::before {
+        content: "";
+        display: inline-block;
+        background-color: #ffffff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 6px;
+        width: 6px;
+        border-radius: 50%; }
+      .sidebar__list-item:hover {
+        border-color: #ffffff; }
+    .sidebar__list-item--active {
       display: inline-block;
-      background-color: #ffffff;
-      position: absolute;
-      top: 4px;
-      left: 4px;
-      height: 6px;
-      width: 6px;
-      border-radius: 100%; }
+      position: relative;
+      border: 1px solid #ffffff; }
+      .sidebar__list-item--active::before {
+        content: "";
+        display: inline-block;
+        background-color: #ffffff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 6px;
+        width: 6px;
+        border-radius: 50%; }
 
 .main {
   display: flex;
-  flex-flow: row;
-  justify-content: space-between; }
+  flex-direction: row; }
 
 .main-image {
-  margin-left: 5%;
-  position: relative;
-  min-width: 417px;
-  height: 424px;
-  background-image: url("../../img/burger.png");
-  background-repeat: no-repeat;
-  background-size: cover; }
+  flex: 1;
+  width: 50%;
+  height: 100%;
+  position: relative; }
   .main-image__modified {
+    display: inline-block; }
+  .main-image::before {
     position: absolute;
     width: 451px;
     height: 241px;
@@ -164,7 +166,10 @@
     background-image: url("../../img/drops.png"); }
 
 .wellcome-block {
-  padding-left: 4%; }
+  flex: .8;
+  display: flex;
+  flex-flow: column;
+  align-items: center; }
   .wellcome-block__first {
     color: #f9b43b;
     font-family: gagalinregular;
