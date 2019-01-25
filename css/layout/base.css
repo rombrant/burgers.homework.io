@@ -37,51 +37,55 @@
   justify-content: center; }
   .header-menu {
     margin-top: 2%;
-    margin-left: 5%;
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between; }
-    .header-menu__item {
-      display: block;
-      width: 80px;
-      max-height: 11px;
-      list-style-type: none;
-      font-family: ubunturegular;
-      font-weight: 500;
-      line-height: 30px;
-      text-transform: uppercase;
-      color: #ffffff;
-      font-size: 11px; }
-      .header-menu__item:nth-child(6) {
-        width: 130px; }
-      .header-menu__item::before {
-        margin-right: 15%;
-        content: "";
-        display: inline-block;
-        background-color: #ffffff;
-        position: absolute;
-        top: 4px;
-        left: 4px;
-        height: 6px;
-        width: 6px;
-        border-radius: 100%;
-        position: static; }
+    margin-left: 5%; }
+    .header-menu__list {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between; }
+      .header-menu__list__item {
+        display: block;
+        width: 80px;
+        max-height: 11px;
+        list-style-type: none;
+        font-family: ubunturegular;
+        font-weight: 500;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: #ffffff;
+        font-size: 11px;
+        cursor: pointer; }
+        .header-menu__list__item:nth-child(6) {
+          width: 130px; }
+        .header-menu__list__item::before {
+          margin-right: 15%;
+          content: "";
+          display: inline-block;
+          background-color: #ffffff;
+          position: absolute;
+          top: 4px;
+          left: 4px;
+          height: 6px;
+          width: 6px;
+          border-radius: 100%;
+          position: static; }
 
 .offer-button {
-  margin-top: 2%; }
+  margin-top: 2%;
+  margin-left: 1%; }
   .offer-button__form {
     min-width: 97px;
     min-height: 35px;
     border-style: none;
     background-color: #e45028;
-    border-radius: 5px; }
-    .offer-button__form__named {
-      font-size: 11px;
-      font-family: ubunturegular;
-      font-weight: 500;
-      line-height: 30px;
-      text-transform: uppercase;
-      color: #ffffff; }
+    border-radius: 5px;
+    font-size: 11px;
+    font-family: ubunturegular;
+    font-weight: 500;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #ffffff; }
 
 .logo {
   margin-top: 1%;
@@ -607,13 +611,12 @@
   height: 35px;
   background-color: #010206;
   border-radius: 10px;
-  cursor: pointer; }
-  .feedback-button__element {
-    color: #ffffff;
-    font-family: ubunturegular;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 30px;
-    text-transform: uppercase; }
+  cursor: pointer;
+  color: #ffffff;
+  font-family: ubunturegular;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase; }
 
 /*# sourceMappingURL=base.css.map */

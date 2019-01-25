@@ -112,41 +112,45 @@
     &-menu {
         margin-top: 2%;
         margin-left: 5%;
-        display: flex;
-        flex-flow: row;
-        justify-content: space-between;
-        &__item {
-            display: block;
-            width: 80px;
-            max-height: 11px;
-            list-style-type: none;
-            @include menu-buttons;
-            font-size: 11px;
-            &:nth-child(6) {
-                width: 130px;
-            }
-            
-            
-            &::before {
-                margin-right: 15%;
-                @include point-bar;
-                position: static;
+        &__list {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-flow: row;
+            justify-content: space-between;
+            &__item {
+                display: block;
+                width: 80px;
+                max-height: 11px;
+                list-style-type: none;
+                @include menu-buttons;
+                font-size: 11px;
+                cursor: pointer;
+                &:nth-child(6) {
+                    width: 130px;
+                }
+                
+                
+                &::before {
+                    margin-right: 15%;
+                    @include point-bar;
+                    position: static;
+                }
             }
         }
     }
 }
 .offer-button {
     margin-top: 2%;
+    margin-left: 1%;
     &__form {
     min-width: 97px;
     min-height: 35px;
     border-style: none;
     background-color:#e45028;
     border-radius: 5px ;
-        &__named {
-            font-size: 11px;
-            @include menu-buttons;
-        }
+    font-size: 11px;
+    @include menu-buttons;
     }
 }
 .logo {
@@ -373,12 +377,10 @@
     background-color: #010206;
     border-radius: 10px;
     cursor: pointer;
-    &__element {
-        color: #ffffff;
-        font-family: ubunturegular;
-        font-size: 13px;
-        font-weight: 500;
-        line-height: 30px;
-        text-transform: uppercase;
-    }
+    color: #ffffff;
+    font-family: ubunturegular;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 30px;
+    text-transform: uppercase;
 }
