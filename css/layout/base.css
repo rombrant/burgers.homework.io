@@ -1,57 +1,90 @@
+@keyframes ball {
+  0%,
+    40%,
+    80% {
+    transform: translateY(0); }
+  0% {
+    opacity: 0; }
+  20% {
+    transform: translateY(-30px);
+    opacity: 1; }
+  60% {
+    transform: translateY(-15px); } }
 .wrapper {
   margin: 0 auto;
   width: 100%;
-  min-height: 650px;
+  min-height: 655px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  overflow: hidden;
   background-image: url("../../img/video-bg.png"); }
   .wrapper-texture {
     margin: 0 auto;
     width: 100%;
-    min-height: 650px;
+    min-height: 655px;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    overflow: hidden;
     background-image: url("../../img/texture.png"); }
 
 .header {
   margin: 0 auto;
   max-width: 1100px;
   display: flex;
-  flex-flow: row; }
+  flex-flow: row;
+  justify-content: center; }
   .header-menu {
+    margin-top: 2%;
     margin-left: 5%;
     display: flex;
     flex-flow: row;
     justify-content: space-between; }
     .header-menu__item {
+      display: block;
+      width: 80px;
+      max-height: 11px;
+      list-style-type: none;
       font-family: ubunturegular;
-      font-size: 13px;
       font-weight: 500;
       line-height: 30px;
       text-transform: uppercase;
       color: #ffffff;
-      margin-top: 30px;
-      margin-left: 10px; }
+      font-size: 11px; }
+      .header-menu__item:nth-child(6) {
+        width: 130px; }
+      .header-menu__item::before {
+        margin-right: 15%;
+        content: "";
+        display: inline-block;
+        background-color: #ffffff;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        height: 6px;
+        width: 6px;
+        border-radius: 100%;
+        position: static; }
 
-.offer-button__form {
-  min-width: 97px;
-  min-height: 35px;
-  margin-top: 27px;
-  margin-left: 10px;
-  border-style: none;
-  background-color: #e45028;
-  border-radius: 5px; }
-  .offer-button__form__named {
-    font-family: ubunturegular;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 30px;
-    text-transform: uppercase;
-    color: #ffffff; }
+.offer-button {
+  margin-top: 2%; }
+  .offer-button__form {
+    min-width: 97px;
+    min-height: 35px;
+    border-style: none;
+    background-color: #e45028;
+    border-radius: 5px; }
+    .offer-button__form__named {
+      font-size: 11px;
+      font-family: ubunturegular;
+      font-weight: 500;
+      line-height: 30px;
+      text-transform: uppercase;
+      color: #ffffff; }
 
 .logo {
+  margin-top: 1%;
   width: 95px;
   height: 70px;
   background-image: url("../../img/logo.png");
@@ -61,9 +94,11 @@
   margin: 0 auto;
   max-width: 1100px;
   display: flex;
-  flex-flow: row-reverse; }
+  flex-flow: row-reverse;
+  justify-content: flex-end; }
 
 .sidebar__list {
+  padding: 0;
   display: flex;
   flex-flow: column; }
   .sidebar__list-item {
@@ -104,12 +139,12 @@
 .main {
   display: flex;
   flex-flow: row;
-  justify-content: space-around; }
+  justify-content: space-between; }
 
 .main-image {
+  margin-left: 5%;
   position: relative;
   min-width: 417px;
-  width: 40%;
   height: 424px;
   background-image: url("../../img/burger.png");
   background-repeat: no-repeat;
@@ -125,11 +160,11 @@
     background-image: url("../../img/drops.png"); }
 
 .wellcome-block {
-  width: 40%; }
+  padding-left: 4%; }
   .wellcome-block__first {
     color: #f9b43b;
     font-family: gagalinregular;
-    font-size: 72px;
+    font-size: 69px;
     font-weight: 500;
     text-transform: uppercase; }
   .wellcome-block__second {
@@ -140,23 +175,31 @@
     font-size: 72px; }
 
 .scroll-button {
-  margin: 80px auto;
-  content: "";
-  width: 29px;
-  height: 14px;
-  display: block;
-  background-image: url("../../img/arrow-scroll.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
   cursor: pointer; }
+  .scroll-button:hover {
+    animation: ball 1s;
+    animation-iteration-count: 1; }
+  .scroll-button__block {
+    margin: 30px auto;
+    content: "";
+    width: 29px;
+    height: 14px;
+    display: block;
+    background-image: url("../../img/arrow-scroll.png");
+    background-repeat: no-repeat;
+    background-size: cover; }
 
 .wrapper-webest {
   margin: 0 auto;
   width: 100%;
-  min-height: 650px;
+  min-height: 655px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  overflow: hidden;
   background-image: url("../../img/bg.png"); }
 
 .main-content {
@@ -170,7 +213,7 @@
 .headline-webest {
   margin: 0 auto;
   font-family: gagalinregular;
-  font-size: 72px;
+  font-size: 69px;
   font-weight: 500;
   text-transform: uppercase;
   color: #2f3234; }
@@ -281,5 +324,296 @@
   flex-flow: column;
   text-align: center;
   margin-top: 55px; }
+
+.wrapper-feedback {
+  margin: 0 auto;
+  width: 100%;
+  min-height: 655px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden;
+  background-color: #cfd8dc; }
+
+.main-feedback {
+  margin: 0 auto;
+  max-width: 1100px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center; }
+
+.feedback-photo-first {
+  position: relative;
+  width: 275px;
+  height: 325px;
+  background-position: center center;
+  background-size: cover;
+  background-image: url("../../img/first-avatar.png"); }
+
+.feedback-photo-second {
+  position: relative;
+  width: 275px;
+  height: 325px;
+  background-position: center center;
+  background-size: cover;
+  background-image: url("../../img/second-avatar.png"); }
+
+.feedback-photo-third {
+  position: relative;
+  width: 275px;
+  height: 325px;
+  background-position: center center;
+  background-size: cover;
+  background-image: url("../../img/third-avatar.png"); }
+
+.feedback-photo-fourth {
+  position: relative;
+  width: 275px;
+  height: 325px;
+  background-position: center center;
+  background-size: cover;
+  background-image: url("../../img/fourth-avatar.png"); }
+
+.feedback-photo-fifth {
+  position: relative;
+  width: 275px;
+  height: 325px;
+  background-position: center center;
+  background-size: cover;
+  background-image: url("../../img/fifth-avatar.png"); }
+
+.feedback-photo-sixth {
+  position: relative;
+  width: 275px;
+  height: 325px;
+  background-position: center center;
+  background-size: cover;
+  background-image: url("../../img/sixth-avatar.png"); }
+
+.feedback-photo-seventh {
+  position: relative;
+  width: 275px;
+  height: 325px;
+  background-position: center center;
+  background-size: cover;
+  background-image: url("../../img/seventh-avatar.png"); }
+
+.feedback-photo-eightth {
+  position: relative;
+  width: 275px;
+  height: 325px;
+  background-position: center center;
+  background-size: cover;
+  background-image: url("../../img/eightth-avatar.png"); }
+
+.feedback-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 275px;
+  height: 325px;
+  background-position: center center;
+  background-size: cover;
+  background-color: #2f3234;
+  opacity: 0;
+  transition: .6s; }
+  .feedback-container:hover {
+    transition: .6s;
+    opacity: .7; }
+
+.feedback-username-first {
+  margin-left: 15%;
+  width: 139px;
+  height: 10px;
+  color: #ffffff;
+  font-family: gagalinregular;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28.11px;
+  letter-spacing: 1.5px; }
+
+.feedback-content-first {
+  margin-left: 15%;
+  width: 222px;
+  height: 133px;
+  color: #ffffff;
+  font-family: ubunturegular;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 24px;
+  cursor: pointer; }
+
+.feedback-username-second {
+  margin-left: 15%;
+  width: 139px;
+  height: 10px;
+  color: #ffffff;
+  font-family: gagalinregular;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28.11px;
+  letter-spacing: 1.5px; }
+
+.feedback-content-second {
+  margin-left: 15%;
+  width: 222px;
+  height: 133px;
+  color: #ffffff;
+  font-family: ubunturegular;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 24px;
+  cursor: pointer; }
+
+.feedback-username-third {
+  margin-left: 15%;
+  width: 139px;
+  height: 10px;
+  color: #ffffff;
+  font-family: gagalinregular;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28.11px;
+  letter-spacing: 1.5px; }
+
+.feedback-content-third {
+  margin-left: 15%;
+  width: 222px;
+  height: 133px;
+  color: #ffffff;
+  font-family: ubunturegular;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 24px;
+  cursor: pointer; }
+
+.feedback-username-fourth {
+  margin-left: 15%;
+  width: 139px;
+  height: 10px;
+  color: #ffffff;
+  font-family: gagalinregular;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28.11px;
+  letter-spacing: 1.5px; }
+
+.feedback-content-fourth {
+  margin-left: 15%;
+  width: 222px;
+  height: 133px;
+  color: #ffffff;
+  font-family: ubunturegular;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 24px;
+  cursor: pointer; }
+
+.feedback-username-fifth {
+  margin-left: 15%;
+  width: 139px;
+  height: 10px;
+  color: #ffffff;
+  font-family: gagalinregular;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28.11px;
+  letter-spacing: 1.5px; }
+
+.feedback-content-fifth {
+  margin-left: 15%;
+  width: 222px;
+  height: 133px;
+  color: #ffffff;
+  font-family: ubunturegular;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 24px;
+  cursor: pointer; }
+
+.feedback-username-sixth {
+  margin-left: 15%;
+  width: 139px;
+  height: 10px;
+  color: #ffffff;
+  font-family: gagalinregular;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28.11px;
+  letter-spacing: 1.5px; }
+
+.feedback-content-sixth {
+  margin-left: 15%;
+  width: 222px;
+  height: 133px;
+  color: #ffffff;
+  font-family: ubunturegular;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 24px;
+  cursor: pointer; }
+
+.feedback-username-seventh {
+  margin-left: 15%;
+  width: 139px;
+  height: 10px;
+  color: #ffffff;
+  font-family: gagalinregular;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28.11px;
+  letter-spacing: 1.5px; }
+
+.feedback-content-seventh {
+  margin-left: 15%;
+  width: 222px;
+  height: 133px;
+  color: #ffffff;
+  font-family: ubunturegular;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 24px;
+  cursor: pointer; }
+
+.feedback-username-eightth {
+  margin-left: 15%;
+  width: 139px;
+  height: 10px;
+  color: #ffffff;
+  font-family: gagalinregular;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28.11px;
+  letter-spacing: 1.5px; }
+
+.feedback-content-eightth {
+  margin-left: 15%;
+  width: 222px;
+  height: 133px;
+  color: #ffffff;
+  font-family: ubunturegular;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 24px;
+  cursor: pointer; }
+
+.feedback-button {
+  margin-left: 15%;
+  border-style: none;
+  width: 110px;
+  height: 35px;
+  background-color: #010206;
+  border-radius: 10px;
+  cursor: pointer; }
+  .feedback-button__element {
+    color: #ffffff;
+    font-family: ubunturegular;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 30px;
+    text-transform: uppercase; }
 
 /*# sourceMappingURL=base.css.map */
