@@ -376,6 +376,7 @@
   background-size: cover;
   min-width: 275px;
   min-height: 325px;
+  filter: grayscale(100%);
   flex: 1;
   background-image: url("../../img/first-avatar.png"); }
 
@@ -387,6 +388,7 @@
   background-size: cover;
   min-width: 275px;
   min-height: 325px;
+  filter: grayscale(100%);
   flex: 1;
   background-image: url("../../img/second-avatar.png"); }
 
@@ -398,6 +400,7 @@
   background-size: cover;
   min-width: 275px;
   min-height: 325px;
+  filter: grayscale(100%);
   flex: 1;
   background-image: url("../../img/third-avatar.png"); }
 
@@ -409,6 +412,7 @@
   background-size: cover;
   min-width: 275px;
   min-height: 325px;
+  filter: grayscale(100%);
   flex: 1;
   background-image: url("../../img/fourth-avatar.png"); }
 
@@ -420,6 +424,7 @@
   background-size: cover;
   min-width: 275px;
   min-height: 325px;
+  filter: grayscale(100%);
   flex: 1;
   background-image: url("../../img/fifth-avatar.png"); }
 
@@ -431,6 +436,7 @@
   background-size: cover;
   min-width: 275px;
   min-height: 325px;
+  filter: grayscale(100%);
   flex: 1;
   background-image: url("../../img/sixth-avatar.png"); }
 
@@ -442,6 +448,7 @@
   background-size: cover;
   min-width: 275px;
   min-height: 325px;
+  filter: grayscale(100%);
   flex: 1;
   background-image: url("../../img/seventh-avatar.png"); }
 
@@ -453,13 +460,12 @@
   background-size: cover;
   min-width: 275px;
   min-height: 325px;
+  filter: grayscale(100%);
   flex: 1;
   background-image: url("../../img/eightth-avatar.png"); }
 
 .feedback-container {
-  display: flex;
-  flex-flow: column;
-  justify-content: space-around;
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
@@ -470,185 +476,214 @@
   background-size: cover;
   min-width: 275px;
   min-height: 325px;
+  filter: grayscale(100%);
   background-color: #2f3234;
   opacity: 0;
   transition: .6s;
-  width: 100%; }
+  width: 100%;
+  height: 100%; }
   .feedback-container:hover {
     transition: .6s;
     opacity: .7; }
 
 .feedback-username-first {
+  display: block;
   margin-left: 15%;
   color: #ffffff;
   font-family: gagalinregular;
-  font-size: 14px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 28.11px;
+  letter-spacing: 1.5px; }
+
+.feedback-username-second {
+  display: block;
+  margin-left: 15%;
+  color: #ffffff;
+  font-family: gagalinregular;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 28.11px;
+  letter-spacing: 1.5px; }
+
+.feedback-username-third {
+  display: block;
+  margin-left: 15%;
+  color: #ffffff;
+  font-family: gagalinregular;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 28.11px;
+  letter-spacing: 1.5px; }
+
+.feedback-username-fourth {
+  display: block;
+  margin-left: 15%;
+  color: #ffffff;
+  font-family: gagalinregular;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 28.11px;
+  letter-spacing: 1.5px; }
+
+.feedback-username-fifth {
+  display: block;
+  margin-left: 15%;
+  color: #ffffff;
+  font-family: gagalinregular;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 28.11px;
+  letter-spacing: 1.5px; }
+
+.feedback-username-sixth {
+  display: block;
+  margin-left: 15%;
+  color: #ffffff;
+  font-family: gagalinregular;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 28.11px;
+  letter-spacing: 1.5px; }
+
+.feedback-username-seventh {
+  display: block;
+  margin-left: 15%;
+  color: #ffffff;
+  font-family: gagalinregular;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 28.11px;
+  letter-spacing: 1.5px; }
+
+.feedback-username-eightth {
+  display: block;
+  margin-left: 15%;
+  color: #ffffff;
+  font-family: gagalinregular;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 28.11px;
   letter-spacing: 1.5px; }
 
 .feedback-content-first {
+  display: block;
+  transform: translateY(20%);
+  width: 85%;
+  height: 50%;
   margin-left: 15%;
-  width: 222px;
-  height: 133px;
   color: #ffffff;
   font-family: ubunturegular;
-  font-size: 12px;
+  font-size: 0.8125rem;
   font-weight: 300;
   line-height: 24px;
   cursor: pointer; }
-
-.feedback-username-second {
-  margin-left: 15%;
-  color: #ffffff;
-  font-family: gagalinregular;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 28.11px;
-  letter-spacing: 1.5px; }
 
 .feedback-content-second {
+  display: block;
+  transform: translateY(20%);
+  width: 85%;
+  height: 50%;
   margin-left: 15%;
-  width: 222px;
-  height: 133px;
   color: #ffffff;
   font-family: ubunturegular;
-  font-size: 12px;
+  font-size: 0.8125rem;
   font-weight: 300;
   line-height: 24px;
   cursor: pointer; }
-
-.feedback-username-third {
-  margin-left: 15%;
-  color: #ffffff;
-  font-family: gagalinregular;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 28.11px;
-  letter-spacing: 1.5px; }
 
 .feedback-content-third {
+  display: block;
+  transform: translateY(20%);
+  width: 85%;
+  height: 50%;
   margin-left: 15%;
-  width: 222px;
-  height: 133px;
   color: #ffffff;
   font-family: ubunturegular;
-  font-size: 12px;
+  font-size: 0.8125rem;
   font-weight: 300;
   line-height: 24px;
   cursor: pointer; }
-
-.feedback-username-fourth {
-  margin-left: 15%;
-  color: #ffffff;
-  font-family: gagalinregular;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 28.11px;
-  letter-spacing: 1.5px; }
 
 .feedback-content-fourth {
+  display: block;
+  transform: translateY(20%);
+  width: 85%;
+  height: 50%;
   margin-left: 15%;
-  width: 222px;
-  height: 133px;
   color: #ffffff;
   font-family: ubunturegular;
-  font-size: 12px;
+  font-size: 0.8125rem;
   font-weight: 300;
   line-height: 24px;
   cursor: pointer; }
-
-.feedback-username-fifth {
-  margin-left: 15%;
-  color: #ffffff;
-  font-family: gagalinregular;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 28.11px;
-  letter-spacing: 1.5px; }
 
 .feedback-content-fifth {
+  display: block;
+  transform: translateY(20%);
+  width: 85%;
+  height: 50%;
   margin-left: 15%;
-  width: 222px;
-  height: 133px;
   color: #ffffff;
   font-family: ubunturegular;
-  font-size: 12px;
+  font-size: 0.8125rem;
   font-weight: 300;
   line-height: 24px;
   cursor: pointer; }
-
-.feedback-username-sixth {
-  margin-left: 15%;
-  color: #ffffff;
-  font-family: gagalinregular;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 28.11px;
-  letter-spacing: 1.5px; }
 
 .feedback-content-sixth {
+  display: block;
+  transform: translateY(20%);
+  width: 85%;
+  height: 50%;
   margin-left: 15%;
-  width: 222px;
-  height: 133px;
   color: #ffffff;
   font-family: ubunturegular;
-  font-size: 12px;
+  font-size: 0.8125rem;
   font-weight: 300;
   line-height: 24px;
   cursor: pointer; }
-
-.feedback-username-seventh {
-  margin-left: 15%;
-  color: #ffffff;
-  font-family: gagalinregular;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 28.11px;
-  letter-spacing: 1.5px; }
 
 .feedback-content-seventh {
+  display: block;
+  transform: translateY(20%);
+  width: 85%;
+  height: 50%;
   margin-left: 15%;
-  width: 222px;
-  height: 133px;
   color: #ffffff;
   font-family: ubunturegular;
-  font-size: 12px;
+  font-size: 0.8125rem;
   font-weight: 300;
   line-height: 24px;
   cursor: pointer; }
 
-.feedback-username-eightth {
-  margin-left: 15%;
-  color: #ffffff;
-  font-family: gagalinregular;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 28.11px;
-  letter-spacing: 1.5px; }
-
 .feedback-content-eightth {
+  display: block;
+  transform: translateY(20%);
+  width: 85%;
+  height: 50%;
   margin-left: 15%;
-  width: 222px;
-  height: 133px;
   color: #ffffff;
   font-family: ubunturegular;
-  font-size: 12px;
+  font-size: 0.8125rem;
   font-weight: 300;
   line-height: 24px;
   cursor: pointer; }
 
 .feedback-button {
+  text-align: center;
+  display: block;
   margin-left: 15%;
   border-style: none;
-  width: 110px;
-  height: 35px;
+  box-sizing: border-box;
+  height: 10%;
+  width: 30%;
   background-color: #010206;
   border-radius: 10px;
   cursor: pointer;
   color: #ffffff;
   font-family: ubunturegular;
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 500;
   line-height: 30px;
   text-transform: uppercase; }
