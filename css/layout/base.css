@@ -35,50 +35,53 @@
   max-width: 95vw;
   margin: 0 auto;
   display: flex;
-  justify-content: space-around; }
-  .header-menu {
-    width: 70%;
-    margin-top: 2%;
-    margin-left: 3%; }
-    .header-menu__list {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      margin-left: auto; }
-      .header-menu__list__item {
-        flex: .6;
-        list-style-type: none;
-        font-family: ubunturegular;
-        font-weight: 500;
-        line-height: 30px;
-        text-transform: uppercase;
-        color: #ffffff;
-        font-size: 0.7rem;
-        text-align: start;
-        cursor: pointer; }
-        .header-menu__list__item:nth-child(6) {
-          flex: 1; }
-        .header-menu__list__item::before {
-          vertical-align: sub;
-          margin-right: 13%;
-          content: "";
-          display: inline-block;
-          background-color: #ffffff;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          height: 6px;
-          width: 6px;
-          border-radius: 50%;
-          position: static; }
+  justify-content: center; }
+
+.menu {
+  width: 75%;
+  margin-top: 2%; }
+  .menu__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: auto; }
+    .menu__list__item {
+      flex: .6;
+      list-style-type: none;
+      font-family: ubunturegular;
+      font-weight: 500;
+      line-height: 30px;
+      text-transform: uppercase;
+      color: #ffffff;
+      font-size: 0.7rem;
+      text-align: start;
+      cursor: pointer; }
+      .menu__list__item:nth-child(6) {
+        flex: 1; }
+      .menu__list__item::before {
+        vertical-align: sub;
+        margin-right: 13%;
+        content: "";
+        display: inline-block;
+        background-color: #ffffff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 6px;
+        width: 6px;
+        border-radius: 50%;
+        position: static; }
 
 .offer-button {
   margin-top: 3%;
-  margin-left: 1%; }
+  margin-left: 1%;
+  height: 60%;
+  cursor: pointer; }
   .offer-button__form {
-    min-width: 97px;
-    min-height: 35px;
+    text-align: center;
+    width: 6vw;
+    margin: 0 auto;
     border-style: none;
     background-color: #e45028;
     border-radius: 5px;
@@ -93,9 +96,7 @@
 .logo {
   margin-top: 1%;
   width: 95px;
-  height: 70px;
-  background-image: url("../../img/logo.png");
-  background-repeat: no-repeat; }
+  height: 70px; }
 
 .container {
   margin: 0 auto;
@@ -183,7 +184,7 @@
 .scroll-button {
   width: 50px;
   height: 50px;
-  margin: 5% auto;
+  margin: 3% auto;
   cursor: pointer; }
   .scroll-button:hover {
     animation: ball 1s;

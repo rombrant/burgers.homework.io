@@ -112,54 +112,55 @@
     max-width: 95vw;
     margin: 0 auto;
     display: flex;
-    justify-content: space-around;
-    &-menu {
-        width: 70%;
-        margin-top: 2%;
-        margin-left: 3%;
-        &__list {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            margin-left: auto;
-            &__item {
-                flex: .6;
-                list-style-type: none;
-                @include menu-buttons;
-                text-align: start;
-                cursor: pointer;
-                &:nth-child(6) {
-                    flex: 1;
-                }
-                &::before {
-                    vertical-align: sub;
-                    margin-right: 13%;
-                    @include point-bar;
-                    position: static;
-                }
+    justify-content: center;
+}
+.menu {
+    width: 75%;
+    margin-top: 2%;
+    &__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-left: auto;
+        &__item {
+            flex: .6;
+            list-style-type: none;
+            @include menu-buttons;
+            text-align: start;
+            cursor: pointer;
+            &:nth-child(6) {
+                flex: 1;
+            }
+            &::before {
+                vertical-align: sub;
+                margin-right: 13%;
+                @include point-bar;
+                position: static;
             }
         }
     }
 }
+
 .offer-button {
     margin-top: 3%;
     margin-left: 1%;
+    height: 60%;
+    cursor: pointer;
     &__form {
-    min-width: 97px;
-    min-height: 35px;
-    border-style: none;
-    background-color:#e45028;
-    border-radius: 5px ;
-    font-size: 11px;
-    @include menu-buttons;
+        text-align: center;
+        width: 6vw;
+        margin: 0 auto;
+        border-style: none;
+        background-color:#e45028;
+        border-radius: 5px ;
+        font-size: 11px;
+        @include menu-buttons;
     }
 }
 .logo {
     margin-top: 1%;
     width: 95px;
     height: 70px;
-    background-image: url('../../img/logo.png');
-    background-repeat:  no-repeat;
 }
 .container {
     margin: 0 auto;
@@ -239,7 +240,7 @@
 .scroll-button{
     width: 50px;
     height: 50px;
-    margin: 5% auto;
+    margin: 3% auto;
     cursor: pointer;
     &:hover {
         animation: ball 1s;
