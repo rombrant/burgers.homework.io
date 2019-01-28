@@ -10,7 +10,7 @@
     opacity: 1; }
   60% {
     transform: translateY(-15px); } }
-.wrapper {
+.burgers-intro {
   margin: 0 auto;
   width: 100%;
   min-height: 655px;
@@ -18,8 +18,9 @@
   background-position: center center;
   background-size: cover;
   overflow: hidden;
+  box-sizing: content-box;
   background-image: url("../../img/video-bg.png"); }
-  .wrapper-texture {
+  .burgers-intro__texture {
     margin: 0 auto;
     width: 100%;
     min-height: 655px;
@@ -27,37 +28,39 @@
     background-position: center center;
     background-size: cover;
     overflow: hidden;
+    box-sizing: content-box;
     background-image: url("../../img/texture.png"); }
 
 .header {
+  max-width: 95vw;
   margin: 0 auto;
   display: flex;
-  justify-content: center; }
+  justify-content: space-around; }
   .header-menu {
-    width: 50%;
+    width: 70%;
     margin-top: 2%;
-    margin-left: 5%; }
+    margin-left: 3%; }
     .header-menu__list {
       display: flex;
-      align-items: center;
+      flex-direction: row;
+      justify-content: center;
       margin-left: auto; }
       .header-menu__list__item {
-        display: block;
-        width: 80px;
-        max-height: 11px;
+        flex: .6;
         list-style-type: none;
         font-family: ubunturegular;
         font-weight: 500;
         line-height: 30px;
         text-transform: uppercase;
         color: #ffffff;
-        font-size: 11px;
+        font-size: 0.7rem;
+        text-align: start;
         cursor: pointer; }
         .header-menu__list__item:nth-child(6) {
-          width: 130px; }
+          flex: 1; }
         .header-menu__list__item::before {
           vertical-align: sub;
-          margin-right: 15%;
+          margin-right: 13%;
           content: "";
           display: inline-block;
           background-color: #ffffff;
@@ -84,7 +87,8 @@
     font-weight: 500;
     line-height: 30px;
     text-transform: uppercase;
-    color: #ffffff; }
+    color: #ffffff;
+    font-size: 0.7rem; }
 
 .logo {
   margin-top: 1%;
@@ -95,7 +99,7 @@
 
 .container {
   margin: 0 auto;
-  width: 940px; }
+  width: 100vw; }
 
 .sidebar {
   position: fixed;
@@ -145,54 +149,47 @@
         border-radius: 50%; }
 
 .main {
+  margin: 0 auto;
+  max-width: 940px;
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  justify-content: center; }
 
-.main-image {
-  flex: 1;
-  width: 50%;
-  height: 100%;
-  position: relative; }
-  .main-image__modified {
-    display: inline-block; }
-  .main-image::before {
-    position: absolute;
-    width: 451px;
-    height: 241px;
-    top: 50px;
-    left: -20px;
-    content: "";
-    display: block;
-    background-image: url("../../img/drops.png"); }
+.main-image__modified {
+  width: 100%;
+  box-sizing: content-box; }
 
 .wellcome-block {
-  flex: .8;
+  width: 40%;
   display: flex;
   flex-flow: column;
-  align-items: center; }
+  justify-content: center; }
   .wellcome-block__first {
+    margin: 0;
     color: #f9b43b;
     font-family: gagalinregular;
-    font-size: 69px;
+    font-size: 3.5rem;
     font-weight: 500;
     text-transform: uppercase; }
   .wellcome-block__second {
+    box-sizing: content-box;
+    margin: 0;
     color: #ffffff;
     font-family: lifehackmedium;
     font-weight: 500;
     letter-spacing: -1.63px;
-    font-size: 72px; }
+    font-size: 4rem; }
 
 .scroll-button {
   width: 50px;
   height: 50px;
-  margin: 0 auto;
+  margin: 5% auto;
   cursor: pointer; }
   .scroll-button:hover {
     animation: ball 1s;
     animation-iteration-count: 1; }
   .scroll-button__block {
-    margin: 30px auto;
+    margin: 0 auto;
     content: "";
     width: 29px;
     height: 14px;
@@ -201,7 +198,7 @@
     background-repeat: no-repeat;
     background-size: cover; }
 
-.wrapper-webest {
+.webest {
   margin: 0 auto;
   width: 100%;
   min-height: 655px;
@@ -209,20 +206,33 @@
   background-position: center center;
   background-size: cover;
   overflow: hidden;
-  background-image: url("../../img/bg.png"); }
+  box-sizing: content-box; }
+  .webest__texture {
+    margin: 0 auto;
+    width: 100%;
+    min-height: 655px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+    box-sizing: content-box;
+    background-image: url("../../img/bg.png"); }
 
 .main-content {
+  margin: 0 auto;
+  width: 80vw;
+  height: 70vh;
   min-height: 650px;
   display: flex;
   flex-flow: column;
   justify-content: center;
-  margin: 0 auto;
-  max-width: 1100px; }
+  max-width: 95%;
+  box-sizing: content-box; }
 
 .headline-webest {
   margin: 0 auto;
   font-family: gagalinregular;
-  font-size: 69px;
+  font-size: 3.5rem;
   font-weight: 500;
   text-transform: uppercase;
   color: #2f3234; }
@@ -296,7 +306,7 @@
   opacity: 0.8;
   color: #2f3234;
   font-family: ubunturegular;
-  font-size: 14px;
+  font-size: 0.8125rem;
   font-weight: 300;
   line-height: 24.07px; }
 
@@ -304,7 +314,7 @@
   opacity: 0.8;
   color: #2f3234;
   font-family: ubunturegular;
-  font-size: 14px;
+  font-size: 0.8125rem;
   font-weight: 300;
   line-height: 24.07px; }
 
@@ -312,7 +322,7 @@
   opacity: 0.8;
   color: #2f3234;
   font-family: ubunturegular;
-  font-size: 14px;
+  font-size: 0.8125rem;
   font-weight: 300;
   line-height: 24.07px; }
 
@@ -334,7 +344,7 @@
   text-align: center;
   margin-top: 55px; }
 
-.wrapper-feedback {
+.feedback {
   margin: 0 auto;
   width: 100%;
   min-height: 655px;
@@ -342,77 +352,114 @@
   background-position: center center;
   background-size: cover;
   overflow: hidden;
-  background-color: #cfd8dc; }
+  box-sizing: content-box; }
+  .feedback__texture {
+    margin: 0 auto;
+    width: 100%;
+    min-height: 655px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+    box-sizing: content-box;
+    background-color: #cfd8dc; }
 
 .main-feedback {
   margin: 0 auto;
-  max-width: 1100px;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center; }
+  flex-flow: wrap;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-height: 650px;
+  box-sizing: content-box; }
 
 .feedback-photo-first {
   position: relative;
-  width: 275px;
-  height: 325px;
+  display: block;
+  box-sizing: content-box;
   background-position: center center;
   background-size: cover;
+  min-width: 275px;
+  min-height: 325px;
+  flex: 1;
   background-image: url("../../img/first-avatar.png"); }
 
 .feedback-photo-second {
   position: relative;
-  width: 275px;
-  height: 325px;
+  display: block;
+  box-sizing: content-box;
   background-position: center center;
   background-size: cover;
+  min-width: 275px;
+  min-height: 325px;
+  flex: 1;
   background-image: url("../../img/second-avatar.png"); }
 
 .feedback-photo-third {
   position: relative;
-  width: 275px;
-  height: 325px;
+  display: block;
+  box-sizing: content-box;
   background-position: center center;
   background-size: cover;
+  min-width: 275px;
+  min-height: 325px;
+  flex: 1;
   background-image: url("../../img/third-avatar.png"); }
 
 .feedback-photo-fourth {
   position: relative;
-  width: 275px;
-  height: 325px;
+  display: block;
+  box-sizing: content-box;
   background-position: center center;
   background-size: cover;
+  min-width: 275px;
+  min-height: 325px;
+  flex: 1;
   background-image: url("../../img/fourth-avatar.png"); }
 
 .feedback-photo-fifth {
   position: relative;
-  width: 275px;
-  height: 325px;
+  display: block;
+  box-sizing: content-box;
   background-position: center center;
   background-size: cover;
+  min-width: 275px;
+  min-height: 325px;
+  flex: 1;
   background-image: url("../../img/fifth-avatar.png"); }
 
 .feedback-photo-sixth {
   position: relative;
-  width: 275px;
-  height: 325px;
+  display: block;
+  box-sizing: content-box;
   background-position: center center;
   background-size: cover;
+  min-width: 275px;
+  min-height: 325px;
+  flex: 1;
   background-image: url("../../img/sixth-avatar.png"); }
 
 .feedback-photo-seventh {
   position: relative;
-  width: 275px;
-  height: 325px;
+  display: block;
+  box-sizing: content-box;
   background-position: center center;
   background-size: cover;
+  min-width: 275px;
+  min-height: 325px;
+  flex: 1;
   background-image: url("../../img/seventh-avatar.png"); }
 
 .feedback-photo-eightth {
   position: relative;
-  width: 275px;
-  height: 325px;
+  display: block;
+  box-sizing: content-box;
   background-position: center center;
   background-size: cover;
+  min-width: 275px;
+  min-height: 325px;
+  flex: 1;
   background-image: url("../../img/eightth-avatar.png"); }
 
 .feedback-container {
@@ -422,21 +469,23 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 275px;
-  height: 325px;
+  box-sizing: content-box;
+  display: block;
+  box-sizing: content-box;
   background-position: center center;
   background-size: cover;
+  min-width: 275px;
+  min-height: 325px;
   background-color: #2f3234;
   opacity: 0;
-  transition: .6s; }
+  transition: .6s;
+  width: 100%; }
   .feedback-container:hover {
     transition: .6s;
     opacity: .7; }
 
 .feedback-username-first {
   margin-left: 15%;
-  width: 139px;
-  height: 10px;
   color: #ffffff;
   font-family: gagalinregular;
   font-size: 14px;
@@ -457,8 +506,6 @@
 
 .feedback-username-second {
   margin-left: 15%;
-  width: 139px;
-  height: 10px;
   color: #ffffff;
   font-family: gagalinregular;
   font-size: 14px;
@@ -479,8 +526,6 @@
 
 .feedback-username-third {
   margin-left: 15%;
-  width: 139px;
-  height: 10px;
   color: #ffffff;
   font-family: gagalinregular;
   font-size: 14px;
@@ -501,8 +546,6 @@
 
 .feedback-username-fourth {
   margin-left: 15%;
-  width: 139px;
-  height: 10px;
   color: #ffffff;
   font-family: gagalinregular;
   font-size: 14px;
@@ -523,8 +566,6 @@
 
 .feedback-username-fifth {
   margin-left: 15%;
-  width: 139px;
-  height: 10px;
   color: #ffffff;
   font-family: gagalinregular;
   font-size: 14px;
@@ -545,8 +586,6 @@
 
 .feedback-username-sixth {
   margin-left: 15%;
-  width: 139px;
-  height: 10px;
   color: #ffffff;
   font-family: gagalinregular;
   font-size: 14px;
@@ -567,8 +606,6 @@
 
 .feedback-username-seventh {
   margin-left: 15%;
-  width: 139px;
-  height: 10px;
   color: #ffffff;
   font-family: gagalinregular;
   font-size: 14px;
@@ -589,8 +626,6 @@
 
 .feedback-username-eightth {
   margin-left: 15%;
-  width: 139px;
-  height: 10px;
   color: #ffffff;
   font-family: gagalinregular;
   font-size: 14px;
