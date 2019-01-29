@@ -98,13 +98,14 @@
     background-size: cover;
     filter: grayscale(100%);
 }
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 html, body {
-    font-family: 'ubuntu', sans-serif;
+    font-family: 'ubunturegular', sans-serif;
     height: 100%;
 }
 ul {
@@ -175,9 +176,6 @@ ul {
                 &::before {
                     display: none;
                 }
-                &-link {
-                    
-                }
             }
             &::before {
                 vertical-align: sub;
@@ -197,6 +195,7 @@ ul {
 .container {
     margin: 0 auto;
     height: 90%;
+    max-width: 940px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -238,7 +237,6 @@ ul {
 }
 .main {
     margin: 0 auto;
-    max-width: 940px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -279,7 +277,7 @@ ul {
     display: block;
     width: 50px;
     height: 50px;
-    margin:  15vh auto 0 auto;
+    margin:  5% auto 0 auto;
     cursor: pointer;
     &:hover {
         animation: ball 1s;
@@ -437,5 +435,79 @@ ul {
         font-weight: 500;
         line-height: 30px;
         text-transform: uppercase;
+    }
+}
+.team {
+    @include wrapper;
+    background-image: url('../../img/team-layer.png');
+    position: relative;
+    &-block {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        right: 0;
+        bottom: 0;
+        width: 50%;
+        height: 100%;
+        background: #343739;
+        opacity: 0.9;
+    }
+    &-block__content {
+        width: 70%;
+        height: 85%;
+        margin: 10% 20% 10% 10%;
+        &-headline {
+            @include headline;
+            color: #f9b43b;
+            text-align: center;
+        }
+        &-accordeon {
+            box-sizing: content-box;
+            &__list {
+                height: 70%;
+                &-item {
+                    display: flex;
+                    flex-direction: column;
+                    &-name {
+                        color: #ffffff;
+                        font-family: gagalinregular;
+                        font-size: 0.8125rem;
+                        letter-spacing: 0.0625rem;
+                        font-weight: 400;
+                        line-height: 1.75rem;
+                        &::before {
+                            display: block;
+                            content: "";
+                            width: 0;
+                            height: 0;
+                            border-left: 0.25rem solid transparent;
+                            border-right: 0.25rem solid transparent;
+                            border-top: 0.5rem solid #ffffff;
+                        }
+                    }
+                    &__description {
+                        display: flex;
+                        flex-direction: row;
+                        &-photo {
+                            display: block;
+                            width: 25%;
+                            height:100%;
+                            border-radius: 50%;
+                        }
+                        &-position {
+                            width: 40%;
+                            margin: 0 auto;
+                            color: #ffffff;
+                            font-size: 0.8rem;
+                            text-align: start;
+                        }
+                        &-text {
+                            font-family: ubuntulight;
+                            font-size: 0.7rem;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
