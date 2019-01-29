@@ -483,8 +483,7 @@ ul li {
     bottom: 0;
     width: 50%;
     height: 100%;
-    background: #343739;
-    opacity: 0.9; }
+    background: rgba(0, 0, 0, 0.9); }
   .team-block__content {
     width: 70%;
     height: 85%;
@@ -495,14 +494,32 @@ ul li {
       font-weight: 500;
       text-transform: uppercase;
       color: #f9b43b;
-      text-align: center; }
+      text-align: start; }
     .team-block__content-accordeon {
-      box-sizing: content-box; }
+      height: 100%; }
       .team-block__content-accordeon__list {
-        height: 70%; }
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around; }
         .team-block__content-accordeon__list-item {
           display: flex;
           flex-direction: column; }
+          .team-block__content-accordeon__list-item--active .team-block__content-accordeon__list-item-name {
+            color: #f9b43b; }
+            .team-block__content-accordeon__list-item--active .team-block__content-accordeon__list-item-name::before {
+              display: inline-block;
+              margin-right: 5%;
+              content: "";
+              width: 0;
+              height: 0;
+              border-left: 0.25rem solid transparent;
+              border-right: 0.25rem solid transparent;
+              border-bottom: none;
+              border-top: 0.5rem solid #f9b43b; }
+          .team-block__content-accordeon__list-item--active .team-block__content-accordeon__list-item__description {
+            height: 100%;
+            overflow: hidden; }
           .team-block__content-accordeon__list-item-name {
             color: #ffffff;
             font-family: gagalinregular;
@@ -511,29 +528,38 @@ ul li {
             font-weight: 400;
             line-height: 1.75rem; }
             .team-block__content-accordeon__list-item-name::before {
-              display: block;
+              display: inline-block;
+              margin-right: 5%;
               content: "";
               width: 0;
               height: 0;
               border-left: 0.25rem solid transparent;
               border-right: 0.25rem solid transparent;
-              border-top: 0.5rem solid #ffffff; }
+              border-bottom: 0.5rem solid #ffffff;
+              border-top: none; }
           .team-block__content-accordeon__list-item__description {
+            margin-top: 2%;
             display: flex;
-            flex-direction: row; }
+            flex-direction: row;
+            overflow: hidden;
+            height: 0; }
             .team-block__content-accordeon__list-item__description-photo {
               display: block;
               width: 25%;
               height: 100%;
               border-radius: 50%; }
             .team-block__content-accordeon__list-item__description-position {
-              width: 40%;
+              width: 60%;
               margin: 0 auto;
               color: #ffffff;
               font-size: 0.8rem;
               text-align: start; }
             .team-block__content-accordeon__list-item__description-text {
+              margin-top: 5%;
               font-family: ubuntulight;
-              font-size: 0.7rem; }
+              font-size: 0.7rem;
+              letter-spacing: 0.0625rem;
+              font-weight: 300;
+              line-height: 1.5rem; }
 
 /*# sourceMappingURL=base.css.map */
