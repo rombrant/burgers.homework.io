@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @keyframes ball {
   0%,
     40%,
@@ -544,10 +545,25 @@ ul li {
             overflow: hidden;
             height: 0; }
             .team-block__content-accordeon__list-item__description-photo {
-              display: block;
-              width: 25%;
-              height: 100%;
-              border-radius: 50%; }
+              position: relative;
+              width: 30%; }
+              .team-block__content-accordeon__list-item__description-photo:before {
+                content: "";
+                display: block;
+                padding-top: 100%;
+                /* С помощью этого padding мы задаем высоту равную ширине блока */ }
+              .team-block__content-accordeon__list-item__description-photo-photofile {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background-position: 61% center;
+                /* Задаем фон, если требуется */
+                background-repeat: no-repeat;
+                background-size: cover;
+                /* Растягиваем фон под размеры блока, если требуется */
+                border-radius: 50%; }
             .team-block__content-accordeon__list-item__description-position {
               width: 60%;
               margin: 0 auto;
@@ -555,7 +571,7 @@ ul li {
               font-size: 0.8rem;
               text-align: start; }
             .team-block__content-accordeon__list-item__description-text {
-              margin-top: 5%;
+              margin-top: 10%;
               font-family: ubuntulight;
               font-size: 0.7rem;
               letter-spacing: 0.0625rem;
@@ -589,46 +605,41 @@ ul li {
       overflow: hidden; }
       .menu-accordeon__container-list-item {
         width: 100%;
-        height: 100%;
         display: flex;
         flex-direction: row; }
+        .menu-accordeon__container-list-item--active .menu-accordeon__container-list-item-headline {
+          color: #f9b43b; }
         .menu-accordeon__container-list-item--active .menu-accordeon__container-list-item__content {
           height: 100%; }
         .menu-accordeon__container-list-item-headline {
-          flex: 0;
+          width: 40vmax;
           background-image: url("../../img/photo-1468071174046-657d9d351a40.jpg.png");
           background-repeat: no-repeat;
           background-position: center center;
           background-size: cover; }
-          .menu-accordeon__container-list-item-headline-text {
+          .menu-accordeon__container-list-item-headline::before {
+            content: "для мясоедов";
+            display: block;
+            box-sizing: content-box;
             transform: rotate(-90deg);
-            color: #ffffff;
+            color: #f9b43b;
+            width: 13rem;
             font-family: gagalinregular;
             font-size: 3.5rem;
             font-weight: 500;
-            text-transform: uppercase; }
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            margin-right: 70%;
+            float: left; }
         .menu-accordeon__container-list-item__content {
-          flex: 1;
+          transform-origin: 0 0;
           height: 0;
+          overflow: hidden;
           display: flex;
           flex-direction: row;
           justify-content: end; }
-          .menu-accordeon__container-list-item__content-headline {
-            flex: 0;
-            background-image: url("../../img/photo-1468071174046-657d9d351a40.jpg.png");
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
-            box-sizing: content-box; }
-            .menu-accordeon__container-list-item__content-headline-text {
-              transform: rotate(-90deg);
-              font-family: gagalinregular;
-              font-size: 3.5rem;
-              font-weight: 500;
-              text-transform: uppercase;
-              color: #f9b43b; }
           .menu-accordeon__container-list-item__content-description {
-            flex: 1;
+            width: 100%;
             text-align: center;
             background: rgba(0, 0, 0, 0.7);
             color: #ffffff;
