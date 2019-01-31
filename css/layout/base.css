@@ -109,7 +109,8 @@ ul li {
 .logo {
   margin-top: 1%;
   width: 95px;
-  height: 70px; }
+  height: 70px;
+  margin-right: 2%; }
 
 .container {
   margin: 0 auto;
@@ -216,7 +217,7 @@ ul li {
     width: 29px;
     height: 14px;
     display: block;
-    background-image: url("../../img/arrow-scroll.png");
+    background-image: url("../../img/arrow-scroll.svg");
     background-repeat: no-repeat;
     background-size: cover; }
 
@@ -366,6 +367,150 @@ ul li {
   flex-flow: column;
   text-align: center;
   margin-top: 55px; }
+
+.burgers-slider {
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  min-height: 655px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  box-sizing: content-box;
+  background-image: url("../../img/burgers-slider-bg.png"); }
+  .burgers-slider__main {
+    margin: 0 auto;
+    height: 100%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+
+.slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .slider__scroll-btn {
+    display: inline-block;
+    width: 3%;
+    height: 1%;
+    margin-top: 20%;
+    text-decoration: none;
+    box-sizing: content-box; }
+    .slider__scroll-btn:last-child .slider__scroll-btn-svg {
+      transform: rotate(-90deg);
+      width: 2.5rem;
+      height: 2.5rem; }
+    .slider__scroll-btn-svg {
+      transform: rotate(90deg);
+      width: 2.5rem;
+      height: 2.5rem; }
+  .slider__main {
+    display: flex;
+    flex-direction: row; }
+    .slider__main__image-block-contains {
+      position: relative;
+      background-color: #f08c33;
+      box-sizing: content-box;
+      width: 4rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column-reverse;
+      color: #ffffff;
+      padding: 0.5rem 0.8rem;
+      border-radius: 0.3rem;
+      transition: .7s;
+      cursor: pointer; }
+      .slider__main__image-block-contains:hover {
+        background-color: #e45028; }
+        .slider__main__image-block-contains:hover .slider__main__image-block-contains-text {
+          transition: .7s;
+          height: 20rem; }
+      .slider__main__image-block-contains-svg {
+        display: block;
+        margin: 0 auto;
+        width: 3rem;
+        height: 3rem; }
+      .slider__main__image-block-contains-text {
+        height: 0;
+        overflow: hidden;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        top: 0;
+        left: 100%;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.9);
+        width: 16.875rem; }
+        .slider__main__image-block-contains-text-ingredients {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          color: #2f3234; }
+          .slider__main__image-block-contains-text-ingredients-svg {
+            display: inline-block;
+            width: 2rem;
+            height: 2rem; }
+    .slider__main__image-block-kkal {
+      width: 4rem;
+      height: 4rem;
+      position: relative; }
+      .slider__main__image-block-kkal-svg {
+        width: 100%;
+        height: 100%; }
+      .slider__main__image-block-kkal-counter {
+        position: absolute;
+        text-align: center;
+        top: 60%;
+        bottom: 0;
+        left: 25%;
+        right: 0;
+        width: 1.9rem;
+        height: 2.3rem;
+        opacity: 0.5;
+        color: #ffffff;
+        font-family: gagalinregular;
+        font-size: 1.2rem;
+        font-weight: 400;
+        line-height: 1.5rem; }
+    .slider__main__description {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around; }
+      .slider__main__description-headline {
+        font-family: gagalinregular;
+        font-size: 3.5rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #ffffff; }
+      .slider__main__description-text {
+        color: #ffffff;
+        font-family: ubunturegular;
+        font-size: 0.85rem;
+        font-weight: 300;
+        line-height: 1.5rem; }
+      .slider__main__description-price {
+        font-family: gagalinregular;
+        font-size: 3.5rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #e45028; }
+        .slider__main__description-price-rub {
+          font-size: 1.9rem; }
+        .slider__main__description-price__order {
+          font-family: ubunturegular;
+          font-weight: 500;
+          line-height: 30px;
+          text-transform: uppercase;
+          color: #ffffff;
+          font-size: 0.7rem;
+          background-color: #e45028;
+          padding: 0.9rem;
+          border-radius: 0.3rem;
+          letter-spacing: 0.0625rem;
+          font-size: 0.9rem; }
 
 .feedback {
   height: 100vh;
