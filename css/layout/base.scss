@@ -456,6 +456,7 @@ ul {
     @include tablets {
         margin-left: 2%;
         height: 60%;
+        align-items: center;
     }
     &__scroll-btn {
         display: inline-block;
@@ -505,13 +506,16 @@ ul {
             }
             &-imgfile {
                 display: inline-block;
-                width: 50%;
+                
                 @include tablets {
+                    width: 50%;
                     margin-top: 4rem;
                 }
                 &-src {
-                    display: block;
-                    width: 100%;
+                    @include tablets {
+                        display: block;
+                        width: 100%;
+                    }
                 }
             }
             &-contains {
