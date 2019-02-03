@@ -507,7 +507,7 @@ ul {
         flex-direction: row;
         overflow: hidden;
         @include phones {
-            height: 100%;
+            height: 90%;
         }
     }
     &__main {
@@ -546,6 +546,9 @@ ul {
                     @include tablets {
                         display: block;
                         width: 100%;
+                    }
+                    @include phones {
+                        transform: translateY(50%);
                     }
                 }
             }
@@ -610,7 +613,6 @@ ul {
                 @include phones {
                     width: 2.5rem;
                     height: 2.5rem;
-                    transform: translateX(-2rem);
                 }
                 &-svg{
                     width: 100%;

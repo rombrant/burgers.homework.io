@@ -557,7 +557,7 @@ ul li {
     overflow: hidden; }
     @media screen and (max-width: 480px) {
       .slider__list {
-        height: 100%; } }
+        height: 90%; } }
   .slider__main {
     min-width: 100%;
     display: flex;
@@ -593,6 +593,9 @@ ul li {
           .slider__main__image-block-imgfile-src {
             display: block;
             width: 100%; } }
+        @media screen and (max-width: 480px) {
+          .slider__main__image-block-imgfile-src {
+            transform: translateY(50%); } }
       .slider__main__image-block-contains {
         position: relative;
         background-color: #f08c33;
@@ -647,8 +650,7 @@ ul li {
         @media screen and (max-width: 480px) {
           .slider__main__image-block-kkal {
             width: 2.5rem;
-            height: 2.5rem;
-            transform: translateX(-2rem); } }
+            height: 2.5rem; } }
         .slider__main__image-block-kkal-svg {
           width: 100%;
           height: 100%; }
