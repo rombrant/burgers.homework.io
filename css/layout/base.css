@@ -576,6 +576,9 @@ ul li {
           flex-direction: row;
           flex-wrap: wrap;
           justify-content: space-around; } }
+      @media screen and (max-width: 480px) {
+        .slider__main__image-block {
+          height: 50%; } }
       .slider__main__image-block-imgfile {
         display: inline-block; }
         @media screen and (max-width: 768px) {

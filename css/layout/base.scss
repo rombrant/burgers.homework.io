@@ -527,6 +527,9 @@ ul {
                 flex-wrap: wrap;
                 justify-content: space-around;
             }
+            @include phones {
+                height: 50%;
+            }
             &-imgfile {
                 display: inline-block;
                 
