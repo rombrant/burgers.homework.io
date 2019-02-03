@@ -41,6 +41,9 @@ $phones: 480px;
     background-position: center center;
     background-size: cover;
     box-sizing: content-box;
+    @include tablets {
+        max-width: 768px;
+    }
 }
 @mixin input {
     border-style: none;

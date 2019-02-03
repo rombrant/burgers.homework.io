@@ -45,6 +45,9 @@ ul li {
   background-size: cover;
   box-sizing: content-box;
   background-image: linear-gradient(rgba(0, 0, 0, 0.31), rgba(0, 0, 0, 0.31)), url("../../img/texture.png"), url("../../img/video-bg.png"); }
+  @media screen and (max-width: 768px) {
+    .burgers-intro {
+      max-width: 768px; } }
   .burgers-intro__main {
     max-width: 1100px;
     width: 100%;
@@ -289,6 +292,9 @@ ul li {
   background-image: url("../../img/bg.png"); }
   @media screen and (max-width: 768px) {
     .webest {
+      max-width: 768px; } }
+  @media screen and (max-width: 768px) {
+    .webest {
       background-image: url("../../img/bg-webest768.png"); } }
   .webest__main {
     margin: 0 auto;
@@ -299,6 +305,9 @@ ul li {
     background-position: center center;
     background-size: cover;
     box-sizing: content-box; }
+    @media screen and (max-width: 768px) {
+      .webest__main {
+        max-width: 768px; } }
 
 .main-content {
   margin: 0 auto;
@@ -436,6 +445,9 @@ ul li {
   background-size: cover;
   box-sizing: content-box;
   background-image: url("../../img/burgers-slider-bg.png"); }
+  @media screen and (max-width: 768px) {
+    .burgers-slider {
+      max-width: 768px; } }
   .burgers-slider__main {
     margin: 0 auto;
     height: 100%;
@@ -735,6 +747,9 @@ ul li {
   box-sizing: content-box;
   background-image: url("../../img/team-layer.png");
   position: relative; }
+  @media screen and (max-width: 768px) {
+    .team {
+      max-width: 768px; } }
   .team-block {
     position: absolute;
     top: 0;
@@ -879,6 +894,9 @@ ul li {
   box-sizing: content-box;
   position: relative;
   background-image: url("../../img/menu-background.png"); }
+  @media screen and (max-width: 768px) {
+    .menu-accordeon {
+      max-width: 768px; } }
   .menu-accordeon__container {
     box-sizing: content-box;
     width: 100%;
@@ -948,6 +966,9 @@ ul li {
   background-size: cover;
   box-sizing: content-box;
   background-image: url("../../img/work-texture.png"); }
+  @media screen and (max-width: 768px) {
+    .work {
+      max-width: 768px; } }
   .work-headline {
     font-family: gagalinregular;
     font-size: 3.5rem;
@@ -972,6 +993,9 @@ ul li {
   box-sizing: content-box;
   background-image: url("../../img/location-texture.png");
   background-color: #161616; }
+  @media screen and (max-width: 768px) {
+    .order {
+      max-width: 768px; } }
   .order-headline {
     margin: 0 auto;
     font-family: gagalinregular;
@@ -1083,6 +1107,9 @@ ul li {
   background-image: url("../../img/location-texture.png");
   background-color: #161616;
   position: relative; }
+  @media screen and (max-width: 768px) {
+    .map {
+      max-width: 768px; } }
 
 .container--map {
   overflow: hidden;
