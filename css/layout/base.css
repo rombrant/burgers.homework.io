@@ -574,28 +574,25 @@ ul li {
       justify-content: center; }
       @media screen and (max-width: 768px) {
         .slider__main__image-block {
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: space-around; } }
+          position: relative;
+          height: 50%; } }
       @media screen and (max-width: 480px) {
         .slider__main__image-block {
-          height: 50%; } }
+          height: 50%;
+          position: relative; } }
       .slider__main__image-block-imgfile {
         display: inline-block; }
         @media screen and (max-width: 768px) {
           .slider__main__image-block-imgfile {
-            width: 70%;
+            width: 100%;
             margin-top: 4rem; } }
         @media screen and (max-width: 480px) {
           .slider__main__image-block-imgfile {
-            width: 67%; } }
+            width: 100%; } }
         @media screen and (max-width: 768px) {
           .slider__main__image-block-imgfile-src {
             display: block;
             width: 100%; } }
-        @media screen and (max-width: 480px) {
-          .slider__main__image-block-imgfile-src {
-            transform: translateY(50%); } }
       .slider__main__image-block-contains {
         position: relative;
         background-color: #f08c33;
@@ -610,6 +607,16 @@ ul li {
         border-radius: 0.3rem;
         transition: .7s;
         cursor: pointer; }
+        @media screen and (max-width: 768px) {
+          .slider__main__image-block-contains {
+            position: absolute;
+            top: 0;
+            left: 0; } }
+        @media screen and (max-width: 480px) {
+          .slider__main__image-block-contains {
+            position: absolute;
+            top: 0;
+            left: 0; } }
         .slider__main__image-block-contains:hover {
           background-color: #e45028; }
           .slider__main__image-block-contains:hover .slider__main__image-block-contains-text {
@@ -647,8 +654,18 @@ ul li {
         width: 4rem;
         height: 4rem;
         position: relative; }
+        @media screen and (max-width: 768px) {
+          .slider__main__image-block-kkal {
+            position: absolute;
+            top: 0;
+            left: 90%;
+            width: 3rem;
+            height: 3rem; } }
         @media screen and (max-width: 480px) {
           .slider__main__image-block-kkal {
+            position: absolute;
+            top: 0;
+            left: 90%;
             width: 2.5rem;
             height: 2.5rem; } }
         .slider__main__image-block-kkal-svg {
@@ -669,6 +686,9 @@ ul li {
           font-size: 1.2rem;
           font-weight: 400;
           line-height: 1.7rem; }
+          @media screen and (max-width: 768px) {
+            .slider__main__image-block-kkal-counter {
+              top: 40%; } }
           @media screen and (max-width: 480px) {
             .slider__main__image-block-kkal-counter {
               font-size: 1rem;

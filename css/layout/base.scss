@@ -525,30 +525,27 @@ ul {
             flex-direction: column;
             justify-content: center;
             @include tablets {
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: space-around;
+                position: relative;
+                height: 50%;
             }
             @include phones {
                 height: 50%;
+                position: relative;
             }
             &-imgfile {
                 display: inline-block;
                 
                 @include tablets {
-                    width: 70%;
+                    width: 100%;
                     margin-top: 4rem;
                 }
                 @include phones {
-                    width: 67%;
+                    width: 100%;
                 }
                 &-src {
                     @include tablets {
                         display: block;
                         width: 100%;
-                    }
-                    @include phones {
-                        transform: translateY(50%);
                     }
                 }
             }
@@ -566,6 +563,16 @@ ul {
                 border-radius: 0.3rem;
                 transition: .7s;
                 cursor: pointer;
+                @include tablets {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                @include phones {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
                 &:hover {
                     background-color: #e45028;
                     & .slider__main__image-block-contains-text {
@@ -610,7 +617,17 @@ ul {
                 width: 4rem;
                 height: 4rem;
                 position: relative;
+                @include tablets {
+                    position: absolute;
+                    top: 0;
+                    left: 90%;
+                    width: 3rem;
+                    height: 3rem;
+                }
                 @include phones {
+                    position: absolute;
+                    top: 0;
+                    left: 90%;
                     width: 2.5rem;
                     height: 2.5rem;
                 }
@@ -633,6 +650,9 @@ ul {
                     font-size: 1.2rem;
                     font-weight: 400;
                     line-height: 1.7rem;
+                    @include tablets {
+                        top: 40%;
+                    }
                     @include phones {
                         font-size: 1rem;
                         line-height: 1.4rem;
