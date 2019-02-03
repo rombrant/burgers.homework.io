@@ -468,7 +468,6 @@ ul li {
   width: 95%; }
   @media screen and (max-width: 768px) {
     .slider {
-      margin-left: 2%;
       height: 60%;
       align-items: center; } }
   .slider__scroll-btn {
