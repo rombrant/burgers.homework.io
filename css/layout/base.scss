@@ -444,6 +444,8 @@ ul {
                 padding: 0.5rem;
             }
             @include phones {
+                max-height: 30%;
+                margin-top: 2rem;
                 flex-direction: row;
             }
     }
@@ -510,6 +512,7 @@ ul {
             justify-content: space-around;
             @include phones {
                 justify-content: center;
+                transform: translateX(1rem);
             }
         }
         &__image-block {
@@ -619,6 +622,10 @@ ul {
                     font-size: 1.2rem;
                     font-weight: 400;
                     line-height: 1.5rem;
+                    @include phones {
+                        top: 44%;
+                        left: 18%;
+                    }
                 }
             }
         }

@@ -463,6 +463,8 @@ ul li {
       padding: 0.5rem; } }
   @media screen and (max-width: 480px) {
     .ingredients__meat {
+      max-height: 30%;
+      margin-top: 2rem;
       flex-direction: row; } }
 
 .ingredients__made {
@@ -475,6 +477,8 @@ ul li {
       padding: 0.5rem; } }
   @media screen and (max-width: 480px) {
     .ingredients__made {
+      max-height: 30%;
+      margin-top: 2rem;
       flex-direction: row; } }
 
 .ingredients__nature {
@@ -487,6 +491,8 @@ ul li {
       padding: 0.5rem; } }
   @media screen and (max-width: 480px) {
     .ingredients__nature {
+      max-height: 30%;
+      margin-top: 2rem;
       flex-direction: row; } }
 
 .burgers-slider {
@@ -555,7 +561,8 @@ ul li {
         justify-content: space-around; } }
   @media screen and (max-width: 768px) and (max-width: 480px) {
     .slider__main {
-      justify-content: center; } }
+      justify-content: center;
+      transform: translateX(1rem); } }
 
     .slider__main__image-block {
       display: flex;
@@ -652,6 +659,10 @@ ul li {
           font-size: 1.2rem;
           font-weight: 400;
           line-height: 1.5rem; }
+          @media screen and (max-width: 480px) {
+            .slider__main__image-block-kkal-counter {
+              top: 44%;
+              left: 18%; } }
     .slider__main__description {
       display: flex;
       flex-direction: column;
