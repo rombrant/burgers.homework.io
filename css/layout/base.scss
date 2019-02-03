@@ -1,3 +1,8 @@
+$desktop: 1200px;
+$laptop: 992px;
+$tablets: 768px;
+$phones: 480px;
+
 @keyframes ball {
     0%,
     40%,
@@ -16,7 +21,17 @@
       transform: translateY(-15px);
     }
   }
-
+  @mixin tablets {
+    @media screen and (max-width: $tablets) {
+      @content;
+    }
+  }
+  
+  @mixin phones {
+    @media screen and (max-width: $phones) {
+      @content;
+    }
+  }
 @mixin wrapper {
     margin: 0 auto;
     width: 100%;
@@ -113,6 +128,9 @@
 html, body {
     font-family: 'ubunturegular', sans-serif;
     height: 100%;
+    @include tablets {
+        font-size: 14px;
+    }
 }
 ul {
     margin: 0;
@@ -127,6 +145,9 @@ ul {
     overflow: hidden;
     min-width: 1100px;
     min-height: 100%;
+    @include tablets {
+        min-width: 768px;
+    }
 }
 .burgers-intro {
     @include wrapper;
@@ -149,6 +170,11 @@ ul {
     display: flex;
     justify-content: center;
     width: 95%;
+    @include tablets {
+        justify-content: flex-end;
+        max-width: 48rem;
+        position: relative;
+    }
 }
 .menu {
     width: 75%;
@@ -172,17 +198,6 @@ ul {
                     display: none;
                 }
             }
-            &:last-child {
-                text-align: center;
-                box-sizing: border-box;
-                border-style: none;
-                background-color:#e45028;
-                border-radius: 6px;
-                height: 100%;
-                &::before {
-                    display: none;
-                }
-            }
             &::before {
                 vertical-align: sub;
                 margin-right: 13%;
@@ -191,12 +206,62 @@ ul {
             }
         }
     }
-}
+    @include tablets {
+          display: none;  
+    }
+    &__order {
+        margin-top: 1.5%;
+        @include menu-buttons;
+        background-color: #e45028;
+        width: 6rem;
+        height: 2rem;
+        border-radius: 0.4rem;
+        text-align: center;
+    }
 
+}
+.burgers-menu {
+    display: none;
+    margin-left: 2%;
+    margin-top: 2.5%;
+    width: 1.5rem;
+    height: 0.2rem;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 0.4rem;
+    @include tablets {
+        display: block;
+    }
+    &::after {
+        margin-top: -0.5rem;
+        position: absolute;
+        content: "";
+        display: block;
+        width: 1.5rem;
+        height: 0.2rem;
+        background-color: #ffffff;
+        border-radius: 0.4rem;
+    }
+    &::before {
+        margin-top: 0.5rem;
+        position: absolute;
+        content: "";
+        display: block;
+        width: 1.5rem;
+        height: 0.2rem;
+        background-color: #ffffff;
+        border-radius: 0.4rem;
+    }
+}
 .logo {
     width: 6rem;
     height: 6rem;
     margin-right: 2%;
+    @include tablets {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 }
 .container {
     margin: 0 auto;
@@ -210,6 +275,9 @@ ul {
     position: fixed;
     top: 80px;
     right: 45px;
+    @include tablets {
+        display: none;
+    }
     &__list {
         padding: 0;
         display: flex;
@@ -246,6 +314,10 @@ ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 .main-image {
     &__modified {
@@ -260,6 +332,11 @@ ul {
     display: flex;
     flex-flow: column;
     justify-content: center;
+    @include tablets {
+        width: 100%;
+        text-align: center;
+        max-width: 26rem;
+    }
     &__first {
         display: flex;
         flex-direction: column;
@@ -297,8 +374,10 @@ ul {
 .webest {
     @include wrapper;
     background-image: url('../../img/bg.png');
+    @include tablets {
+        background-image: url('../../img/bg-webest768.png');
+    }
     &__main {
-        max-width: 1100px;
         @include wrapper;
     }
 }
@@ -373,6 +452,11 @@ ul {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    width: 95%;
+    @include tablets {
+        margin-left: 2%;
+        height: 60%;
+    }
     &__scroll-btn {
         display: inline-block;
         width: 3%;
@@ -397,20 +481,45 @@ ul {
         display: flex;
         flex-direction: row;
         overflow: hidden;
+        @include tablets {
+            height: 100%;
+        }
     }
     &__main {
         min-width: 100%;
         display: flex;
         flex-direction: row;
+        @include tablets {
+            flex-flow: column;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
         &__image-block {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            @include tablets {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            &-imgfile {
+                display: inline-block;
+                width: 50%;
+                @include tablets {
+                    margin-top: 4rem;
+                }
+                &-src {
+                    display: block;
+                    width: 100%;
+                }
+            }
             &-contains {
                 position: relative;
                 background-color: #f08c33;
                 box-sizing: content-box;
                 width: 4rem;
+                height: 4rem;
                 text-align: center;
                 display: flex;
                 flex-direction: column-reverse;
@@ -489,6 +598,9 @@ ul {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            @include tablets {
+                align-items: center;
+            }
             &-headline {
                 @include headline;
                 color: #ffffff;
@@ -500,7 +612,11 @@ ul {
                 font-size: 0.85rem;
                 font-weight: 300;
                 line-height: 1.5rem;
-                margin-bottom: 3%
+                margin-bottom: 3%;
+                @include tablets {
+                    width: 60%;
+                    text-align: center;
+                }
             }
             &-price {
                 @include headline;
@@ -536,6 +652,10 @@ ul {
         @include avatar;
         width: 25%;
         height: 50%;
+        @include tablets {
+            width: 50%;
+            height: 25%;
+        }
         &:hover {
             .feedback-container {
             transition: .6s;
@@ -614,26 +734,49 @@ ul {
         width: 50%;
         height: 100%;
         background: rgba(0, 0, 0, 0.9);
+        @include tablets {
+            left: 0;
+            width: 100%;
+        }
     }
     &-block__content {
         width: 70%;
         height: 85%;
         margin: 10% 20% 10% 10%;
+        @include tablets {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
         &-headline {
             @include headline;
             color: #f9b43b;
             text-align: start;
+            @include tablets {
+                text-align: center;
+            }
         }
         &-accordeon {
             height: 100%;
+            @include tablets {
+                height: 50%;
+            }
             &__list {
                 height: 70%;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
+                @include tablets {
+                    align-items: center;
+                    justify-content: center;
+                }
                 &-item {
                     display: flex;
                     flex-direction: column;
+                    @include tablets {
+                        align-items: center;
+                    }
                     &--active {
                         & .team-block__content-accordeon__list-item {
                             &-name {
@@ -663,6 +806,10 @@ ul {
                         letter-spacing: 0.0625rem;
                         font-weight: 400;
                         line-height: 1.75rem;
+                        @include tablets {
+                            width: 100%;
+                            text-align: center;
+                        }
                         &::before {
                             display: inline-block;
                             margin-right: 5%;
@@ -681,6 +828,10 @@ ul {
                         flex-direction: row;
                         overflow: hidden;
                         height: 0;
+                        @include tablets {
+                            flex-direction: column;
+                            align-items: center;
+                        }
                         &-photo {
                             position: relative;
                             width: 30%;
@@ -707,6 +858,9 @@ ul {
                             color: #ffffff;
                             font-size: 0.8rem;
                             text-align: start;
+                            @include tablets {
+                                text-align: center;
+                            }
                         }
                         &-text {
                             margin-top: 10%;
@@ -825,6 +979,11 @@ ul {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        @include tablets {
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10%;
+        }
     &__first {
         height: 80%;
         width: 48%;
@@ -870,6 +1029,9 @@ ul {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        @include tablets {
+            margin-top: 5%;
+        }
         &__textarea {
             width: 100%;
             height: 50%;
@@ -912,6 +1074,17 @@ ul {
     overflow: hidden;
     position: relative;
     max-width: 1100px;
+}
+.location {
+    height: 100%;
+    background-image: url('../../img/map.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &-img {
+        display: block;
+        width: 100%;
+    }
 }
 .footer {
     margin: 0 auto;
