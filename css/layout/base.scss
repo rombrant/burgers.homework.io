@@ -440,6 +440,9 @@ ul {
             flex-flow: column;
             text-align: center;
             margin-top: 4rem;
+            @include tablets {
+                padding: 0.5rem;
+            }
             @include phones {
                 flex-direction: row;
             }
@@ -521,6 +524,9 @@ ul {
                 @include tablets {
                     width: 70%;
                     margin-top: 4rem;
+                }
+                @include phones {
+                    width: 65%;
                 }
                 &-src {
                     @include tablets {
@@ -617,9 +623,13 @@ ul {
                 align-items: center;
             }
             &-headline {
+                text-align: center;
                 @include headline;
                 color: #ffffff;
                 margin-bottom: 3%;
+                @include phones {
+                    font-size: 3rem;
+                }
             }
             &-text {
                 color: #ffffff;
@@ -697,6 +707,11 @@ ul {
     transition: opacity 0.3s;
     text-align: left;
     padding: 10% 8%;
+    @include phones {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
     &-username{
         display: block;
         margin-left: 15%;
@@ -717,6 +732,9 @@ ul {
         font-weight: 300;
         line-height: 24px;
         cursor: pointer;
+        @include phones {
+            display: none;
+        }
     }
     &-button {
         text-align: center;
@@ -726,7 +744,7 @@ ul {
         border-style: none;
         box-sizing: border-box;
         height: 20%;
-        max-height: 35px;
+        max-height: 2.5rem;
         width: 30%;
         background-color: #2f3234;
         border-radius: 5px;
@@ -737,6 +755,10 @@ ul {
         font-weight: 500;
         line-height: 30px;
         text-transform: uppercase;
+        @include phones {
+            width: 35%;
+            height: 25%;
+        }
     }
 }
 .team {
@@ -987,10 +1009,10 @@ ul {
         @include headline;
         color: #f9b43b;
         @include tablets {
-            font-size: 4.5rem;
+            font-size: 3.5rem;
         }
         @include phones {
-            font-size: 3.5rem;
+            font-size: 3rem;
         }
     }
 }
@@ -1013,6 +1035,9 @@ ul {
         justify-content: space-between;
         @include tablets {
             width: 75%;
+        }
+        @include phones {
+            width: 95%;
         }
         &-user {
             @include input;
@@ -1044,6 +1069,12 @@ ul {
             &-input {
                 @include input;
                 width: 20%;
+                @include phones {
+                    width: 30%;
+                    &:last-child {
+                        display: none;
+                    }
+                }
             }
         }
     }
@@ -1053,9 +1084,13 @@ ul {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-items: center;
         @include tablets {
             margin-top: 5%;
             width: 75%;
+        }
+        @include phones {
+            width: 95%;
         }
         &__textarea {
             width: 100%;
