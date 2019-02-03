@@ -508,6 +508,9 @@ ul {
             align-items: center;
             flex-wrap: wrap;
             justify-content: space-around;
+            @include phones {
+                justify-content: center;
+            }
         }
         &__image-block {
             display: flex;
@@ -526,7 +529,7 @@ ul {
                     margin-top: 4rem;
                 }
                 @include phones {
-                    width: 65%;
+                    width: 58%;
                 }
                 &-src {
                     @include tablets {
@@ -593,6 +596,10 @@ ul {
                 width: 4rem;
                 height: 4rem;
                 position: relative;
+                @include phones {
+                    width: 3rem;
+                    height: 3rem;
+                }
                 &-svg{
                     width: 100%;
                     height: 100%;
@@ -629,6 +636,7 @@ ul {
                 margin-bottom: 3%;
                 @include phones {
                     font-size: 3rem;
+                    margin-left: 2%;
                 }
             }
             &-text {
@@ -639,7 +647,7 @@ ul {
                 line-height: 1.5rem;
                 margin-bottom: 3%;
                 @include tablets {
-                    width: 60%;
+                    margin-left: 2%;
                     text-align: center;
                 }
             }
@@ -988,8 +996,14 @@ ul {
     @include wrapper;
     background-image: url('../../img/work-texture.png');
     &-headline {
-        @include headline;
+        font-family: gagalinregular;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: 3.5rem;
         margin: 0 auto;
+        @include phones {
+            font-size: 2rem;
+        }
     }
     &__player {
         position: relative;
@@ -1012,7 +1026,7 @@ ul {
             font-size: 3.5rem;
         }
         @include phones {
-            font-size: 3rem;
+            font-size: 2.1rem;
         }
     }
 }

@@ -553,6 +553,10 @@ ul li {
         align-items: center;
         flex-wrap: wrap;
         justify-content: space-around; } }
+  @media screen and (max-width: 768px) and (max-width: 480px) {
+    .slider__main {
+      justify-content: center; } }
+
     .slider__main__image-block {
       display: flex;
       flex-direction: column;
@@ -570,7 +574,7 @@ ul li {
             margin-top: 4rem; } }
         @media screen and (max-width: 480px) {
           .slider__main__image-block-imgfile {
-            width: 65%; } }
+            width: 58%; } }
         @media screen and (max-width: 768px) {
           .slider__main__image-block-imgfile-src {
             display: block;
@@ -626,6 +630,10 @@ ul li {
         width: 4rem;
         height: 4rem;
         position: relative; }
+        @media screen and (max-width: 480px) {
+          .slider__main__image-block-kkal {
+            width: 3rem;
+            height: 3rem; } }
         .slider__main__image-block-kkal-svg {
           width: 100%;
           height: 100%; }
@@ -661,7 +669,8 @@ ul li {
         margin-bottom: 3%; }
         @media screen and (max-width: 480px) {
           .slider__main__description-headline {
-            font-size: 3rem; } }
+            font-size: 3rem;
+            margin-left: 2%; } }
       .slider__main__description-text {
         color: #ffffff;
         font-family: ubunturegular;
@@ -671,7 +680,7 @@ ul li {
         margin-bottom: 3%; }
         @media screen and (max-width: 768px) {
           .slider__main__description-text {
-            width: 60%;
+            margin-left: 2%;
             text-align: center; } }
       .slider__main__description-price {
         font-family: gagalinregular;
@@ -1046,10 +1055,13 @@ ul li {
       max-width: 768px; } }
   .work-headline {
     font-family: gagalinregular;
-    font-size: 3.5rem;
     font-weight: 500;
     text-transform: uppercase;
+    font-size: 3.5rem;
     margin: 0 auto; }
+    @media screen and (max-width: 480px) {
+      .work-headline {
+        font-size: 2rem; } }
   .work__player {
     position: relative; }
     .work__player-bg {
@@ -1083,7 +1095,7 @@ ul li {
         font-size: 3.5rem; } }
     @media screen and (max-width: 480px) {
       .order-headline {
-        font-size: 3rem; } }
+        font-size: 2.1rem; } }
 
 .main-form {
   height: 30%;
