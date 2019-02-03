@@ -593,8 +593,8 @@ ul li {
         position: relative;
         background-color: #f08c33;
         box-sizing: content-box;
-        width: 3rem;
-        height: 3rem;
+        width: 4rem;
+        height: 4rem;
         text-align: center;
         display: flex;
         flex-direction: column-reverse;
@@ -603,9 +603,6 @@ ul li {
         border-radius: 0.3rem;
         transition: .7s;
         cursor: pointer; }
-        @media screen and (max-width: 480px) {
-          .slider__main__image-block-contains {
-            transform: translateX(2rem); } }
         .slider__main__image-block-contains:hover {
           background-color: #e45028; }
           .slider__main__image-block-contains:hover .slider__main__image-block-contains-text {
