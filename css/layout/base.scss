@@ -479,6 +479,9 @@ ul {
         height: 60%;
         align-items: center;
     }
+    @include phones {
+        height: 90%;
+    }
     &__scroll-btn {
         display: inline-block;
         width: 3%;
@@ -503,6 +506,9 @@ ul {
         display: flex;
         flex-direction: row;
         overflow: hidden;
+        @include phones {
+            height: 100%;
+        }
     }
     &__main {
         min-width: 100%;
@@ -513,10 +519,6 @@ ul {
             align-items: center;
             flex-wrap: wrap;
             justify-content: space-around;
-            @include phones {
-                justify-content: center;
-                transform: translateX(1rem);
-            }
         }
         &__image-block {
             display: flex;

@@ -533,6 +533,9 @@ ul li {
     .slider {
       height: 60%;
       align-items: center; } }
+  @media screen and (max-width: 480px) {
+    .slider {
+      height: 90%; } }
   .slider__scroll-btn {
     display: inline-block;
     width: 3%;
@@ -552,6 +555,9 @@ ul li {
     display: flex;
     flex-direction: row;
     overflow: hidden; }
+    @media screen and (max-width: 480px) {
+      .slider__list {
+        height: 100%; } }
   .slider__main {
     min-width: 100%;
     display: flex;
@@ -562,11 +568,6 @@ ul li {
         align-items: center;
         flex-wrap: wrap;
         justify-content: space-around; } }
-  @media screen and (max-width: 768px) and (max-width: 480px) {
-    .slider__main {
-      justify-content: center;
-      transform: translateX(1rem); } }
-
     .slider__main__image-block {
       display: flex;
       flex-direction: column;
