@@ -339,6 +339,9 @@ ul li {
   font-weight: 500;
   text-transform: uppercase;
   color: #2f3234; }
+  @media screen and (max-width: 480px) {
+    .headline-webest {
+      margin-top: 10%; } }
 
 .ingredients {
   display: flex;
@@ -581,7 +584,7 @@ ul li {
             margin-top: 4rem; } }
         @media screen and (max-width: 480px) {
           .slider__main__image-block-imgfile {
-            width: 58%; } }
+            width: 67%; } }
         @media screen and (max-width: 768px) {
           .slider__main__image-block-imgfile-src {
             display: block;
@@ -590,8 +593,8 @@ ul li {
         position: relative;
         background-color: #f08c33;
         box-sizing: content-box;
-        width: 4rem;
-        height: 4rem;
+        width: 3rem;
+        height: 3rem;
         text-align: center;
         display: flex;
         flex-direction: column-reverse;
@@ -600,6 +603,9 @@ ul li {
         border-radius: 0.3rem;
         transition: .7s;
         cursor: pointer; }
+        @media screen and (max-width: 480px) {
+          .slider__main__image-block-contains {
+            transform: translateX(2rem); } }
         .slider__main__image-block-contains:hover {
           background-color: #e45028; }
           .slider__main__image-block-contains:hover .slider__main__image-block-contains-text {
@@ -639,8 +645,9 @@ ul li {
         position: relative; }
         @media screen and (max-width: 480px) {
           .slider__main__image-block-kkal {
-            width: 3rem;
-            height: 3rem; } }
+            width: 2.5rem;
+            height: 2.5rem;
+            transform: translateX(-2rem); } }
         .slider__main__image-block-kkal-svg {
           width: 100%;
           height: 100%; }
@@ -658,9 +665,11 @@ ul li {
           font-family: gagalinregular;
           font-size: 1.2rem;
           font-weight: 400;
-          line-height: 1.5rem; }
+          line-height: 1.7rem; }
           @media screen and (max-width: 480px) {
             .slider__main__image-block-kkal-counter {
+              font-size: 1rem;
+              line-height: 1.4rem;
               top: 44%;
               left: 18%; } }
     .slider__main__description {
@@ -681,7 +690,8 @@ ul li {
         @media screen and (max-width: 480px) {
           .slider__main__description-headline {
             font-size: 3rem;
-            margin-left: 2%; } }
+            margin-left: 2%;
+            margin-right: 3%; } }
       .slider__main__description-text {
         color: #ffffff;
         font-family: ubunturegular;

@@ -391,6 +391,9 @@ ul {
     margin: 0 auto;
     @include headline;
     color: #2f3234;
+    @include phones {
+        margin-top: 10%;
+    }
 }
 .ingredients {
     display: flex;
@@ -532,7 +535,7 @@ ul {
                     margin-top: 4rem;
                 }
                 @include phones {
-                    width: 58%;
+                    width: 67%;
                 }
                 &-src {
                     @include tablets {
@@ -545,8 +548,8 @@ ul {
                 position: relative;
                 background-color: #f08c33;
                 box-sizing: content-box;
-                width: 4rem;
-                height: 4rem;
+                width: 3rem;
+                height: 3rem;
                 text-align: center;
                 display: flex;
                 flex-direction: column-reverse;
@@ -555,6 +558,9 @@ ul {
                 border-radius: 0.3rem;
                 transition: .7s;
                 cursor: pointer;
+                @include phones {
+                    transform: translateX(2rem);
+                }
                 &:hover {
                     background-color: #e45028;
                     & .slider__main__image-block-contains-text {
@@ -600,8 +606,9 @@ ul {
                 height: 4rem;
                 position: relative;
                 @include phones {
-                    width: 3rem;
-                    height: 3rem;
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    transform: translateX(-2rem);
                 }
                 &-svg{
                     width: 100%;
@@ -621,8 +628,10 @@ ul {
                     font-family: gagalinregular;
                     font-size: 1.2rem;
                     font-weight: 400;
-                    line-height: 1.5rem;
+                    line-height: 1.7rem;
                     @include phones {
+                        font-size: 1rem;
+                        line-height: 1.4rem;
                         top: 44%;
                         left: 18%;
                     }
@@ -644,6 +653,7 @@ ul {
                 @include phones {
                     font-size: 3rem;
                     margin-left: 2%;
+                    margin-right: 3%
                 }
             }
             &-text {
