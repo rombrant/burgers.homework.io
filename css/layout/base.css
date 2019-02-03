@@ -34,9 +34,6 @@ ul li {
   overflow: hidden;
   min-width: 1100px;
   min-height: 100%; }
-  @media screen and (max-width: 768px) {
-    .wrapper {
-      min-width: 768px; } }
 
 .burgers-intro {
   margin: 0 auto;
@@ -446,6 +443,10 @@ ul li {
     display: flex;
     flex-direction: column;
     justify-content: center; }
+    @media screen and (max-width: 768px) {
+      .burgers-slider__main {
+        max-width: 768px;
+        width: 85%; } }
 
 .slider {
   display: flex;
@@ -477,9 +478,6 @@ ul li {
     display: flex;
     flex-direction: row;
     overflow: hidden; }
-    @media screen and (max-width: 768px) {
-      .slider__list {
-        height: 100%; } }
   .slider__main {
     min-width: 100%;
     display: flex;
@@ -497,12 +495,13 @@ ul li {
       @media screen and (max-width: 768px) {
         .slider__main__image-block {
           flex-direction: row;
-          flex-wrap: wrap; } }
+          flex-wrap: wrap;
+          justify-content: space-around; } }
       .slider__main__image-block-imgfile {
         display: inline-block; }
         @media screen and (max-width: 768px) {
           .slider__main__image-block-imgfile {
-            width: 50%;
+            width: 60%;
             margin-top: 4rem; } }
         @media screen and (max-width: 768px) {
           .slider__main__image-block-imgfile-src {
@@ -771,9 +770,6 @@ ul li {
           text-align: center; } }
     .team-block__content-accordeon {
       height: 100%; }
-      @media screen and (max-width: 768px) {
-        .team-block__content-accordeon {
-          height: 50%; } }
       .team-block__content-accordeon__list {
         height: 70%;
         display: flex;

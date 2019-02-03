@@ -145,9 +145,6 @@ ul {
     overflow: hidden;
     min-width: 1100px;
     min-height: 100%;
-    @include tablets {
-        min-width: 768px;
-    }
 }
 .burgers-intro {
     @include wrapper;
@@ -445,6 +442,10 @@ ul {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        @include tablets {
+            max-width: 768px;
+            width: 85%;
+        }
     }
 }
 .slider {
@@ -482,9 +483,6 @@ ul {
         display: flex;
         flex-direction: row;
         overflow: hidden;
-        @include tablets {
-            height: 100%;
-        }
     }
     &__main {
         min-width: 100%;
@@ -503,12 +501,13 @@ ul {
             @include tablets {
                 flex-direction: row;
                 flex-wrap: wrap;
+                justify-content: space-around;
             }
             &-imgfile {
                 display: inline-block;
                 
                 @include tablets {
-                    width: 50%;
+                    width: 60%;
                     margin-top: 4rem;
                 }
                 &-src {
@@ -763,9 +762,6 @@ ul {
         }
         &-accordeon {
             height: 100%;
-            @include tablets {
-                height: 50%;
-            }
             &__list {
                 height: 70%;
                 display: flex;
