@@ -22,6 +22,9 @@ html, body {
   @media screen and (max-width: 768px) {
     html, body {
       font-size: 14px; } }
+  @media screen and (max-width: 480px) {
+    html, body {
+      font-size: 12px; } }
 
 ul {
   margin: 0;
@@ -130,7 +133,7 @@ ul li {
 .burgers-menu {
   display: none;
   margin-left: 2%;
-  margin-top: 2.5%;
+  margin-top: 4.5%;
   width: 1.5rem;
   height: 0.2rem;
   position: relative;
@@ -175,6 +178,12 @@ ul li {
   display: flex;
   flex-direction: column;
   justify-content: center; }
+  @media screen and (max-width: 768px) {
+    .container {
+      width: 95%; } }
+  @media screen and (max-width: 480px) {
+    .container {
+      width: 90%; } }
 
 .sidebar {
   position: fixed;
@@ -335,42 +344,36 @@ ul li {
   display: flex;
   flex-flow: row;
   justify-content: space-around; }
+  @media screen and (max-width: 480px) {
+    .ingredients {
+      flex-direction: column; } }
 
 .ingredients__meat-img {
-  margin: 0 auto;
-  content: "";
-  display: block;
-  background-image: url("../../img/meat_hand_nature.png");
-  background-repeat: no-repeat; }
+  width: 7.5rem;
+  flex: 1 0 auto;
+  margin: 0 auto; }
+  .ingredients__meat-img-svg {
+    display: inline-block;
+    width: 100%;
+    height: 58%; }
 
 .ingredients__made-img {
-  margin: 0 auto;
-  content: "";
-  display: block;
-  background-image: url("../../img/meat_hand_nature.png");
-  background-repeat: no-repeat; }
+  width: 7.5rem;
+  flex: 1 0 auto;
+  margin: 0 auto; }
+  .ingredients__made-img-svg {
+    display: inline-block;
+    width: 100%;
+    height: 58%; }
 
 .ingredients__nature-img {
-  margin: 0 auto;
-  content: "";
-  display: block;
-  background-image: url("../../img/meat_hand_nature.png");
-  background-repeat: no-repeat; }
-
-.ingredients__meat-img {
-  width: 97px;
-  height: 89px;
-  background-position: -88px -5px; }
-
-.ingredients__made-img {
-  width: 73px;
-  height: 85px;
-  background-position: -5px -5px; }
-
-.ingredients__nature-img {
-  width: 88px;
-  height: 75px;
-  background-position: -195px -5px; }
+  width: 7.5rem;
+  flex: 1 0 auto;
+  margin: 0 auto; }
+  .ingredients__nature-img-svg {
+    display: inline-block;
+    width: 100%;
+    height: 58%; }
 
 .ingredients__meat-headline {
   color: #2f3234;
@@ -378,7 +381,12 @@ ul li {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.65rem;
-  letter-spacing: -0.6px; }
+  letter-spacing: -0.6px;
+  text-align: center; }
+  @media screen and (max-width: 480px) {
+    .ingredients__meat-headline {
+      text-align: start;
+      margin-left: 5%; } }
 
 .ingredients__made-headline {
   color: #2f3234;
@@ -386,7 +394,12 @@ ul li {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.65rem;
-  letter-spacing: -0.6px; }
+  letter-spacing: -0.6px;
+  text-align: center; }
+  @media screen and (max-width: 480px) {
+    .ingredients__made-headline {
+      text-align: start;
+      margin-left: 5%; } }
 
 .ingredients__nature-headline {
   color: #2f3234;
@@ -394,7 +407,12 @@ ul li {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.65rem;
-  letter-spacing: -0.6px; }
+  letter-spacing: -0.6px;
+  text-align: center; }
+  @media screen and (max-width: 480px) {
+    .ingredients__nature-headline {
+      text-align: start;
+      margin-left: 5%; } }
 
 .ingredients__meat-content {
   opacity: 0.8;
@@ -402,7 +420,12 @@ ul li {
   font-family: ubunturegular;
   font-size: 0.8125rem;
   font-weight: 300;
-  line-height: 1.5rem; }
+  line-height: 1.5rem;
+  text-align: center; }
+  @media screen and (max-width: 480px) {
+    .ingredients__meat-content {
+      text-align: start;
+      margin-top: 5%; } }
 
 .ingredients__made-content {
   opacity: 0.8;
@@ -410,7 +433,12 @@ ul li {
   font-family: ubunturegular;
   font-size: 0.8125rem;
   font-weight: 300;
-  line-height: 1.5rem; }
+  line-height: 1.5rem;
+  text-align: center; }
+  @media screen and (max-width: 480px) {
+    .ingredients__made-content {
+      text-align: start;
+      margin-top: 5%; } }
 
 .ingredients__nature-content {
   opacity: 0.8;
@@ -418,25 +446,39 @@ ul li {
   font-family: ubunturegular;
   font-size: 0.8125rem;
   font-weight: 300;
-  line-height: 1.5rem; }
+  line-height: 1.5rem;
+  text-align: center; }
+  @media screen and (max-width: 480px) {
+    .ingredients__nature-content {
+      text-align: start;
+      margin-top: 5%; } }
 
 .ingredients__meat {
   display: flex;
   flex-flow: column;
   text-align: center;
   margin-top: 4rem; }
+  @media screen and (max-width: 480px) {
+    .ingredients__meat {
+      flex-direction: row; } }
 
 .ingredients__made {
   display: flex;
   flex-flow: column;
   text-align: center;
   margin-top: 4rem; }
+  @media screen and (max-width: 480px) {
+    .ingredients__made {
+      flex-direction: row; } }
 
 .ingredients__nature {
   display: flex;
   flex-flow: column;
   text-align: center;
   margin-top: 4rem; }
+  @media screen and (max-width: 480px) {
+    .ingredients__nature {
+      flex-direction: row; } }
 
 .burgers-slider {
   margin: 0 auto;
@@ -461,7 +503,7 @@ ul li {
     @media screen and (max-width: 768px) {
       .burgers-slider__main {
         max-width: 768px;
-        width: 85%; } }
+        width: 95%; } }
 
 .slider {
   display: flex;
@@ -515,7 +557,7 @@ ul li {
         display: inline-block; }
         @media screen and (max-width: 768px) {
           .slider__main__image-block-imgfile {
-            width: 60%;
+            width: 70%;
             margin-top: 4rem; } }
         @media screen and (max-width: 768px) {
           .slider__main__image-block-imgfile-src {
@@ -1008,6 +1050,12 @@ ul li {
     font-weight: 500;
     text-transform: uppercase;
     color: #f9b43b; }
+    @media screen and (max-width: 768px) {
+      .order-headline {
+        font-size: 4.5rem; } }
+    @media screen and (max-width: 480px) {
+      .order-headline {
+        font-size: 3.5rem; } }
 
 .main-form {
   height: 30%;
@@ -1026,6 +1074,9 @@ ul li {
     display: flex;
     flex-flow: column;
     justify-content: space-between; }
+    @media screen and (max-width: 768px) {
+      .main-form__first {
+        width: 75%; } }
     .main-form__first-user {
       border-style: none;
       border-radius: 0.3rem;
@@ -1069,7 +1120,8 @@ ul li {
     justify-content: space-between; }
     @media screen and (max-width: 768px) {
       .main-form__second {
-        margin-top: 5%; } }
+        margin-top: 5%;
+        width: 75%; } }
     .main-form__second__textarea {
       width: 100%;
       height: 50%;
@@ -1120,6 +1172,12 @@ ul li {
   overflow: hidden;
   position: relative;
   max-width: 1100px; }
+  @media screen and (max-width: 768px) {
+    .container--map {
+      width: 100%; } }
+  @media screen and (max-width: 480px) {
+    .container--map {
+      width: 100%; } }
 
 .location {
   height: 100%;
@@ -1136,25 +1194,24 @@ ul li {
   width: 100%;
   box-sizing: content-box;
   position: absolute;
-  top: 93%;
-  left: 0;
-  right: 0;
   bottom: 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  height: 100%;
+  height: 8%;
   max-width: 1100px; }
 
 .adress {
   width: 50%; }
   .adress-street {
+    margin-left: 5%;
     color: #ffffff;
     font-family: ubunturegular;
     font-size: 0.8rem;
     font-weight: 300;
     line-height: 1.5rem; }
   .adress-phone {
+    margin-left: 5%;
     color: #e45028;
     font-family: ubuntubold;
     font-weight: 700;
