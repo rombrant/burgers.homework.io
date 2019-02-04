@@ -185,7 +185,7 @@ ul li {
   @media screen and (max-width: 480px) {
     .container {
       width: 90%;
-      height: 75%; } }
+      height: 70%; } }
 
 .sidebar {
   position: fixed;
