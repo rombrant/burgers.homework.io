@@ -109,6 +109,7 @@ $phones: 480px;
     box-sizing: border-box;
 }
 html, body {
+    font-size: 16px;
     font-family: 'ubunturegular', sans-serif;
     height: 100%;
     @include tablets {
@@ -966,68 +967,75 @@ ul {
     @include wrapper;
     position: relative;
     background-image: url('../../img/menu-background.png');
-    &__container {
-        box-sizing: content-box;
-        width: 100%;
+    &__list {
         position: absolute;
-        top: 0;
-        left: 50vmax;
-        bottom: 0;
-        right: 0;
-        &-list {
+        top:0;
+        right:0;
+        bottom:0;
+        display: flex;
+        overflow: hidden;
+        &-item {
             height: 100%;
-            margin: 0 ;
-            display: flex;
-            flex-direction: row;
-            overflow: hidden;
-            &-item {
-                width: 100%;
+            display:flex;
+            &--active {
+               & .menu-accordeon__list-item__content {
+                   width: 20rem;
+               }
+               & .menu-accordeon__list-item__img-headline {
+                   color: #f9b43b;
+               }
+            }
+            &__img {
+                width:5rem;
+                height: 100%;
                 display: flex;
-                flex-direction: row;
-                &--active {
-                    & .menu-accordeon__container-list-item-headline {
-                        color: #f9b43b;
-                    }
-                    & .menu-accordeon__container-list-item__content {
-                        height: 100%;
-                    }
-                }
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+                position:relative;
                 &-headline {
-                        width: 40vmax;
-                        background-image: url('../../img/photo-1468071174046-657d9d351a40.jpg.png');
-                        background-repeat:no-repeat;
-                        background-position: center center;
-                        background-size: cover;
-                        &::before {
-                            content: "для мясоедов";
-                            display: block;
-                            box-sizing: content-box;
-                            transform: rotate(-90deg);
-                            color: #f9b43b;
-                            width: 13rem;
-                            @include headline;
-                            font-size: 1.5rem;
-                            margin-right: 70%;
-                            float: left;
-                        }
-                }
-                &__content {
+                    @include headline;
+                    text-decoration-line: none;
+                    color: #fff;
+                    white-space: nowrap; 
+                    position: absolute;
+                    -webkit-transform: rotate(-90deg) translate(-50%, -50%);
+                    -ms-transform: rotate(-90deg) translate(-50%, -50%);
+                    transform: rotate(-90deg) translate(-50%, -50%);
+                    -webkit-transform-origin: 0 0;
+                    -ms-transform-origin: 0 0;
                     transform-origin: 0 0;
-                    height: 0;
-                    overflow: hidden;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: end;
-                    &-description {
-                        width: 100%;
-                        text-align: center;
-                        background: rgba(0, 0, 0, 0.7);
-                        color: #ffffff;
-                        font-family: ubunturegular;
-                        font-size: 0.8125rem;
-                        font-weight: 300;
-                        line-height: 1.5rem;
-                    }
+                    left: 50%;
+                    top: 50%;
+                }
+            }
+            &:nth-child(1) {
+                & .menu-accordeon__list-item__img {
+                    background-image:linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7)), url(../../img/photo-1468071174046-657d9d351a40.png);
+                }
+            }
+            &:nth-child(2) {
+                & .menu-accordeon__list-item__img {
+                    background-image:linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7)), url(../../img/photo-1466814314367-45323ac74e2b.png);
+                }
+            }
+            &:nth-child(3) {
+                & .menu-accordeon__list-item__img {
+                    background-image:linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7)), url(../../img/IMG_4084.png);
+                }
+            }
+            &__content {
+                font-weight: 300;
+                font-size: 0.8rem;
+                background: rgba(47, 50, 52, 0.93);
+                line-height: 1.2rem;
+                height: 100%;
+                color: #fff;
+                width: 0;
+                overflow: hidden;
+                &-description {
+                    margin-top: 10%;
+                    margin-left: 10%;
                 }
             }
         }
@@ -1188,7 +1196,7 @@ ul {
 .container--map {
     overflow: hidden;
     position: relative;
-    max-width: 1100px;
+    max-width: 100%;
     @include tablets {
         width: 100%;
     }

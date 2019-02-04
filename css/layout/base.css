@@ -17,6 +17,7 @@
   box-sizing: border-box; }
 
 html, body {
+  font-size: 16px;
   font-family: 'ubunturegular', sans-serif;
   height: 100%; }
   @media screen and (max-width: 768px) {
@@ -1025,64 +1026,63 @@ ul li {
   @media screen and (max-width: 768px) {
     .menu-accordeon {
       max-width: 768px; } }
-  .menu-accordeon__container {
-    box-sizing: content-box;
-    width: 100%;
+  .menu-accordeon__list {
     position: absolute;
     top: 0;
-    left: 50vmax;
+    right: 0;
     bottom: 0;
-    right: 0; }
-    .menu-accordeon__container-list {
+    display: flex;
+    overflow: hidden; }
+    .menu-accordeon__list-item {
       height: 100%;
-      margin: 0;
-      display: flex;
-      flex-direction: row;
-      overflow: hidden; }
-      .menu-accordeon__container-list-item {
-        width: 100%;
+      display: flex; }
+      .menu-accordeon__list-item--active .menu-accordeon__list-item__content {
+        width: 20rem; }
+      .menu-accordeon__list-item--active .menu-accordeon__list-item__img-headline {
+        color: #f9b43b; }
+      .menu-accordeon__list-item__img {
+        width: 5rem;
+        height: 100%;
         display: flex;
-        flex-direction: row; }
-        .menu-accordeon__container-list-item--active .menu-accordeon__container-list-item-headline {
-          color: #f9b43b; }
-        .menu-accordeon__container-list-item--active .menu-accordeon__container-list-item__content {
-          height: 100%; }
-        .menu-accordeon__container-list-item-headline {
-          width: 40vmax;
-          background-image: url("../../img/photo-1468071174046-657d9d351a40.jpg.png");
-          background-repeat: no-repeat;
-          background-position: center center;
-          background-size: cover; }
-          .menu-accordeon__container-list-item-headline::before {
-            content: "для мясоедов";
-            display: block;
-            box-sizing: content-box;
-            transform: rotate(-90deg);
-            color: #f9b43b;
-            width: 13rem;
-            font-family: gagalinregular;
-            font-size: 3.5rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            font-size: 1.5rem;
-            margin-right: 70%;
-            float: left; }
-        .menu-accordeon__container-list-item__content {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        position: relative; }
+        .menu-accordeon__list-item__img-headline {
+          font-family: gagalinregular;
+          font-size: 3.5rem;
+          font-weight: 500;
+          text-transform: uppercase;
+          text-decoration-line: none;
+          color: #fff;
+          white-space: nowrap;
+          position: absolute;
+          -webkit-transform: rotate(-90deg) translate(-50%, -50%);
+          -ms-transform: rotate(-90deg) translate(-50%, -50%);
+          transform: rotate(-90deg) translate(-50%, -50%);
+          -webkit-transform-origin: 0 0;
+          -ms-transform-origin: 0 0;
           transform-origin: 0 0;
-          height: 0;
-          overflow: hidden;
-          display: flex;
-          flex-direction: row;
-          justify-content: end; }
-          .menu-accordeon__container-list-item__content-description {
-            width: 100%;
-            text-align: center;
-            background: rgba(0, 0, 0, 0.7);
-            color: #ffffff;
-            font-family: ubunturegular;
-            font-size: 0.8125rem;
-            font-weight: 300;
-            line-height: 1.5rem; }
+          left: 50%;
+          top: 50%; }
+      .menu-accordeon__list-item:nth-child(1) .menu-accordeon__list-item__img {
+        background-image: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7)), url(../../img/photo-1468071174046-657d9d351a40.png); }
+      .menu-accordeon__list-item:nth-child(2) .menu-accordeon__list-item__img {
+        background-image: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7)), url(../../img/photo-1466814314367-45323ac74e2b.png); }
+      .menu-accordeon__list-item:nth-child(3) .menu-accordeon__list-item__img {
+        background-image: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7)), url(../../img/IMG_4084.png); }
+      .menu-accordeon__list-item__content {
+        font-weight: 300;
+        font-size: 0.8rem;
+        background: rgba(47, 50, 52, 0.93);
+        line-height: 1.2rem;
+        height: 100%;
+        color: #fff;
+        width: 0;
+        overflow: hidden; }
+        .menu-accordeon__list-item__content-description {
+          margin-top: 10%;
+          margin-left: 10%; }
 
 .work {
   margin: 0 auto;
@@ -1267,7 +1267,7 @@ ul li {
 .container--map {
   overflow: hidden;
   position: relative;
-  max-width: 1100px; }
+  max-width: 100%; }
   @media screen and (max-width: 768px) {
     .container--map {
       width: 100%; } }
