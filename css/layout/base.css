@@ -82,14 +82,14 @@ ul li {
     flex-direction: row;
     justify-content: center; }
     .menu__list__item {
-      flex: .4;
-      list-style-type: none;
+      font-size: 0.65rem;
       font-family: ubunturegular;
       font-weight: 500;
       line-height: 1.8rem;
       text-transform: uppercase;
       color: #ffffff;
-      font-size: 0.7rem;
+      flex: .4;
+      list-style-type: none;
       text-align: start;
       cursor: pointer; }
       .menu__list__item:nth-child(6) {
@@ -342,7 +342,7 @@ ul li {
   @media screen and (max-width: 480px) {
     .headline-webest {
       font-size: 3rem;
-      margin-top: 10%; } }
+      margin-top: 15%; } }
 
 .ingredients {
   display: flex;
@@ -1176,7 +1176,7 @@ ul li {
     color: #f9b43b; }
     @media screen and (max-width: 768px) {
       .order-headline {
-        font-size: 3.5rem; } }
+        font-size: 3.2rem; } }
     @media screen and (max-width: 480px) {
       .order-headline {
         font-size: 2.1rem; } }
@@ -1204,7 +1204,7 @@ ul li {
     justify-content: space-between; }
     @media screen and (max-width: 768px) {
       .main-form__first {
-        width: 75%; } }
+        width: 80%; } }
     @media screen and (max-width: 480px) {
       .main-form__first {
         width: 95%; } }
@@ -1273,10 +1273,11 @@ ul li {
     align-items: center; }
     @media screen and (max-width: 768px) {
       .main-form__second {
-        margin-top: 5%;
-        width: 75%; } }
+        margin-top: 2%;
+        width: 80%; } }
     @media screen and (max-width: 480px) {
       .main-form__second {
+        margin-top: 3%;
         width: 95%; } }
     .main-form__second__textarea {
       width: 100%;
