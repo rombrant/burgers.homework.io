@@ -293,7 +293,7 @@ ul li {
   cursor: pointer; }
   @media screen and (max-width: 480px) {
     .scroll-button {
-      transform: translateY(-6rem); } }
+      transform: translateY(-8rem); } }
   .scroll-button:hover {
     animation: ball 1s;
     animation-iteration-count: 1; }
