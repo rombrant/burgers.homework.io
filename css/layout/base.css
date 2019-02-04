@@ -180,10 +180,12 @@ ul li {
   justify-content: center; }
   @media screen and (max-width: 768px) {
     .container {
-      width: 95%; } }
+      width: 95%;
+      height: 80%; } }
   @media screen and (max-width: 480px) {
     .container {
-      width: 90%; } }
+      width: 90%;
+      height: 75%; } }
 
 .sidebar {
   position: fixed;

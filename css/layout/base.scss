@@ -262,9 +262,11 @@ ul {
     justify-content: center;
     @include tablets {
         width: 95%;
+        height: 80%;
     }
     @include phones {
         width: 90%;
+        height: 75%;
     }
 }
 .sidebar {
