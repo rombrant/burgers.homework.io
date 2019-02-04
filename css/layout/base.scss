@@ -806,7 +806,7 @@ ul {
         line-height: 30px;
         text-transform: uppercase;
         @include phones {
-            width: 35%;
+            width: 55%;
             height: 25%;
         }
     }
@@ -967,6 +967,11 @@ ul {
     @include wrapper;
     position: relative;
     background-image: url('../../img/menu-background.png');
+    &-headline {
+        @include headline;
+        color: #ffffff;
+        transform: translate(10%, 10%);
+    }
     &__list {
         position: absolute;
         top:0;
@@ -980,9 +985,13 @@ ul {
             &--active {
                & .menu-accordeon__list-item__content {
                    width: 20rem;
+                   @include phones {
+                       width: 10rem;
+                   }
                }
                & .menu-accordeon__list-item__img-headline {
                    color: #f9b43b;
+                   font-size: 1.5rem;
                }
             }
             &__img {
@@ -993,6 +1002,9 @@ ul {
                 background-position: center center;
                 background-repeat: no-repeat;
                 position:relative;
+                @include phones {
+                    width: 2rem;
+                }
                 &-headline {
                     @include headline;
                     text-decoration-line: none;
@@ -1007,6 +1019,9 @@ ul {
                     transform-origin: 0 0;
                     left: 50%;
                     top: 50%;
+                    @include phones {
+                        font-size: 1.5rem;
+                    }
                 }
             }
             &:nth-child(1) {
@@ -1082,15 +1097,16 @@ ul {
 .main-form {
         font-family: ubuntulight;
         color: #ffffff;
-        height: 50%;
+        height: 40%;
         margin: 0 auto;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        width: 100%;
         @include tablets {
             flex-direction: column;
             align-items: center;
-            margin-top: 10%;
+            margin-top: 5%;
         }
     &__first {
         height: 80%;
@@ -1259,7 +1275,7 @@ ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    height: 8%;
+    height: 10%;
     @include phones {
         flex-direction: column;
         align-items: center;
