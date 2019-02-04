@@ -366,6 +366,7 @@ ul {
     margin: 0 auto;
     display: block;
     height: 5rem;
+    margin-top: -1rem;
     cursor: pointer;
     &:hover {
         animation: ball 1s;
