@@ -1260,10 +1260,17 @@ ul {
     flex-direction: row;
     flex-wrap: wrap;
     height: 8%;
-    max-width: 1100px;
+    @include phones {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 .adress {
     width: 50%;
+    @include phones {
+        width: 100%;
+        text-align: center;
+    }
     &-street {
         margin-left: 5%;
         color: #ffffff;
@@ -1300,6 +1307,10 @@ ul {
 .socials {
     width: 50%;
     height: 100%;
+    @include phones {
+        width: 10rem;
+        height: 3rem;
+    }
     &__list {
         width: 90%;
         margin-top: 2%;
