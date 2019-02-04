@@ -48,7 +48,7 @@ $phones: 480px;
 @mixin input {
     border-style: none;
     border-radius: 0.3rem;
-    height: 2.3rem;
+    height: 3.3rem;
 }
 @mixin menu-buttons {
     font-family: ubunturegular;
@@ -1080,7 +1080,9 @@ ul {
     }
 }
 .main-form {
-        height: 30%;
+        font-family: ubuntulight;
+        color: #ffffff;
+        height: 50%;
         margin: 0 auto;
         display: flex;
         flex-direction: row;
@@ -1109,19 +1111,30 @@ ul {
             width: 100%;
             justify-content: space-between;
             &-name {
+                display: flex;
                 width: 48%;
-                @include input;
+                flex-direction: column;
+                &-input {
+                    @include input;
+                }
             }
             &-phone {
+                display: flex;
                 width: 48%;
-                @include input;
+                flex-direction: column;
+                &-input {
+                    @include input;
+                }
             }
         }
         &-street {
-            display: flex;
-            flex-direction: column;
-            &-input {
-                @include input;
+            
+            &-block {
+                display: flex;
+                flex-direction: column;
+                &-input {
+                    @include input;
+                }
             }
         }
         &-home-number {
@@ -1129,7 +1142,9 @@ ul {
             flex-direction: row;
             justify-content: space-between;
             flex-wrap: wrap;
-            &-input {
+            &-block {
+                display: flex;
+                flex-direction: column;
                 @include input;
                 width: 20%;
                 @include phones {
@@ -1137,6 +1152,9 @@ ul {
                     &:last-child {
                         display: none;
                     }
+                }
+                &-input {
+                    @include input;
                 }
             }
         }
@@ -1162,17 +1180,33 @@ ul {
             &-block {
                 height: 100%;
                 min-width: 100%;
-                resize: none;
-                border-style: none;
-                border-radius: 0.3rem;
+                &-textarea {
+                    height: 100%;
+                    min-width: 100%;
+                    resize: none;
+                    border-style: none;
+                    border-radius: 0.3rem;
+                }
             }
         }
+        &__radio {
+            margin-top: 5%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 80%;
+        }
+        &__checkbox {
+            margin-top: 5%;
+        }
         &__buttons {
+            margin-top: 5%;
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
             &-order {
                 @include input;
+                height: 2.3rem;
                 margin-right: 3%;
                 background-color: #E45028;
                 color: #ffffff;
@@ -1182,6 +1216,7 @@ ul {
             &-reset {
                 background-color: rgba(0, 0, 0, 0);
                 @include input;
+                height: 2.3rem;
                 color: #ffffff;
             }
         }
@@ -1196,7 +1231,7 @@ ul {
 .container--map {
     overflow: hidden;
     position: relative;
-    max-width: 100%;
+    max-width: 1100px;
     @include tablets {
         width: 100%;
     }
