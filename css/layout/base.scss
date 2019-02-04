@@ -262,11 +262,11 @@ ul {
     justify-content: center;
     @include tablets {
         width: 95%;
-        height: 80%;
+        height: 85%;
     }
     @include phones {
         width: 90%;
-        height: 80%;
+        height: 85%;
     }
 }
 .sidebar {
@@ -385,8 +385,13 @@ ul {
 .headline-webest {
     margin: 0 auto;
     @include headline;
+    font-size: 4.5rem;
     color: #2f3234;
+    @include tablets {
+        font-size: 3.5rem;
+    }
     @include phones {
+        font-size: 3rem;
         margin-top: 10%;
     }
 }
@@ -406,7 +411,7 @@ ul {
         margin: 0 auto;
         &-svg {
             display: inline-block;
-            width: 100%;
+            width: 90%;
             height: 58%;
         }
     }
