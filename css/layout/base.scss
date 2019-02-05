@@ -910,6 +910,9 @@ ul {
                         & .team-block__content-accordeon__list-item__description {
                             height: 100%;
                             overflow: hidden;
+                            &-text {
+                                height: 100%;
+                            }
                         }
                     }
                     &-name {
@@ -942,6 +945,7 @@ ul {
                         margin-top: 2%;
                         display: flex;
                         flex-direction: row;
+                        justify-content: space-between;
                         overflow: hidden;
                         height: 0;
                         @include tablets {
@@ -968,9 +972,15 @@ ul {
                                 border-radius: 50%;
                             }
                         }
+                        &-blockinfo {
+                            align-items: flex-start;
+                            display: flex;
+                            flex-direction: column;
+                            width: 65%;
+                            padding-left: 5%;
+                        }
                         &-position {
                             width: 60%;
-                            margin: 0 auto;
                             color: #ffffff;
                             font-size: 0.8rem;
                             text-align: start;
@@ -979,6 +989,7 @@ ul {
                             }
                         }
                         &-text {
+                            color: #ffffff;
                             margin-top: 10%;
                             font-family: ubuntulight;
                             font-size: 0.7rem;
