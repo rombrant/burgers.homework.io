@@ -1286,9 +1286,11 @@ ul li {
     @media screen and (max-width: 768px) {
       .main-form__second {
         margin-top: 2%;
-        width: 80%; } }
+        width: 80%;
+        justify-content: center; } }
     @media screen and (max-width: 480px) {
       .main-form__second {
+        justify-content: center;
         margin-top: 3%;
         width: 95%; } }
     .main-form__second__textarea {
