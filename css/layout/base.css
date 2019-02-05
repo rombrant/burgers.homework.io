@@ -1212,6 +1212,9 @@ ul li {
       flex-direction: column;
       align-items: center;
       margin-top: 5%; } }
+  @media screen and (max-width: 480px) {
+    .main-form {
+      margin-top: 1%; } }
   .main-form__first {
     height: 80%;
     width: 48%;

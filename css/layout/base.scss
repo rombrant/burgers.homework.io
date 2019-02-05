@@ -1159,6 +1159,9 @@ ul {
             align-items: center;
             margin-top: 5%;
         }
+        @include phones {
+            margin-top: 1%;
+        }
     &__first {
         height: 80%;
         width: 48%;
