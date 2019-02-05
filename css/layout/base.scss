@@ -373,9 +373,6 @@ ul {
     margin: 0 auto;
     display: block;
     height: 5rem;
-    @include phones {
-        transform: translateY(-8rem);
-    }
     cursor: pointer;
     &:hover {
         animation: ball 1s;
