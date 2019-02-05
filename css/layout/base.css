@@ -82,16 +82,18 @@ ul li {
     flex-direction: row;
     justify-content: center; }
     .menu__list__item {
-      font-size: 0.65rem;
-      font-family: ubunturegular;
-      font-weight: 500;
-      line-height: 1.8rem;
-      text-transform: uppercase;
-      color: #ffffff;
       flex: .4;
       list-style-type: none;
-      text-align: start;
       cursor: pointer; }
+      .menu__list__item-link {
+        font-size: 0.65rem;
+        font-family: ubunturegular;
+        font-weight: 500;
+        line-height: 1.8rem;
+        text-transform: uppercase;
+        color: #ffffff;
+        text-decoration-line: none;
+        text-align: start; }
       .menu__list__item:nth-child(6) {
         flex: .7; }
       .menu__list__item:first-child {

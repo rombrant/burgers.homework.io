@@ -173,15 +173,19 @@ ul {
         flex-direction: row;
         justify-content: center;
         &__item {
-            font-size: 0.65rem;
-            font-family: ubunturegular;
-            font-weight: 500;
-            line-height: 1.8rem;
-            text-transform: uppercase;
-            color: #ffffff;
+            &-link {
+                font-size: 0.65rem;
+                font-family: ubunturegular;
+                font-weight: 500;
+                line-height: 1.8rem;
+                text-transform: uppercase;
+                color: #ffffff;
+                text-decoration-line: none;
+                text-align: start;
+            }
+            
             flex: .4;
             list-style-type: none;
-            text-align: start;
             cursor: pointer;
             &:nth-child(6) {
                 flex:.7;
