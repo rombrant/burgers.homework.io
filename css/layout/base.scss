@@ -136,6 +136,7 @@ ul {
     }
 }
 .burgers-intro {
+    position: relative;
     @include wrapper;
     background-image: linear-gradient(rgba(0,0,0, .31),rgba(0,0,0, .31)), 
     url('../../img/texture.png'), url('../../img/video-bg.png');
@@ -152,7 +153,46 @@ ul {
         }
     }
 }
+.visible {
+    display: block;
+}
+.hide-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2f3234;
+    display: none;
+}
+.hide__list {
+    display: flex;
+    height: 65%;
+    padding: 10%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    &__item {
+        text-align: center;
+        padding-bottom: 1rem;
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 1rem;
+            height: 1rem;
+            background-color: #ffffff;
+            border-radius: 50%;
+            vertical-align: super;
+            margin-right: 1rem;
+        }
+        &-link {
+            text-decoration-line: none;
+            color: #ffffff;
+            font-size: 2rem;
 
+        }
+    }
+}
 .header {
     max-width: 1100px;
     margin: 0 auto;
@@ -208,6 +248,7 @@ ul {
           display: none;  
     }
     &__order {
+        margin-right: 3rem;
         margin-top: 1.5%;
         @include menu-buttons;
         background-color: #e45028;
@@ -218,39 +259,47 @@ ul {
     }
 
 }
-.burgers-menu {
-    display: none;
-    margin-left: 2%;
-    margin-top: 4.5%;
-    width: 1.5rem;
-    height: 0.2rem;
-    position: relative;
-    background-color: #ffffff;
-    border-radius: 0.4rem;
-    @include tablets {
-        display: block;
-    }
-    &::after {
-        margin-top: -0.5rem;
-        position: absolute;
-        content: "";
-        display: block;
+.burgers-menu{
+    position: fixed;
+    top: 1.5rem;
+    right: 2rem;
+    &-button {
+        background-color: #fff;
+        border-style: none;
+        display: none;
+        margin-left: 2%;
+        margin-top: 4.5%;
         width: 1.5rem;
         height: 0.2rem;
+        position: relative;
         background-color: #ffffff;
         border-radius: 0.4rem;
-    }
-    &::before {
-        margin-top: 0.5rem;
-        position: absolute;
-        content: "";
-        display: block;
-        width: 1.5rem;
-        height: 0.2rem;
-        background-color: #ffffff;
-        border-radius: 0.4rem;
+        @include tablets {
+            display: block;
+        }
+        &::after {
+            margin-top: -0.5rem;
+            position: absolute;
+            content: "";
+            display: block;
+            width: 1.5rem;
+            height: 0.2rem;
+            background-color: #ffffff;
+            border-radius: 0.4rem;
+        }
+        &::before {
+            margin-top: 0.3rem;
+            position: absolute;
+            content: "";
+            display: block;
+            width: 1.5rem;
+            height: 0.2rem;
+            background-color: #ffffff;
+            border-radius: 0.4rem;
+        }
     }
 }
+
 .logo {
     width: 6rem;
     height: 6rem;
@@ -274,11 +323,11 @@ ul {
     }
     @include tablets {
         width: 95%;
-        height: 85%;
+        height: 100%;
     }
     @include phones {
         width: 90%;
-        height: 85%;
+        height: 100%;
     }
 }
 .sidebar {
@@ -488,7 +537,7 @@ ul {
     align-items: center;
     width: 95%;
     @include tablets {
-        height: 60%;
+        height: 90%;
         align-items: center;
     }
     @include phones {
@@ -518,6 +567,9 @@ ul {
         display: flex;
         flex-direction: row;
         overflow: hidden;
+        @include tablets {
+            height: 90%;
+        }
         @include phones {
             height: 90%;
         }
@@ -529,7 +581,6 @@ ul {
         @include tablets {
             flex-flow: column;
             align-items: center;
-            flex-wrap: wrap;
             justify-content: space-around;
         }
         @include phones {
@@ -554,11 +605,12 @@ ul {
                 display: inline-block;
                 
                 @include tablets {
-                    width: 100%;
+                    margin: auto;
+                    width: 70%;
                     margin-top: 4rem;
                 }
                 @include phones {
-                    width: 100%;
+                    width: 90%;
                 }
                 &-src {
                     display: block;
@@ -720,8 +772,14 @@ ul {
             &-price {
                 @include headline;
                 color: #e45028;
+                @include phones {
+                    font-size: 2.5rem;
+                }
                 &-rub   {
                     font-size: 1.9rem;
+                    @include phones {
+                        font-size: 1.4rem;
+                    }
                 }
                 &__order {
                     text-decoration-line: none;
@@ -731,6 +789,9 @@ ul {
                     border-radius: 0.3rem;
                     letter-spacing: 0.0625rem;
                     font-size: 0.9rem;
+                    @include phones {
+                        font-size: 0.7rem;
+                    }
                 }
             }
         }
@@ -1440,6 +1501,7 @@ ul {
     max-width: 1100px;
     @include tablets {
         width: 100%;
+        height: 90%;
     }
     @include phones {
         width: 100%;
