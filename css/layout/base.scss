@@ -772,6 +772,9 @@ ul {
     }
 }
 .feedback-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     position: absolute;
     top: 0;
     left: 0;
@@ -820,12 +823,11 @@ ul {
         text-align: center;
         display: block;
         margin-left: 15%;
-        margin-top: 15%;
         border-style: none;
         box-sizing: border-box;
         height: 20%;
         max-height: 2.5rem;
-        width: 40%;
+        width: 50%;
         background-color: #2f3234;
         border-radius: 5px;
         cursor: pointer;
@@ -930,8 +932,12 @@ ul {
                         font-weight: 400;
                         line-height: 1.75rem;
                         @include tablets {
+                            font-size: 1.5rem;
                             width: 100%;
                             text-align: center;
+                        }
+                        @include phones {
+                            font-size: 1.5rem;
                         }
                         &::before {
                             display: inline-block;
@@ -977,11 +983,22 @@ ul {
                             }
                         }
                         &-blockinfo {
+                            text-align: center;
                             align-items: flex-start;
                             display: flex;
                             flex-direction: column;
                             width: 65%;
                             padding-left: 5%;
+                            @include tablets {
+                                align-items: center;
+                                padding-left: 0;
+                                padding-bottom: 1rem;
+                            }
+                            @include phones {
+                                align-items: center;
+                                padding-left: 0;
+                                padding-bottom: 1rem;
+                            }
                         }
                         &-position {
                             width: 60%;
@@ -1246,7 +1263,7 @@ ul {
             justify-content: center;
         }
         @include phones {
-            justify-content: center;
+            justify-content: flex-start;
             margin-top: 3%;
             width: 95%;
         }
@@ -1267,48 +1284,6 @@ ul {
                     border-radius: 0.3rem;
                 }
             }
-        }
-        &__radio {
-            margin-top: 5%;
-            display: inline-flex;
-            flex-direction: row;
-            justify-content: space-around;
-            width: 80% ;
-            &-cash {
-                position: relative;
-                &::before {
-                    position: absolute;
-                    top: 25%;
-                    left: -13%;
-                    content: "";
-                    display: block;
-                    border-radius: 50%;
-                    border: 0.1rem solid;
-                    border-color: #fff;
-                    background-color: #fff;
-                    width: 0.5rem;
-                    height: 0.5rem;
-                }
-                &:after {
-                    background-color: #e45028;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    content: "";
-                    display: block;
-                    border-radius: 50%;
-                    width: 0rem;
-                    height: 0rem;
-                }
-                &-input {
-                    display: none;
-                }
-            }
-        }
-        &__checkbox {
-            margin-top: 5%;
         }
         &__buttons {
             margin-top: 5%;
@@ -1377,7 +1352,6 @@ ul {
 	position: relative; 
 
 }
-
 .main-form__radio:checked + .main-form__radio-custom:before {
 	content: "";
 	display: block;
@@ -1401,12 +1375,59 @@ ul {
 
 
 }
+.main-form__checkbox {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.main-form__checkbox-label {
+    width: 100%;
+}
 
-.main-form__radio:checked + .main-form__radio-custom .main-form__radio-text {
-	color: #ffffff;
 
+.main-form__checkbox {
+	display: inline-block;
 
 }
+
+
+.main-form__checkbox-input {
+
+	display: none;
+
+}
+
+
+.main-form__checkbox-text {
+	position: absolute;
+    width: 10rem;
+	left: 1.6rem;
+} 
+
+ .main-form__checkbox-custom {
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	background-color: #ffffff;
+	position: relative; 
+
+}
+
+.main-form__checkbox-input:checked + .main-form__checkbox-custom:before {
+	content: "";
+	position: absolute;
+    display: block;
+    left: 4px;
+    top: 1px;
+    width: 4px;
+    height: 8px;
+    border: solid #e35028;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+
 .map {
     @include wrapper;
     background-image: url('../../img/location-texture.png');
