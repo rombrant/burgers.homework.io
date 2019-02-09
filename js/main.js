@@ -76,4 +76,34 @@ const menuItems = document.querySelectorAll('.team-block__content-accordeon__lis
    }
 
 
+   const menuOffers = document.querySelectorAll('.menu-accordeon__list-item');
+        
+        for ( const offer of menuOffers) {
+            offer.addEventListener('click', e=>{
+                const curOffer = e.currentTarget;
+                const active = curOffer.classList.contains('menu-accordeon__list-item--active');
+                if  (active) {
+                    offerRemoveActiveClass(menuOffers);
+                }
+                else {
+                    offerRemoveActiveClass(menuOffers);
+                    openOfferMenu(offer);
+                }
+            })
+        }
+
+        function openOfferMenu(offer) {
+            const contentBlock = offer.querySelector('.menu-accordeon__list-item__content');
+            const textBlock = contentBlock.firstElementChild;
+            const reqWidth = textBlock.getBoundingClientRect().width;
+            contentBlock.style.width = reqWidth+'px';
+            offer.classList.add('menu-accordeon__list-item--active');
+        }
+
+        function offerRemoveActiveClass(menuOffers) {
+            Array.from(menuOffers).forEach(elem=>{
+                elem.classList.remove("menu-accordeon__list-item--active");
+                elem.querySelector('.menu-accordeon__list-item__content').style.width=0;
+            })
+        }
 openMenu();

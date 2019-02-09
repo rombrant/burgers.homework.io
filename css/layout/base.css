@@ -1269,6 +1269,7 @@ ul li {
       .menu-accordeon__list-item:nth-child(3) .menu-accordeon__list-item__img {
         background-image: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7)), url(../../img/IMG_4084.png); }
       .menu-accordeon__list-item__content {
+        transition: width .6s;
         font-weight: 300;
         font-size: 0.8rem;
         background: rgba(47, 50, 52, 0.93);
@@ -1278,8 +1279,16 @@ ul li {
         width: 0;
         overflow: hidden; }
         .menu-accordeon__list-item__content-description {
-          margin-top: 10%;
-          margin-left: 10%; }
+          padding-right: 1.5rem;
+          width: 25rem;
+          margin-top: 3rem;
+          margin-left: 1rem; }
+          @media screen and (max-width: 768px) {
+            .menu-accordeon__list-item__content-description {
+              width: 18rem; } }
+          @media screen and (max-width: 480px) {
+            .menu-accordeon__list-item__content-description {
+              width: 15rem; } }
 
 .work {
   margin: 0 auto;

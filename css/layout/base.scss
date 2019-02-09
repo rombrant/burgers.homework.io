@@ -1238,6 +1238,7 @@ ul {
                 }
             }
             &__content {
+                transition: width .6s;
                 font-weight: 300;
                 font-size: 0.8rem;
                 background: rgba(47, 50, 52, 0.93);
@@ -1247,8 +1248,16 @@ ul {
                 width: 0;
                 overflow: hidden;
                 &-description {
-                    margin-top: 10%;
-                    margin-left: 10%;
+                    padding-right: 1.5rem;
+                    width: 25rem;
+                    margin-top: 3rem;
+                    margin-left: 1rem;
+                    @include tablets {
+                        width: 18rem;
+                    }
+                    @include phones {
+                        width: 15rem;
+                    }
                 }
             }
         }
