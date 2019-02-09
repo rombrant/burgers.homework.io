@@ -171,6 +171,14 @@ ul {
     height: 2rem;
     position: relative;
     border: none;
+    @include tablets {
+        margin-top: 0.7rem;
+        margin-right: 0;
+    }
+    @include phones {
+        margin-top: 0.3rem;
+        margin-right: 0.7rem;
+    }
     &:before, &:after {
         top: 0.5rem;
         position: absolute;
@@ -225,6 +233,16 @@ ul {
         justify-content: flex-end;
         max-width: 48rem;
         position: relative;
+    }
+    &-hide {
+        margin-top: 1.5rem;
+        @include tablets {
+            min-width: 95%;
+            margin-top: 0;
+        }
+        @include phones {
+            margin-top: 1.5rem;
+        }
     }
 }
 .menu {
@@ -283,8 +301,13 @@ ul {
 }
 .burgers-menu{
     position: fixed;
-    top: 1.5rem;
     right: 2rem;
+    @include tablets {
+        top: 1.5rem;
+    }
+    @include phones {
+        top: 2.5rem;
+    }
     &-button {
         background-color: #fff;
         border-style: none;
@@ -596,10 +619,10 @@ ul {
         flex-direction: row;
         overflow: hidden;
         @include tablets {
-            height: 90%;
+            height: 100%;
         }
         @include phones {
-            height: 90%;
+            height: 100%;
         }
     }
     &__main {
@@ -638,6 +661,7 @@ ul {
                     margin-top: 2rem;
                 }
                 @include phones {
+                    margin-top: 8rem;
                     width: 90%;
                 }
                 &-src {
@@ -667,11 +691,16 @@ ul {
                     position: absolute;
                     top: 0;
                     left: 0;
+                    width: 3rem;
+                    height: 3rem;
                 }
                 @include phones {
+                    width: 2.5rem;
+                    height: 2.5rem;
                     position: absolute;
                     top: 0;
                     left: 0;
+                    padding-right: 1.2rem;
                 }
                 &:hover {
                     background-color: #e45028;
@@ -685,6 +714,11 @@ ul {
                     margin: 0 auto;
                     width: 3rem;
                     height: 3rem;
+                    @include phones {
+                        margin-left: 0.3rem;
+                        width: 2.5rem;
+                        height: 2.5rem;
+                    }
                 }
                 &-text {
                     transition: .7s;
@@ -728,8 +762,9 @@ ul {
                     position: absolute;
                     top: 0;
                     left: 90%;
-                    width: 2.5rem;
-                    height: 2.5rem;
+                    width: 2rem;
+                    height: 2rem;
+                    font-size: 0.8rem;
                 }
                 &-svg{
                     width: 100%;
@@ -754,10 +789,10 @@ ul {
                         top: 40%;
                     }
                     @include phones {
-                        font-size: 1rem;
+                        font-size: 0.8rem;
                         line-height: 1.4rem;
                         top: 44%;
-                        left: 18%;
+                        left: 6%;
                     }
                 }
             }
@@ -914,7 +949,7 @@ ul {
         margin-left: 15%;
         border-style: none;
         box-sizing: border-box;
-        height: 20%;
+        height: 2rem;
         max-height: 2.5rem;
         width: 50%;
         background-color: #2f3234;
