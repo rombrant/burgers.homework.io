@@ -1022,38 +1022,60 @@ ul li {
     .team-block__content-accordeon {
       height: 100%; }
       .team-block__content-accordeon__list {
-        height: 70%;
+        height: 90%;
         display: flex;
         flex-direction: column;
-        justify-content: space-around; }
+        justify-content: flex-start; }
         @media screen and (max-width: 768px) {
           .team-block__content-accordeon__list {
             align-items: center;
             justify-content: center; } }
         .team-block__content-accordeon__list-item {
-          display: flex;
+          overflow: hidden;
           flex-direction: column; }
           @media screen and (max-width: 768px) {
             .team-block__content-accordeon__list-item {
+              display: flex;
+              justify-content: center;
               align-items: center; } }
+          .team-block__content-accordeon__list-item__photo {
+            overflow: hidden;
+            transition: height .6s;
+            transform: translateY(10%);
+            height: 0;
+            float: left;
+            position: relative;
+            width: 30%; }
+            @media screen and (max-width: 768px) {
+              .team-block__content-accordeon__list-item__photo {
+                margin: 0 auto; } }
+            .team-block__content-accordeon__list-item__photo:before {
+              content: "";
+              display: block;
+              padding-top: 100%; }
+            .team-block__content-accordeon__list-item__photo-photofile {
+              width: 6rem;
+              height: 6rem;
+              position: absolute;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              right: 0;
+              background-position: 61% center;
+              background-repeat: no-repeat;
+              background-size: cover;
+              border-radius: 50%; }
+              @media screen and (max-width: 768px) {
+                .team-block__content-accordeon__list-item__photo-photofile {
+                  margin: 0 auto; } }
           .team-block__content-accordeon__list-item--active .team-block__content-accordeon__list-item-name {
             color: #f9b43b; }
             .team-block__content-accordeon__list-item--active .team-block__content-accordeon__list-item-name::before {
-              display: inline-block;
-              margin-right: 5%;
-              content: "";
-              width: 0;
-              height: 0;
-              border-left: 0.25rem solid transparent;
-              border-right: 0.25rem solid transparent;
-              border-bottom: none;
-              border-top: 0.5rem solid #f9b43b; }
-          .team-block__content-accordeon__list-item--active .team-block__content-accordeon__list-item__description {
-            height: 100%;
-            overflow: hidden; }
-            .team-block__content-accordeon__list-item--active .team-block__content-accordeon__list-item__description-text {
-              height: 100%; }
+              transition: .6s;
+              transform: rotate(180deg);
+              border-bottom-color: #f9b43b; }
           .team-block__content-accordeon__list-item-name {
+            width: 100%;
             text-align: left;
             border-style: none;
             background-color: transparent;
@@ -1072,6 +1094,7 @@ ul li {
               .team-block__content-accordeon__list-item-name {
                 font-size: 1.5rem; } }
             .team-block__content-accordeon__list-item-name::before {
+              transition: .6s;
               display: inline-block;
               margin-right: 5%;
               content: "";
@@ -1082,42 +1105,25 @@ ul li {
               border-bottom: 0.5rem solid #ffffff;
               border-top: none; }
           .team-block__content-accordeon__list-item__description {
-            margin-top: 2%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            float: left;
+            width: 70%;
+            transition: height .6s;
+            height: 0;
             overflow: hidden;
-            height: 0; }
+            margin-top: 2%; }
             @media screen and (max-width: 768px) {
               .team-block__content-accordeon__list-item__description {
                 flex-direction: column;
                 align-items: center; } }
-            .team-block__content-accordeon__list-item__description-photo {
-              position: relative;
-              width: 30%; }
-              .team-block__content-accordeon__list-item__description-photo:before {
-                content: "";
-                display: block;
-                padding-top: 100%; }
-              .team-block__content-accordeon__list-item__description-photo-photofile {
-                position: absolute;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                background-position: 61% center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                border-radius: 50%; }
             .team-block__content-accordeon__list-item__description-blockinfo {
+              float: left;
               text-align: center;
               align-items: flex-start;
-              display: flex;
               flex-direction: column;
-              width: 65%;
               padding-left: 5%; }
               @media screen and (max-width: 768px) {
                 .team-block__content-accordeon__list-item__description-blockinfo {
+                  display: flex;
                   align-items: center;
                   padding-left: 0;
                   padding-bottom: 1rem; } }
@@ -1133,6 +1139,7 @@ ul li {
               text-align: start; }
               @media screen and (max-width: 768px) {
                 .team-block__content-accordeon__list-item__description-position {
+                  width: 100%;
                   text-align: center; } }
             .team-block__content-accordeon__list-item__description-text {
               color: #ffffff;
@@ -1142,6 +1149,9 @@ ul li {
               letter-spacing: 0.0625rem;
               font-weight: 300;
               line-height: 1.5rem; }
+              @media screen and (max-width: 768px) {
+                .team-block__content-accordeon__list-item__description-text {
+                  margin-top: 5%; } }
 
 .menu-accordeon {
   margin: 0 auto;
@@ -1570,6 +1580,7 @@ ul li {
   height: 10%; }
   @media screen and (max-width: 480px) {
     .footer {
+      flex-wrap: nowrap;
       flex-direction: column;
       align-items: center; } }
 
