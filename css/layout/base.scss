@@ -563,7 +563,7 @@ ul {
     align-items: center;
     width: 95%;
     @include tablets {
-        height: 80%;
+        height: 90%;
         align-items: center;
     }
     @include phones {
@@ -635,7 +635,7 @@ ul {
                 @include tablets {
                     margin: auto;
                     width: 60%;
-                    margin-top: 4rem;
+                    margin-top: 2rem;
                 }
                 @include phones {
                     width: 90%;

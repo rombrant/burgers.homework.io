@@ -603,7 +603,7 @@ ul li {
   width: 95%; }
   @media screen and (max-width: 768px) {
     .slider {
-      height: 80%;
+      height: 90%;
       align-items: center; } }
   @media screen and (max-width: 480px) {
     .slider {
@@ -668,7 +668,7 @@ ul li {
           .slider__main__image-block-imgfile {
             margin: auto;
             width: 60%;
-            margin-top: 4rem; } }
+            margin-top: 2rem; } }
         @media screen and (max-width: 480px) {
           .slider__main__image-block-imgfile {
             width: 90%; } }
