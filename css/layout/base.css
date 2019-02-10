@@ -666,6 +666,7 @@ ul li {
     height: 90%;
     justify-content: center; }
   .slider__list {
+    right: 0;
     transition: .6s;
     position: relative;
     width: 100%;
