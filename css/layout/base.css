@@ -798,14 +798,14 @@ ul li {
           .slider__main__image-block-kkal {
             position: absolute;
             top: 0;
-            left: 90%;
+            left: 85%;
             width: 3rem;
             height: 3rem; } }
         @media screen and (max-width: 480px) {
           .slider__main__image-block-kkal {
             position: absolute;
             top: 0;
-            left: 90%;
+            left: 85%;
             width: 2rem;
             height: 2rem;
             font-size: 0.8rem; } }
@@ -858,7 +858,7 @@ ul li {
         margin-bottom: 3%; }
         @media screen and (max-width: 480px) {
           .slider__main__description-headline {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-left: 2%;
             margin-right: 3%; } }
       .slider__main__description-text {
