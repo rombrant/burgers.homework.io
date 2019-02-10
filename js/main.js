@@ -117,10 +117,12 @@ const menuItems = document.querySelectorAll('.team-block__content-accordeon__lis
         const itemSlide = document.querySelector('.slider__list');
         let curSwitch = 0;
         const minSwitch = 0;
-        const stepSwitch = itemSlide.firstElementChild.getBoundingClientRect().width;
-        const maxSwitch = (itemSlide.children.length -1) * stepSwitch;
+       
+        
 
         btnRight.addEventListener('click', e=> {
+            const stepSwitch = itemSlide.firstElementChild.getBoundingClientRect().width;
+            const maxSwitch = (itemSlide.children.length -1) * stepSwitch;
             if (curSwitch < maxSwitch) {
                 curSwitch += stepSwitch;
                 itemSlide.style.right = curSwitch+'px';
@@ -135,6 +137,8 @@ const menuItems = document.querySelectorAll('.team-block__content-accordeon__lis
             console.log();
         })
         btnLeft.addEventListener('click', e=>{
+            const stepSwitch = itemSlide.firstElementChild.getBoundingClientRect().width;
+            const maxSwitch = (itemSlide.children.length -1) * stepSwitch;
             if (curSwitch > minSwitch) {
                 curSwitch -= stepSwitch;
                 itemSlide.style.right = curSwitch+'px';
