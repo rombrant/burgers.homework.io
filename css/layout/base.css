@@ -635,7 +635,7 @@ ul li {
       height: 90%; } }
   .slider__scroll-btn-left {
     display: inline-block;
-    width: 6%;
+    width: 2.5rem;
     height: 6%;
     text-decoration: none;
     box-sizing: content-box;
@@ -647,7 +647,7 @@ ul li {
       height: 2.5rem; }
   .slider__scroll-btn-right {
     display: inline-block;
-    width: 6%;
+    width: 2.5rem;
     height: 6%;
     text-decoration: none;
     box-sizing: content-box;
@@ -714,7 +714,7 @@ ul li {
             margin-top: 2rem; } }
         @media screen and (max-width: 480px) {
           .slider__main__image-block-imgfile {
-            margin-top: 8rem;
+            margin-top: 7rem;
             width: 90%; } }
         .slider__main__image-block-imgfile-src {
           display: block;
