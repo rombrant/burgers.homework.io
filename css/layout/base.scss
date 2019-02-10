@@ -580,11 +580,14 @@ ul {
     }
 }
 .slider {
+    overflow: hidden;
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 95%;
+    height: 100%;
     @include tablets {
         height: 90%;
         align-items: center;
@@ -592,7 +595,7 @@ ul {
     @include phones {
         height: 90%;
     }
-    &__scroll-btn {
+    &__scroll-btn-left {
         display: inline-block;
         width: 6%;
         height: 6%;
@@ -600,24 +603,41 @@ ul {
         box-sizing: content-box;
         background-color: transparent;
         border: none;
-        &:last-child {
-            & .slider__scroll-btn-svg {
-                transform: rotate(-90deg);
-                width: 2.5rem;
-                height: 2.5rem;
-            }
-        }
         &-svg {
             transform: rotate(90deg);
             width: 2.5rem;
             height: 2.5rem;
         }
     }
+    &__scroll-btn-right {
+        display: inline-block;
+        width: 6%;
+        height: 6%;
+        text-decoration: none;
+        box-sizing: content-box;
+        background-color: transparent;
+        border: none;
+        &-svg {
+            transform: rotate(-90deg);
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+    }
+    &__wrapper {
+        position: relative;
+        overflow: hidden;
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        height: 90%;
+        justify-content: center;
+    }
     &__list {
+        transition:  .6s;
+        position: relative;
         width: 100%;
         display: flex;
         flex-direction: row;
-        overflow: hidden;
         @include tablets {
             height: 100%;
         }
@@ -1025,7 +1045,7 @@ ul {
                     &__photo {
                         overflow: hidden;
                         transition: height .6s;
-                        transform: translateY(10%);
+                        transform: translateY(5%);
                         height: 0;
                         float: left;
                         position: relative;

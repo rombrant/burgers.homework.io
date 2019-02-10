@@ -106,4 +106,51 @@ const menuItems = document.querySelectorAll('.team-block__content-accordeon__lis
                 elem.querySelector('.menu-accordeon__list-item__content').style.width=0;
             })
         }
+
+
+
+
+
+
+        const btnLeft = document.querySelector('.slider__scroll-btn-left');
+        const btnRight = document.querySelector('.slider__scroll-btn-right');
+        const itemSlide = document.querySelector('.slider__list');
+        let curSwitch = 0;
+        const minSwitch = 0;
+        const stepSwitch = itemSlide.firstElementChild.getBoundingClientRect().width;
+        const maxSwitch = (itemSlide.children.length -1) * stepSwitch;
+
+        btnRight.addEventListener('click', e=> {
+            if (curSwitch < maxSwitch) {
+                curSwitch += stepSwitch;
+                itemSlide.style.right = curSwitch+'px';
+            }
+            else {
+                curSwitch = minSwitch;
+                itemSlide.style.right= 0;
+            }
+            console.log(curSwitch);
+            console.log(maxSwitch);
+            console.log(stepSwitch);
+            console.log();
+        })
+        btnLeft.addEventListener('click', e=>{
+            if (curSwitch > minSwitch) {
+                curSwitch -= stepSwitch;
+                itemSlide.style.right = curSwitch+'px';
+            }
+            else {
+                curSwitch = maxSwitch;
+                itemSlide.style.right = maxSwitch+'px';
+            }
+            console.log(curSwitch);
+            console.log(maxSwitch);
+            console.log(stepSwitch);
+        })
+
+
+
+
+
+
 openMenu();

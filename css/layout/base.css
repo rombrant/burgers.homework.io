@@ -618,11 +618,14 @@ ul li {
         width: 95%; } }
 
 .slider {
+  overflow: hidden;
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 95%; }
+  width: 95%;
+  height: 100%; }
   @media screen and (max-width: 768px) {
     .slider {
       height: 90%;
@@ -630,7 +633,7 @@ ul li {
   @media screen and (max-width: 480px) {
     .slider {
       height: 90%; } }
-  .slider__scroll-btn {
+  .slider__scroll-btn-left {
     display: inline-block;
     width: 6%;
     height: 6%;
@@ -638,19 +641,36 @@ ul li {
     box-sizing: content-box;
     background-color: transparent;
     border: none; }
-    .slider__scroll-btn:last-child .slider__scroll-btn-svg {
-      transform: rotate(-90deg);
-      width: 2.5rem;
-      height: 2.5rem; }
-    .slider__scroll-btn-svg {
+    .slider__scroll-btn-left-svg {
       transform: rotate(90deg);
       width: 2.5rem;
       height: 2.5rem; }
-  .slider__list {
-    width: 100%;
+  .slider__scroll-btn-right {
+    display: inline-block;
+    width: 6%;
+    height: 6%;
+    text-decoration: none;
+    box-sizing: content-box;
+    background-color: transparent;
+    border: none; }
+    .slider__scroll-btn-right-svg {
+      transform: rotate(-90deg);
+      width: 2.5rem;
+      height: 2.5rem; }
+  .slider__wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 90%;
     display: flex;
     flex-direction: row;
-    overflow: hidden; }
+    height: 90%;
+    justify-content: center; }
+  .slider__list {
+    transition: .6s;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row; }
     @media screen and (max-width: 768px) {
       .slider__list {
         height: 100%; } }
@@ -1075,7 +1095,7 @@ ul li {
           .team-block__content-accordeon__list-item__photo {
             overflow: hidden;
             transition: height .6s;
-            transform: translateY(10%);
+            transform: translateY(5%);
             height: 0;
             float: left;
             position: relative;
