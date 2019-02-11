@@ -178,7 +178,8 @@
         for (const curBtn of modalButtons){
             curBtn.addEventListener('click', e=>{
                 const paragraph = e.target.previousElementSibling.innerHTML;//извлечение текста отзыва
-                modal.setContent(paragraph);
+                const headline = e.target.parentNode.firstElementChild.innerHTML;
+                modal.setContent(paragraph, headline);
                 modal.open();
             })
         }
@@ -187,7 +188,8 @@
             const container = document.createElement('div');//блок обертка
             container.className = 'popup';//класс обертки
             container.innerHTML = template;//вкладка тэмплейта в блок обертки
-            const contentBlock = container.querySelector('.popup__content');//блок отзыва
+            const contentBlock = container.querySelector('.popup__content-text');//блок отзыва-текст
+            const headlineBlock = container.querySelector('.popup__content-headline');//блок отзыва заголовок
             const closeBtn = container.querySelector('.popup__close');//кнопка закртия
                 closeBtn.addEventListener('click', e=>{//обработчик закрытия
                     document.querySelector('.wrapper').removeChild(container);
@@ -201,10 +203,11 @@
             //возвращение методов
             return {
                 open() {
-                    document.querySelector('.wrapper').appendChild = container;//метод обЪекта для открытия
+                    document.querySelector('.wrapper').appendChild(container);//метод обЪекта для открытия
                 },
-                setContent(content) {
-                    contentBlock.innerHTML = content;//метод присвыивания текста отзыва
+                setContent(text, user) {
+                    contentBlock.innerHTML = text;//метод присвыивания текста отзыва
+                    headlineBlock.innerHTML = user;
                 }
             };
         }
