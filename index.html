@@ -508,9 +508,9 @@
                 <form class="main-form">
                     <div class="main-form__first">
                         <Label class="main-form__first-user">
-                            <div class="main-form__first-user-name">Имя<input type="text" class="main-form__first-user-name-input"></div>
+                            <div class="main-form__first-user-name">Имя<input type="text" name="name" class="main-form__first-user-name-input" required><div class="error"></div></div>
                             
-                            <div class="main-form__first-user-phone">Телефон<input type="text" class="main-form__first-user-phone-input"></div>
+                            <div class="main-form__first-user-phone">Телефон<input type="text" name="phone" class="main-form__first-user-phone-input" required><div class="error"></div></div>
                         </Label>
                         <label class="main-form__first-street">
                             <div class="main-form__first-street-block">Улица<input type="text" class="main-form__first-street-block-input"></div>
@@ -524,7 +524,7 @@
                     </div>
                     <div class="main-form__second">
                         <label class="main-form__second__textarea">
-                            <div class="main-form__second__textarea-block">Комментарий<textarea name="" id=""class="main-form__second__textarea-block-textarea"></textarea></div>
+                            <div class="main-form__second__textarea-block">Комментарий<textarea name="comment" id=""class="main-form__second__textarea-block-textarea" required></textarea><div class="error"></div></div>
                         </label>
                         <div class="main-form__radio-block">
                             <label class="main-form__radio-box" tabindex="0">
@@ -550,7 +550,7 @@
                         </div>
                         <div class="main-form__second__buttons">
                             <button type="submit" class="main-form__second__buttons-order" type="submit">заказать</button>
-                            <button type="reset" class="main-form__second__buttons-reset">отчистить</button>
+                            <button type="reset" class="main-form__second__buttons-reset" id="reset">отчистить</button>
                         </div>
                     </div>
                 </form>

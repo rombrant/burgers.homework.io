@@ -212,4 +212,52 @@
             };
         }
 
+        //ВАЛИДАЦИЯ ДАННЫХ  ФОРМЫ, ОТПРАЫВКА НА СЕРВЕР, ЗАПРОС ОТВЕТА СЕРВЕРА, МОАДЛЬНОЕ ОКНО С ОТВЕТОМ
 
+        const myForm = document.querySelector('.main-form');
+        const orderBtn = myForm.querySelector('.main-form__second__buttons-order');
+        const clearBtn = myForm.querySelector('#reset');
+        orderBtn.addEventListener('click', e=>{
+            event.preventDefault();
+            if (validateForm(myForm)) {
+                var formData = new FormData();
+                    formData = {
+                        name: myForm.elements.name.value,
+                        phone: myForm.elements.phone.value,
+                        comment: myForm.elements.comment.value,
+                        to: 'test@mail.com'
+                    };
+                console.log(stringify(formData));
+                const xhr = new XMLHttpRequest();
+                xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+                xhr.send(JSON.stringify(formData));
+            }
+        })
+
+        function validateForm(myForm) {
+            let valid = true;
+            
+            if (!validateField(myForm.elements.name)) {
+                valid = false;
+            }
+
+            if (!validateField(myForm.elements.phone)) {
+                valid = false;
+            }
+
+            if (!validateField(myForm.elements.comment)) {
+                valid = false;
+            }
+            return valid;
+        }
+
+        function validateField(field) {
+            if (!field.checkValidity()){
+                field.nextElementSibling.textContent = field.validationMessage;
+                return false;
+            }
+            else {
+                field.nextElementSibling.textContent = '';
+                return true;
+            }
+        }
