@@ -227,7 +227,7 @@
                         comment: myForm.elements.comment.value,
                         to: 'test@mail.com'
                     };
-                console.log(stringify(formData));
+                console.log(formData);
                 const xhr = new XMLHttpRequest();
                 xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
                 xhr.send(JSON.stringify(formData));
