@@ -220,17 +220,19 @@
         orderBtn.addEventListener('click', e=>{
             event.preventDefault();
             if (validateForm(myForm)) {
+                const name = myForm.elements.name.value;
+                const phone = myForm.elements.phone.value;
+                const comment = myForm.elements.comment.value;
+                const to = 'test@mail.com';
                 var formData = new FormData();
-                    formData = {
-                        name: myForm.elements.name.value,
-                        phone: myForm.elements.phone.value,
-                        comment: myForm.elements.comment.value,
-                        to: 'test@mail.com'
-                    };
-                console.log(formData);
-                const xhr = new XMLHttpRequest();
-                xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
-                xhr.send(JSON.stringify(formData));
+                    formData.append('name',name);
+                    formData.append('phone', phone);
+                    formData.append('comment', comment);
+                    formData.append('to', to);
+                    console.log(formData);
+                    const xhr = new XMLHttpRequest();
+                    xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+                    xhr.send(formData);
             }
         })
 
