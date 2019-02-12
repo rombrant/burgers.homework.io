@@ -181,6 +181,7 @@
                 const headline = e.target.parentNode.firstElementChild.innerHTML;
                 modal.setContent(paragraph, headline);
                 modal.open();
+                modal.close();
             })
         }
         //создание модального окна
@@ -208,11 +209,14 @@
                 setContent(text, user) {
                     contentBlock.innerHTML = text;//метод присвыивания текста отзыва
                     headlineBlock.innerHTML = user;
+                },
+                close() {
+                    document.querySelector('.wrapper').removeChild(container);
                 }
             };
         }
 
-        //ВАЛИДАЦИЯ ДАННЫХ  ФОРМЫ, ОТПРАЫВКА НА СЕРВЕР, ЗАПРОС ОТВЕТА СЕРВЕРА, МОАДЛЬНОЕ ОКНО С ОТВЕТОМ
+        //ВАЛИДАЦИЯ ДАННЫХ  ФОРМЫ, ОТПРАВКА НА СЕРВЕР, ЗАПРОС ОТВЕТА СЕРВЕРА, МОАДЛЬНОЕ ОКНО С ОТВЕТОМ
 
         const myForm = document.querySelector('.main-form');
         const orderBtn = myForm.querySelector('.main-form__second__buttons-order');
@@ -231,8 +235,27 @@
                     formData.append('to', to);
                     console.log(formData);
                     const xhr = new XMLHttpRequest();
+                    xhr.responseType = 'json';
                     xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
                     xhr.send(formData);
+                    xhr.addEventListener('load', e =>{
+                        if (xhr.response.status){
+                            const response = 'сообщение отправлено';
+                                modal.setContent('',response);
+                                modal.open();
+                                setTimeout(e=>{
+                                    clearBtn.click();
+                                    modal.close();
+                                },2000);
+                                
+                        } else {
+                            const rejected = 'сообщение отклонено';
+                            modal.setContent('',rejected);
+                            modal.open();
+                            clearBtn.click();
+                        }
+                        
+                    })
             }
         })
 
