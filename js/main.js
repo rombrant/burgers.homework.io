@@ -181,7 +181,6 @@
                 const headline = e.target.parentNode.firstElementChild.innerHTML;
                 modal.setContent(paragraph, headline);
                 modal.open();
-                modal.close();
             })
         }
         //создание модального окна
