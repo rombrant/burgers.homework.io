@@ -266,6 +266,10 @@ ul li {
     height: 2rem;
     border-radius: 0.4rem;
     text-align: center; }
+    .menu__order-buttons {
+      -webkit-text-decoration-line: none;
+      text-decoration-line: none;
+      color: #fff; }
 
 .burgers-menu {
   position: fixed;
@@ -923,7 +927,7 @@ ul li {
             width: 90%; } }
         .slider__main__image-block-imgfile-src {
           display: block;
-          width: 100%; }
+          width: 93%; }
           @media screen and (max-width: 768px) {
             .slider__main__image-block-imgfile-src {
               display: block;
@@ -1041,7 +1045,7 @@ ul li {
         .slider__main__image-block-kkal-counter {
           position: absolute;
           text-align: center;
-          top: 60%;
+          top: 40%;
           bottom: 0;
           left: 25%;
           right: 0;
@@ -1052,10 +1056,11 @@ ul li {
           font-family: gagalinregular;
           font-size: 1.2rem;
           font-weight: 400;
-          line-height: 1.7rem; }
+          line-height: 2rem; }
           @media screen and (max-width: 768px) {
             .slider__main__image-block-kkal-counter {
-              top: 40%; } }
+              top: 40%;
+              left: 21%; } }
           @media screen and (max-width: 480px) {
             .slider__main__image-block-kkal-counter {
               font-size: 0.8rem;
@@ -2229,3 +2234,11 @@ ul li {
 .error {
   color: red;
   font-size: 0.7rem; }
+
+.link-sidebar {
+  position: relative;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  right: 0.1rem;
+  bottom: 0.1rem; }
