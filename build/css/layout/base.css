@@ -2242,3 +2242,8 @@ ul li {
   height: 1rem;
   right: 0.1rem;
   bottom: 0.1rem; }
+
+.active-link {
+  color: #f08c33; }
+  .active-link .hide__list__item::before {
+    background-color: #f08c33; }
