@@ -1,4 +1,23 @@
-        //МОБИЛЬНОЕ МЕНЮ, МЕНЮ ГАМБУРГЕР, ГЛАВНОЕ МЕНЮ
+       window.addEventListener('wheeldown', e => {
+            const wrapper = document.querySelector('.wrapper');
+            const sectionHeight = wrapper.firstElementChild.getBoundingClientRect().height;
+            let curHeight = 0;
+            let maxHeight = (wrapper.length - 1) * sectionHeight;
+            wrapper.style.top = sectionHeight+'px';
+       });
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       //МОБИЛЬНОЕ МЕНЮ, МЕНЮ ГАМБУРГЕР, ГЛАВНОЕ МЕНЮ
 
         const methodClose = openMenu();
         function openMenu(){

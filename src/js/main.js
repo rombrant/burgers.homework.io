@@ -1,6 +1,42 @@
-        //МОБИЛЬНОЕ МЕНЮ, МЕНЮ ГАМБУРГЕР, ГЛАВНОЕ МЕНЮ
 
+     console.log();
+     const section = $('section');
+      const sectionHeight = $('section').outerHeight(true);
+      let curTop = 0;
+      const maxTop = (section.length- 1)* sectionHeight;
+      console.log(maxTop);
+      var inScroll = false;
+      $(window).on('mousewheel', e => {
+          if (!inScroll) {
+              inScroll = true;
+            if (event.deltaY < 0 && curTop < 0 ) {
+                curTop= curTop + sectionHeight;
+                $('.wrapper').css('top', curTop+'px');
+            } else if (event.deltaY > 0 && curTop > -maxTop) {
+              curTop = curTop - sectionHeight;
+              $('.wrapper').css('top', curTop+'px');
+            }
+            setTimeout(function(){
+                inScroll= false;
+              },900);
+          }
+          });
+          
+        
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       //МОБИЛЬНОЕ МЕНЮ, МЕНЮ ГАМБУРГЕР, ГЛАВНОЕ МЕНЮ
 
+        const methodClose = openMenu();
         function openMenu(){
             const openBtn = document.querySelector('.burgers-menu-button');
             const closeBtn = document.querySelector('.burgers-menu-closed');
@@ -9,6 +45,7 @@
 
 
                 openBtn.addEventListener('click', function () {
+                    removeActiveLink(menuLinks);
                     menu.classList.remove('hide-menu');
                     menu.classList.add('visible');
                     menu.style.opacity= 0;
@@ -35,6 +72,33 @@
                         menu.classList.add('hide-menu');
                     }, 1000);
                 })
+                
+                return  {
+                    close() {
+                        closeBtn.click();
+                    }
+                }
+        }
+        
+        const menuLinks = document.querySelectorAll('.hide__list__item-link');
+        for (const link of menuLinks) {
+            link.addEventListener('click', e=> {
+                const curLink = e.currentTarget;
+                const isClosedLink = curLink.classList.contains("active-link");
+                if (isClosedLink) {
+                    removeActiveLink(menuLinks);
+                } else {
+                    removeActiveLink(menuLinks);
+                    curLink.classList.add('active-link');
+                    setTimeout(methodClose.close(), 1000);
+                }
+            })
+        }
+
+        function removeActiveLink(menuLinks) {
+            Array.from(menuLinks).forEach(link=>{
+                link.classList.remove('active-link');
+            })
         }
         openMenu();
 

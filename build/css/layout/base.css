@@ -55,6 +55,7 @@ ul li {
   list-style-type: none; }
 
 .wrapper {
+  position: relative;
   overflow: hidden;
   min-height: 100%; }
   @media screen and (max-width: 768px) {
