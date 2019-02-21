@@ -1,26 +1,58 @@
+var index = 0;
+     
+    $(".sidebar__list").on("click","a", function (event) {
+		//отменяем стандартную обработку нажатия по ссылке
+		event.preventDefault();
 
-     console.log();
-     const section = $('section');
+		//забираем идентификатор бока с атрибута href
+        var id  = $(this).attr('href'),
+        
+        
+		//узнаем высоту от начала страницы до блока на который ссылается якорь
+            top = $(id).offset().top,
+            
+            index= $(id).index();
+
+            console.log(index);
+
+		
+		//анимируем переход на расстояние - top за 1500 мс
+        $('body,html').animate({scrollTop: top}, 1000);
+        return top, index;
+    });
+
+
+    $('.sidebar__list-item').on('click', function (params) {
+        $('.sidebar__list-item--active').removeClass('sidebar__list-item--active');
+		$(this).addClass('sidebar__list-item--active');
+    });
+
+    
       const sectionHeight = $('section').outerHeight(true);
       let curTop = 0;
-      const maxTop = (section.length- 1)* sectionHeight;
-      console.log(maxTop);
+      var top = $('#y8').offset().top;
+      console.log(top);
       var inScroll = false;
-      $(window).on('mousewheel', e => {
+      $(window).on('wheel', e => {
           if (!inScroll) {
               inScroll = true;
-            if (event.deltaY < 0 && curTop < 0 ) {
+            if (event.deltaY < 0) {
+                index = index + 1;
+                console.log(index);
                 curTop= curTop + sectionHeight;
                 $('.wrapper').css('top', curTop+'px');
-            } else if (event.deltaY > 0 && curTop > -maxTop) {
-              curTop = curTop - sectionHeight;
-              $('.wrapper').css('top', curTop+'px');
+            } else if (event.deltaY > 0) {
+                index = index - 1;
+                console.log(index);
+                curTop = curTop - sectionHeight;
+                $('.wrapper').css('top', curTop+'px');
             }
             setTimeout(function(){
                 inScroll= false;
               },900);
           }
           });
+ 
           
         
        
@@ -349,3 +381,70 @@
                 return true;
             }
         }
+
+
+
+        //yandex maps location
+
+
+
+        ymaps.ready(init);
+
+var placemarks = [
+    {
+        latitude: 59.97,
+        longitude: 30.31,
+
+    },
+    {
+        latitude: 59.94,
+        longitude: 30.25,
+
+    },
+    {
+        latitude: 59.93,
+        longitude: 30.34,
+       
+    },
+    {
+        latitude: 59.87,
+        longitude: 30.46,
+    }
+],
+    geoObjects= [];
+
+function init() {
+    var map = new ymaps.Map('map', {
+        center: [59.94, 30.32],
+        zoom: 10,
+        controls: ['zoomControl'],
+        behaviors: ['drag']
+    });
+
+    for (var i = 0; i < placemarks.length; i++) {
+            geoObjects[i] = new ymaps.Placemark([placemarks[i].latitude, placemarks[i].longitude], {
+                hintContent: '<p class="hint">this is the hint</p>',
+                baloonContent: '<p class="baloon">this is baloon</p>'
+            },
+                
+            {
+                iconLayout: 'default#image',
+                iconImageHref: 'img/map-marker.svg',
+                iconImageOffset: [-23, -57],
+                iconImageSize: [46, 57]
+            });
+            map.geoObjects.add(geoObjects[i]);
+    };
+
+
+}
+
+
+//видеоплеер html5 video api 
+
+
+
+
+
+
+

@@ -130,7 +130,7 @@ ul {
 }
 
 .wrapper {
-    transition: top .6s;
+    transition: top .8s;
     top: 0;
     position: relative;
     overflow: hidden;
@@ -411,13 +411,8 @@ ul {
             &:hover {
                 border-color: #ffffff;
             }
-        }
-        &-item--active {
-            display: inline-block;
-            position: relative;
-            border: 1px solid #ffffff;
-            &::before {
-                @include point-bar;
+            &--active {
+                border-color: #ffffff;
             }
         }
     }
@@ -1303,7 +1298,7 @@ ul {
         font-size: 3.5rem;
         margin: 0 auto;
         @include phones {
-            font-size: 2rem;
+            font-size: 2.5rem;
         }
     }
     &__player {
@@ -1608,7 +1603,7 @@ ul {
 .container--map {
     overflow: hidden;
     position: relative;
-    max-width: 1100px;
+    max-width: 100%;
     @include tablets {
         width: 100%;
         height: 90%;
@@ -1619,10 +1614,7 @@ ul {
 }
 .location {
     height: 100%;
-    background-image: url('../../img/map.png');
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    min-width: 100%;
     &-img {
         display: block;
         width: 100%;
@@ -1810,5 +1802,30 @@ ul {
         &::before{
             background-color: #f08c33;
         }
+    }
+}
+.baloon {
+    width: 10rem;
+    height: 4rem;
+    color: #fff;
+    background-color: #f08c33;
+    font-style: ubunturegular;
+    font-size: 0.8rem;
+    border-radius: 50%;
+}
+
+.video_player_block {
+    width: 60%;
+    height: 50%;
+    margin: 0 auto;
+    @include tablets {
+        width: 80%;
+    }
+    @include phones {
+        width: 95%;
+    }
+    &-box {
+        width: 100%;
+        height: 100%;
     }
 }

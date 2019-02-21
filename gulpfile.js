@@ -2,6 +2,7 @@
 
 const gulp = require('gulp');
 const sass = require('gulp-sass');
+sass.compiler = require('node-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const image = require('gulp-imagemin');
 const del = require('del');
@@ -22,30 +23,27 @@ gulp.task('fonts', e=>{
     .pipe(reload({stream: true}));
 });
 
+gulp.task('svg', e=>{
+    return gulp.src(['./src/img/sprite.svg', './src/img/map-marker.svg'])
+    .pipe(gulp.dest('./build/img'))
+    .pipe(reload({stream: true}));
+});
+
 gulp.task('js', e=>{
     return gulp.src('./src/js/*.js')
     .pipe(gulp.dest('./build/js'))
     .pipe(reload({stream: true}));
 });
-gulp.task('maincss', e=>{
-    return gulp.src('./src/css/main.css')
-    .pipe(gulp.dest('./build/css'))
-    .pipe(reload({stream: true}));
-});
 
-gulp.task('sass', e=>{
-    return gulp.src('./src/css/layout/*.scss')
-    .pipe(sass())
-    .pipe(autoprefixer({
-        browsers: ['last 2 versions'],
-        cascade: false
-    }))
-    .pipe(gulp.dest('./build/css/layout'))
-    .pipe(reload({stream: true}));
-});
+gulp.task('sass', function () {
+    return gulp.src('./src/css/main.scss')
+      .pipe(sass().on('error', sass.logError))
+      .pipe(gulp.dest('./build/css'));
+  });
+
 
 gulp.task('image', e=>{
-    return gulp.src('./src/img/*')
+    return gulp.src(['./src/img/*.png', './src/img/*.jpg'])
     .pipe(image())
     .pipe(gulp.dest('build/img'))
     .pipe(reload({stream: true}));
@@ -67,7 +65,7 @@ gulp.task('watch', e=>{
     gulp.watch('./src/*.html', e =>{
         gulp.start('html');
     });
-    gulp.watch('./src/css/layout/*.scss', e =>{
+    gulp.watch('./src/css/*.scss', e =>{
         gulp.start('sass');
     });
     gulp.watch('./src/img/**', e =>{
@@ -75,9 +73,6 @@ gulp.task('watch', e=>{
     });
     gulp.watch('./src/js/**', e =>{
         gulp.start('js');
-    });
-    gulp.watch('./src/css/main.css', e =>{
-        gulp.start('maincss');
     });
     gulp.watch('./src/css/layout/fonts/**', e =>{
         gulp.start('fonts');
@@ -87,11 +82,11 @@ gulp.task('default', e => {
     runSequence(
         'clean',
         'fonts',
+        'svg',
         'html',
         'image',
         'sass',
         'js',
-        'maincss',
         'watch',
         'server'
     )

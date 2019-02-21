@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <section class="burgers-intro" id="section-burgers-intro">
+        <section class="burgers-intro" id="y0">
             <div class="burgers-intro__main">
                 <header class="header">
                     <svg class="logo">
@@ -43,7 +43,7 @@
                 </div>
             </div>
         </section>
-        <section class="webest" id="section-webest">
+        <section class="webest" id="y1">
             <div class="webest__main">
                 <div class="container">
                     <h2 class="headline-webest">мы лучшие</h2>
@@ -67,7 +67,7 @@
                 </div>
             </div>
         </section>
-        <section class="burgers-slider" id="section-burgers-slider">
+        <section class="burgers-slider" id="y2">
             <div class="burgers-slider__main">
                 <div class="slider">
                     <button type="button" class="slider__scroll-btn-left"><svg class="slider__scroll-btn-left-svg"><use xlink:href="./img/sprite.svg#scroll-btn"></use></svg></button>
@@ -281,7 +281,7 @@
                 </div>
             </div>
         </section>
-        <section class="feedback" id="section-feedback">
+        <section class="feedback" id="y3">
             <ul class="main-feedback">
                 <li class="feedback-reviews">
                     <div class="feedback-container">
@@ -349,7 +349,7 @@
                 </li>
             </ul>
         </section>
-        <section class="team" id="section-team">
+        <section class="team" id="y4">
             <div class="team-block">
                 <div class="team-block__content">
                     <h2 class="team-block__content-headline">Команда</h2>
@@ -416,7 +416,7 @@
                 </div>
             </div>
         </section>
-        <section class="menu-accordeon" id="section-menu-accordeon">
+        <section class="menu-accordeon" id="y5">
             <h2 class="menu-accordeon-headline">МЕНЮ</h2>
                 <ul class="menu-accordeon__list">
                     <li class="menu-accordeon__list-item">
@@ -487,22 +487,17 @@
                     </li>
                 </ul>
         </section>
-        <section class="work" id="section-work">
+        <section class="work" id="y6">
             <div class="container">
                 <h2 class="work-headline">Как мы работаем</h2>
-                <div class="work__player">
-                    <img class="work__player-bg" src="./img/player-layer.png" alt="бэкграунд плейера">
-                    <div class="work__player-playbtn"></div>
-                    <div class="work__player__controls">
-                        <div class="work__player__controls-playbtn"></div>
-                        <div class="work__player__controls-time-scale"></div>
-                        <div class="work__player__controls-volume"></div>
-                        <div class="work__player__controls-volume-scale"></div>
-                    </div>
-                </div>
+                <div class="video_player_block" >
+                    <video class="video_player_block-box" controls="controls"  id="my_video">
+                      <source src="./video/RobotsypPynkyyBrein.mp4">
+                    </video>
+                  </div>
             </div>
         </section>
-        <section class="order" id="section-order">
+        <section class="order" id="y7">
             <div class="container form">
                 <h2 class="order-headline">Закажите доставку</h2>
                 <form class="main-form">
@@ -556,9 +551,9 @@
                 </form>
             </div>
         </section>
-        <section class="map" id="section-map">
+        <section class="map" id="y8">
             <div class=" container container--map">
-                <div class="location">
+                <div class="location" id="map">
                    
                 </div>
             </div>
@@ -624,18 +619,19 @@
         </div>
         <div class="sidebar">
             <ul class="sidebar__list">
-                <li class="sidebar__list-item"><a class="menu__list__item-link link-sidebar" href="./index.html#section-burgers-intro"></a></li>
-                <li class="sidebar__list-item"><a class="menu__list__item-link link-sidebar" href="./index.html#section-webest"></a></li>
-                <li class="sidebar__list-item"><a class="menu__list__item-link link-sidebar" href="./index.html#section-burgers-slider"></a></li>
-                <li class="sidebar__list-item"><a class="menu__list__item-link link-sidebar" href="./index.html#section-feedback"></a></li>
-                <li class="sidebar__list-item"><a class="menu__list__item-link link-sidebar" href="./index.html#section-team"></a></li>
-                <li class="sidebar__list-item"><a class="menu__list__item-link link-sidebar" href="./index.html#section-menu-accordeon"></a></li>
-                <li class="sidebar__list-item"><a class="menu__list__item-link link-sidebar" href="./index.html#section-work"></a></li>
-                <li class="sidebar__list-item"><a class="menu__list__item-link link-sidebar" href="./index.html#section-order"></a></li>
-                <li class="sidebar__list-item"><a class="menu__list__item-link link-sidebar" href="./index.html#section-map"></a></li>
+                <li class="sidebar__list-item"><a class="menu__list__item-link link-sidebar" href="#y0"></a></li>
+                <li class="sidebar__list-item"><a class="menu__list__item-link link-sidebar" href="#y1"></a></li>
+                <li class="sidebar__list-item"><a class="menu__list__item-link link-sidebar" href="#y2"></a></li>
+                <li class="sidebar__list-item"><a class="menu__list__item-link link-sidebar" href="#y3"></a></li>
+                <li class="sidebar__list-item"><a class="menu__list__item-link link-sidebar" href="#y4"></a></li>
+                <li class="sidebar__list-item"><a class="menu__list__item-link link-sidebar" href="#y5"></a></li>
+                <li class="sidebar__list-item"><a class="menu__list__item-link link-sidebar" href="#y6"></a></li>
+                <li class="sidebar__list-item"><a class="menu__list__item-link link-sidebar" href="#y7"></a></li>
+                <li class="sidebar__list-item"><a class="menu__list__item-link link-sidebar" href="#y8"></a></li>
             </ul>
         </div>
     </div>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=<1c84d5c8-5eb2-4bb8-9f85-6230bacda4ad>&lang=ru_RU" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="template" id="modal-template">
         <div class="overlay">
@@ -647,6 +643,6 @@
             </div>
         </div>
     </script>
-    <script src="js/main.js"></script>
+    <script src="js/main.js" type="text/javascript"></script>
 </body>
 </html>
