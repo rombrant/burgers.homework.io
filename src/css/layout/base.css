@@ -54,7 +54,7 @@ ul li {
   background-position: center center;
   background-size: cover;
   box-sizing: content-box;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.31), rgba(0, 0, 0, 0.31)), url("../../img/texture.png"), url("../../img/video-bg.png"); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.31), rgba(0, 0, 0, 0.31)), url("../img/texture.png"), url("../img/video-bg.png"); }
   @media screen and (max-width: 768px) {
     .burgers-intro {
       max-width: 768px; } }
@@ -395,13 +395,13 @@ ul li {
   background-position: center center;
   background-size: cover;
   box-sizing: content-box;
-  background-image: url("../../img/bg.png"); }
+  background-image: url("../img/bg.png"); }
   @media screen and (max-width: 768px) {
     .webest {
       max-width: 768px; } }
   @media screen and (max-width: 768px) {
     .webest {
-      background-image: url("../../img/bg-webest768.png"); } }
+      background-image: url("../img/bg-webest768.png"); } }
   .webest__main {
     margin: 0 auto;
     width: 100%;
@@ -595,7 +595,7 @@ ul li {
   background-position: center center;
   background-size: cover;
   box-sizing: content-box;
-  background-image: url("../../img/burgers-slider-bg.png"); }
+  background-image: url("../img/burgers-slider-bg.png"); }
   @media screen and (max-width: 768px) {
     .burgers-slider {
       max-width: 768px; } }
@@ -930,28 +930,28 @@ ul li {
     opacity: 1; }
 
 .feedback-reviews:nth-child(1) {
-  background-image: url("../../img/1-avatar.png"); }
+  background-image: url("../img/1-avatar.png"); }
 
 .feedback-reviews:nth-child(2) {
-  background-image: url("../../img/2-avatar.png"); }
+  background-image: url("../img/2-avatar.png"); }
 
 .feedback-reviews:nth-child(3) {
-  background-image: url("../../img/3-avatar.png"); }
+  background-image: url("../img/3-avatar.png"); }
 
 .feedback-reviews:nth-child(4) {
-  background-image: url("../../img/4-avatar.png"); }
+  background-image: url("../img/4-avatar.png"); }
 
 .feedback-reviews:nth-child(5) {
-  background-image: url("../../img/5-avatar.png"); }
+  background-image: url("../img/5-avatar.png"); }
 
 .feedback-reviews:nth-child(6) {
-  background-image: url("../../img/6-avatar.png"); }
+  background-image: url("../img/6-avatar.png"); }
 
 .feedback-reviews:nth-child(7) {
-  background-image: url("../../img/7-avatar.png"); }
+  background-image: url("../img/7-avatar.png"); }
 
 .feedback-reviews:nth-child(8) {
-  background-image: url("../../img/8-avatar.png"); }
+  background-image: url("../img/8-avatar.png"); }
 
 .feedback-container {
   display: flex;
@@ -1031,7 +1031,7 @@ ul li {
   background-position: center center;
   background-size: cover;
   box-sizing: content-box;
-  background-image: url("../../img/team-layer.png");
+  background-image: url("../img/team-layer.png");
   position: relative; }
   @media screen and (max-width: 768px) {
     .team {
@@ -1213,7 +1213,7 @@ ul li {
   background-size: cover;
   box-sizing: content-box;
   position: relative;
-  background-image: url("../../img/menu-background.png"); }
+  background-image: url("../img/menu-background.png"); }
   @media screen and (max-width: 768px) {
     .menu-accordeon {
       max-width: 768px; } }
@@ -1279,11 +1279,11 @@ ul li {
             .menu-accordeon__list-item__img-headline {
               font-size: 1.5rem; } }
       .menu-accordeon__list-item:nth-child(1) .menu-accordeon__list-item__img {
-        background-image: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7)), url(../../img/photo-1468071174046-657d9d351a40.png); }
+        background-image: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7)), url(../img/photo-1468071174046-657d9d351a40.png); }
       .menu-accordeon__list-item:nth-child(2) .menu-accordeon__list-item__img {
-        background-image: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7)), url(../../img/photo-1466814314367-45323ac74e2b.png); }
+        background-image: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7)), url(../img/photo-1466814314367-45323ac74e2b.png); }
       .menu-accordeon__list-item:nth-child(3) .menu-accordeon__list-item__img {
-        background-image: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7)), url(../../img/IMG_4084.png); }
+        background-image: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7)), url(../img/IMG_4084.png); }
       .menu-accordeon__list-item__content {
         transition: width .6s;
         font-weight: 300;
@@ -1315,7 +1315,7 @@ ul li {
   background-position: center center;
   background-size: cover;
   box-sizing: content-box;
-  background-image: url("../../img/work-texture.png"); }
+  background-image: url("../img/work-texture.png"); }
   @media screen and (max-width: 768px) {
     .work {
       max-width: 768px; } }
@@ -1344,7 +1344,7 @@ ul li {
   background-position: center center;
   background-size: cover;
   box-sizing: content-box;
-  background-image: url("../../img/location-texture.png");
+  background-image: url("../img/location-texture.png");
   background-color: #161616; }
   @media screen and (max-width: 768px) {
     .order {

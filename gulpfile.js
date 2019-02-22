@@ -19,7 +19,7 @@ gulp.task('html', e=>{
 
 gulp.task('fonts', e=>{
     return gulp.src('./src/css/layout/fonts/**')
-    .pipe(gulp.dest('./build/css/layout/fonts'))
+    .pipe(gulp.dest('./build/css'))
     .pipe(reload({stream: true}));
 });
 
@@ -32,6 +32,12 @@ gulp.task('svg', e=>{
 gulp.task('js', e=>{
     return gulp.src('./src/js/*.js')
     .pipe(gulp.dest('./build/js'))
+    .pipe(reload({stream: true}));
+});
+
+gulp.task('video', e=>{
+    return gulp.src('./src/video/RobotsypPynkyyBrein.mp4')
+    .pipe(gulp.dest('./build/video'))
     .pipe(reload({stream: true}));
 });
 
@@ -87,6 +93,7 @@ gulp.task('default', e => {
         'image',
         'sass',
         'js',
+        'video',
         'watch',
         'server'
     )

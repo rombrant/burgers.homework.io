@@ -143,7 +143,7 @@ ul {
     position: relative;
     @include wrapper;
     background-image: linear-gradient(rgba(0,0,0, .31),rgba(0,0,0, .31)), 
-    url('../../img/texture.png'), url('../../img/video-bg.png');
+    url('../img/texture.png'), url('../img/video-bg.png');
     &__main {
         max-width:1100px;
         width: 100%;
@@ -487,9 +487,9 @@ ul {
 }
 .webest {
     @include wrapper;
-    background-image: url('../../img/bg.png');
+    background-image: url('../img/bg.png');
     @include tablets {
-        background-image: url('../../img/bg-webest768.png');
+        background-image: url('../img/bg-webest768.png');
     }
     &__main {
         @include wrapper;
@@ -568,7 +568,7 @@ ul {
 }
 .burgers-slider {
     @include wrapper;
-    background-image: url('../../img/burgers-slider-bg.png');
+    background-image: url('../img/burgers-slider-bg.png');
     &__main {
         margin: 0 auto;
         height: 100%;
@@ -917,7 +917,7 @@ ul {
 }
 @each $person in (1, 2, 3, 4, 5, 6, 7, 8) {
     .feedback-reviews:nth-child(#{$person}) {
-        background-image: url('../../img/#{$person}-avatar.png');
+        background-image: url('../img/#{$person}-avatar.png');
     }
 }
 .feedback-container {
@@ -994,7 +994,7 @@ ul {
 }
 .team {
     @include wrapper;
-    background-image: url('../../img/team-layer.png');
+    background-image: url('../img/team-layer.png');
     position: relative;
     &-block {
         position: absolute;
@@ -1184,7 +1184,7 @@ ul {
 .menu-accordeon {
     @include wrapper;
     position: relative;
-    background-image: url('../../img/menu-background.png');
+    background-image: url('../img/menu-background.png');
     &-headline {
         @include headline;
         color: #ffffff;
@@ -1249,17 +1249,17 @@ ul {
             }
             &:nth-child(1) {
                 & .menu-accordeon__list-item__img {
-                    background-image:linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7)), url(../../img/photo-1468071174046-657d9d351a40.png);
+                    background-image:linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7)), url(../img/photo-1468071174046-657d9d351a40.png);
                 }
             }
             &:nth-child(2) {
                 & .menu-accordeon__list-item__img {
-                    background-image:linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7)), url(../../img/photo-1466814314367-45323ac74e2b.png);
+                    background-image:linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7)), url(../img/photo-1466814314367-45323ac74e2b.png);
                 }
             }
             &:nth-child(3) {
                 & .menu-accordeon__list-item__img {
-                    background-image:linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7)), url(../../img/IMG_4084.png);
+                    background-image:linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7)), url(../img/IMG_4084.png);
                 }
             }
             &__content {
@@ -1290,7 +1290,7 @@ ul {
 }
 .work {
     @include wrapper;
-    background-image: url('../../img/work-texture.png');
+    background-image: url('../img/work-texture.png');
     &-headline {
         font-family: gagalinregular;
         font-weight: 500;
@@ -1312,7 +1312,7 @@ ul {
 }
 .order {
     @include wrapper;
-    background-image: url('../../img/location-texture.png');
+    background-image: url('../img/location-texture.png');
     background-color: #161616;
     &-headline {
         margin: 0 auto;

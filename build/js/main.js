@@ -1,56 +1,58 @@
-var index = 0;
-     
-    $(".sidebar__list").on("click","a", function (event) {
-		//отменяем стандартную обработку нажатия по ссылке
-		event.preventDefault();
+    const sectionHeight = $('section').outerHeight(true);
+    let curTop = 0;
+    var inScroll = false;
 
-		//забираем идентификатор бока с атрибута href
-        var id  = $(this).attr('href'),
-        
-        
-		//узнаем высоту от начала страницы до блока на который ссылается якорь
-            top = $(id).offset().top,
-            
-            index= $(id).index();
-
-            console.log(index);
-
-		
-		//анимируем переход на расстояние - top за 1500 мс
-        $('body,html').animate({scrollTop: top}, 1000);
-        return top, index;
-    });
 
 
     $('.sidebar__list-item').on('click', function (params) {
         $('.sidebar__list-item--active').removeClass('sidebar__list-item--active');
-		$(this).addClass('sidebar__list-item--active');
+        $(this).addClass('sidebar__list-item--active');
     });
-
-    
-      const sectionHeight = $('section').outerHeight(true);
-      let curTop = 0;
-      var top = $('#y8').offset().top;
-      console.log(top);
-      var inScroll = false;
-      $(window).on('wheel', e => {
-          if (!inScroll) {
-              inScroll = true;
-            if (event.deltaY < 0) {
-                index = index + 1;
-                console.log(index);
-                curTop= curTop + sectionHeight;
-                $('.wrapper').css('top', curTop+'px');
-            } else if (event.deltaY > 0) {
-                index = index - 1;
-                console.log(index);
-                curTop = curTop - sectionHeight;
-                $('.wrapper').css('top', curTop+'px');
+    $(".sidebar__list").on("click","a", function (event) {
+        event.preventDefault();
+        $('.sidebar__list-item').each((ndx, item) =>{
+            if ($(item).hasClass('sidebar__list-item--active')){
+                let index = $(item).index();
+                curTop= index * sectionHeight;
+                $('.wrapper').css('top', -curTop+'px');
             }
-            setTimeout(function(){
-                inScroll= false;
-              },900);
-          }
+        });
+		
+    });
+     
+    let index = 0;
+      $(window).on('wheel', e => {
+              $('.sidebar__list-item').each((ndx, item) =>{
+                if ($(item).hasClass('sidebar__list-item--active')){
+                    let index = $(item).index();
+                    console.log(index,'первое условие');
+                    if (!inScroll){
+                        inScroll = true;
+                        if (event.deltaY < 0 && index > 0) {
+                            $(item).removeClass('sidebar__list-item--active');
+                            $(item).prev().addClass('sidebar__list-item--active');
+                            index = index - 1;
+                            console.log(index);
+                            curTop= index * sectionHeight;
+                            $('.wrapper').css('top', -curTop+'px');
+                        } else if (event.deltaY > 0 && index < $('section').length-1) {
+                            $(item).removeClass('sidebar__list-item--active');
+                            $(item).next().addClass('sidebar__list-item--active');
+                            index = index + 1;
+                            console.log(index);
+                            curTop= index * sectionHeight;
+                            $('.wrapper').css('top', -curTop+'px');
+                        }
+                        setTimeout(function(){
+                            inScroll= false;
+                          },900);
+                    }
+                       
+                } 
+              });
+            
+           
+          
           });
  
           
