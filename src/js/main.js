@@ -1,13 +1,41 @@
+    //One page scroll реализация
+    
+    
+    
     const sectionHeight = $('section').outerHeight(true);
     let curTop = 0;
     var inScroll = false;
+    let index = 0;
 
 
-
+    //событие по пунктам меню
+    $('.menu__list__item').on('click', e =>{
+        event.preventDefault();
+        const curItem = $(e.currentTarget);
+        console.log(curItem.index(), $('.menu__list__item').length);
+        if (curItem.index()<6) {
+            let index= curItem.index()+1;
+            curTop= index * sectionHeight;
+            $('.wrapper').css('top', -curTop+'px');
+            $('.sidebar__list-item').removeClass('sidebar__list-item--active');
+            $('.sidebar__list-item').eq(index).addClass('sidebar__list-item--active');
+        } else if (curItem.index()==$('.menu__list__item').length-1) {
+            console.log($('.menu__list__item').length, curItem.index());
+            index= curItem.index()+2;
+            console.log(index);
+            curTop= index * sectionHeight;
+            console.log(curTop);
+            $('.wrapper').css('top', -curTop+'px');
+            $('.sidebar__list-item').removeClass('sidebar__list-item--active');
+            $('.sidebar__list-item').eq(index).addClass('sidebar__list-item--active');
+        }
+    });
+    // изменение передача класса
     $('.sidebar__list-item').on('click', function (params) {
         $('.sidebar__list-item--active').removeClass('sidebar__list-item--active');
         $(this).addClass('sidebar__list-item--active');
     });
+    // событие по кликам на сайдбаре
     $(".sidebar__list").on("click","a", function (event) {
         event.preventDefault();
         $('.sidebar__list-item').each((ndx, item) =>{
@@ -19,8 +47,29 @@
         });
 		
     });
-     
-    let index = 0;
+    //событие по клику на кнопку заказа
+    $('.menu__order-buttons').on('click', e => {
+        event.preventDefault();
+        index = $('.menu__list__item').length;
+        console.log($('.menu__list__item').length);
+        curTop= index * sectionHeight;
+        $('.wrapper').css('top', -curTop+'px');
+        $('.sidebar__list-item').removeClass('sidebar__list-item--active');
+        $('.sidebar__list-item').eq(7).addClass('sidebar__list-item--active');
+    });
+    //событие по клику на эроу батн
+    $('.scroll-button').on('click', e =>{
+        event.preventDefault();
+        let index = $('.sidebar__list-item').index(1);
+        console.log(index);
+        curTop= index * sectionHeight;
+        $('.wrapper').css('top', curTop+'px');
+        $('.sidebar__list-item').removeClass('sidebar__list-item--active');
+        $('.sidebar__list-item').eq(1).addClass('sidebar__list-item--active');
+    });
+    
+
+    //событие по вращению колеса мыши
       $(window).on('wheel', e => {
               $('.sidebar__list-item').each((ndx, item) =>{
                 if ($(item).hasClass('sidebar__list-item--active')){
@@ -28,36 +77,85 @@
                     console.log(index,'первое условие');
                     if (!inScroll){
                         inScroll = true;
-                        if (event.deltaY < 0 && index > 0) {
+                        if (event.deltaY < 0 && $(item).prev().length) {
                             $(item).removeClass('sidebar__list-item--active');
                             $(item).prev().addClass('sidebar__list-item--active');
-                            index = index - 1;
+                            index--;
                             console.log(index);
                             curTop= index * sectionHeight;
                             $('.wrapper').css('top', -curTop+'px');
-                        } else if (event.deltaY > 0 && index < $('section').length-1) {
+                        } else if (event.deltaY > 0 && $(item).next().length) {
                             $(item).removeClass('sidebar__list-item--active');
                             $(item).next().addClass('sidebar__list-item--active');
-                            index = index + 1;
+                            index++;
                             console.log(index);
                             curTop= index * sectionHeight;
                             $('.wrapper').css('top', -curTop+'px');
                         }
                         setTimeout(function(){
                             inScroll= false;
-                          },900);
+                          },1100);
                     }
                        
                 } 
               });
-            
-           
-          
           });
- 
           
+
+          $(window).swipe({
+              swipe: function (event, direction) {
+                $('.sidebar__list-item').each((ndx, item) =>{
+                    if ($(item).hasClass('sidebar__list-item--active')){
+                        let index = $(item).index();
+                        console.log(index,'первое условие');
+                        if (!inScroll){
+                            inScroll = true;
+                            if (direction == 'down' && $(item).prev().length) {
+                                $(item).removeClass('sidebar__list-item--active');
+                                $(item).prev().addClass('sidebar__list-item--active');
+                                index--;
+                                console.log(index);
+                                curTop= index * sectionHeight;
+                                $('.wrapper').css('top', -curTop+'px');
+                            } else if (direction == 'up' && $(item).next().length) {
+                                $(item).removeClass('sidebar__list-item--active');
+                                $(item).next().addClass('sidebar__list-item--active');
+                                index++;
+                                console.log(index);
+                                curTop= index * sectionHeight;
+                                $('.wrapper').css('top', -curTop+'px');
+                            }
+                            setTimeout(function(){
+                                inScroll= false;
+                              },1100);
+                        }
+                           
+                    } 
+                  });
+                }
+              });
         
-       
+              $('.hide__list__item').on('click', e =>{
+                event.preventDefault();
+                const curItem = $(e.currentTarget);
+                console.log(curItem.index(), $('.hide__list__item').length);
+                if (curItem.index()<6) {
+                    let index= curItem.index()+1;
+                    curTop= index * sectionHeight;
+                    $('.wrapper').css('top', -curTop+'px');
+                    $('.sidebar__list-item').removeClass('sidebar__list-item--active');
+                    $('.sidebar__list-item').eq(index).addClass('sidebar__list-item--active');
+                } else if (curItem.index()==$('.hide__list__item').length-1) {
+                    console.log($('.hide__list__item').length, curItem.index());
+                    index= curItem.index()+2;
+                    console.log(index);
+                    curTop= index * sectionHeight;
+                    console.log(curTop);
+                    $('.wrapper').css('top', -curTop+'px');
+                    $('.sidebar__list-item').removeClass('sidebar__list-item--active');
+                    $('.sidebar__list-item').eq(index).addClass('sidebar__list-item--active');
+                }
+            });
        
        
        
@@ -444,6 +542,99 @@ function init() {
 
 //видеоплеер html5 video api 
 
+
+/*Получение элементов плеера */
+    const player = document.querySelector('.player');
+    const video = player.querySelector('.viewer');
+    const toggle = player.querySelector('.toggle');
+    const mute = player.querySelector('.mute');
+
+    const progress = player.querySelector('.progress');
+    const progressBar = player.querySelector('.progress__filled');
+    const range = player.querySelector('.player__slider');
+    const bufferedTimeDur = player.querySelector('.buffered__time');
+    const bufferedTimeCur = player.querySelector('.buffered__time-curent');
+
+/* Построение функций */
+function togglePlay() {
+    
+    if(video.paused) {
+        video.play();
+    }else {
+        video.pause();
+    };    
+}
+function updateButton() {
+    const icon=this.paused;
+    if(icon) {
+        toggle.innerHTML = '<svg class="play-pic"><use xlink:href="img/sprite.svg#play"></use></svg>'; 
+    } else {
+        toggle.innerHTML = '<img src="img/pause.png" style="height:25px; width:25px">'; 
+    }
+}
+
+function muteButton() {
+    let viMute= video.muted;
+    if(viMute) {
+        mute.innerHTML = '<svg class="play-pic"><use xlink:href="img/sprite.svg#volume"></use></svg>'; 
+        video.muted=false;
+    }   else {
+        mute.innerHTML = '<img src="img/mute.png" style="height:18px; width:18px">'; 
+        video.muted= true;
+    }
+}
+
+function handleRangeUpdate() {
+    video.volume = this.value/100;
+}
+
+function handleProgress() {
+    const percent = (video.currentTime / video.duration) * 100;
+    progressBar.style.left = `${percent}%`;
+}
+
+function scrub(e) {
+    const scrubTime = (e.offsetX / progress.offsetWidth)* video.duration;
+    video.currentTime = scrubTime;
+}
+function vidSeek(){
+	var seekto = video.duration * (progress.value / 100);
+	video.currentTime = seekto;
+}
+function seektimeupdate(){
+    var nt = video.currentTime * (100 / video.duration);
+    progress.value = nt;
+	var curmins = Math.floor(video.currentTime / 60);
+	var cursecs = Math.floor(video.currentTime - curmins * 60);
+	var durmins = Math.floor(video.duration / 60);
+	var dursecs = Math.floor(video.duration - durmins * 60);
+	if(cursecs < 10){ cursecs = "0"+cursecs; }
+	if(dursecs < 10){ dursecs = "0"+dursecs; }
+	if(curmins < 10){ curmins = "0"+curmins; }
+	if(durmins < 10){ durmins = "0"+durmins; }
+	bufferedTimeCur.innerHTML = curmins+":"+cursecs;
+	bufferedTimeDur.innerHTML = durmins+":"+dursecs;
+}
+
+
+/* Построение обработчиков событий */
+video.addEventListener('click',togglePlay );
+video.addEventListener('play',updateButton);
+video.addEventListener('pause',updateButton);
+mute.addEventListener('click',muteButton);
+
+
+
+video.addEventListener("timeupdate",seektimeupdate,false);
+video.addEventListener('timeupdate',handleProgress);
+
+
+toggle.addEventListener('click', togglePlay);
+
+range.addEventListener('change', handleRangeUpdate);
+range.addEventListener('mousemove', handleRangeUpdate);
+
+progress.addEventListener('click',scrub);
 
 
 
