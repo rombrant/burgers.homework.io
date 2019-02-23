@@ -35,7 +35,7 @@ $phones: 480px;
 @mixin wrapper {
     margin: 0 auto;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     min-height: 655px;
     background-repeat:no-repeat;
     background-position: center center;
