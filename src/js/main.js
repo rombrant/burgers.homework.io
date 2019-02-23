@@ -11,6 +11,7 @@
     //событие по пунктам меню
     $('.menu__list__item').on('click', e =>{
         event.preventDefault();
+        const sectionHeight = $('section').outerHeight(true);
         const curItem = $(e.currentTarget);
         console.log(curItem.index(), $('.menu__list__item').length);
         if (curItem.index()<6) {
@@ -38,6 +39,7 @@
     // событие по кликам на сайдбаре
     $(".sidebar__list").on("click","a", function (event) {
         event.preventDefault();
+        const sectionHeight = $('section').outerHeight(true);
         $('.sidebar__list-item').each((ndx, item) =>{
             if ($(item).hasClass('sidebar__list-item--active')){
                 let index = $(item).index();
@@ -50,6 +52,7 @@
     //событие по клику на кнопку заказа
     $('.menu__order-buttons').on('click', e => {
         event.preventDefault();
+        const sectionHeight = $('section').outerHeight(true);
         index = $('.menu__list__item').length;
         console.log($('.menu__list__item').length);
         curTop= index * sectionHeight;
@@ -60,6 +63,7 @@
     //событие по клику на эроу батн
     $('.scroll-button').on('click', e =>{
         event.preventDefault();
+        const sectionHeight = $('section').outerHeight(true);
         let index = $('.sidebar__list-item').index(1);
         console.log(index);
         curTop= index * sectionHeight;
@@ -71,6 +75,7 @@
 
     //событие по вращению колеса мыши
       $(window).on('wheel', e => {
+        const sectionHeight = $('section').outerHeight(true);
               $('.sidebar__list-item').each((ndx, item) =>{
                 if ($(item).hasClass('sidebar__list-item--active')){
                     let index = $(item).index();
@@ -104,6 +109,7 @@
 
           $(window).swipe({
               swipe: function (event, direction) {
+                const sectionHeight = $('section').outerHeight(true);
                 $('.sidebar__list-item').each((ndx, item) =>{
                     if ($(item).hasClass('sidebar__list-item--active')){
                         let index = $(item).index();
@@ -137,6 +143,7 @@
         
               $('.hide__list__item').on('click', e =>{
                 event.preventDefault();
+                const sectionHeight = $('section').outerHeight(true);
                 const curItem = $(e.currentTarget);
                 console.log(curItem.index(), $('.hide__list__item').length);
                 if (curItem.index()<6) {
