@@ -60,6 +60,16 @@
         $('.sidebar__list-item').removeClass('sidebar__list-item--active');
         $('.sidebar__list-item').eq(7).addClass('sidebar__list-item--active');
     });
+    $('.slider__main__description-price__order').on('click', e =>{
+        event.preventDefault();
+        const sectionHeight = $('section').outerHeight(true);
+        index = $('.menu__list__item').length;
+        console.log($('.menu__list__item').length);
+        curTop= index * sectionHeight;
+        $('.wrapper').css('top', -curTop+'px');
+        $('.sidebar__list-item').removeClass('sidebar__list-item--active');
+        $('.sidebar__list-item').eq(7).addClass('sidebar__list-item--active');
+    });
     //событие по клику на эроу батн
     $('.scroll-button').on('click', e =>{
         event.preventDefault();

@@ -49,7 +49,7 @@ gulp.task('sass', function () {
 
 
 gulp.task('image', e=>{
-    return gulp.src(['./src/img/*.png', './src/img/*.jpg'])
+    return gulp.src(['./src/img/*.png', './src/img/*.jpg','./src/img/favicon.ico'])
     .pipe(image())
     .pipe(gulp.dest('build/img'))
     .pipe(reload({stream: true}));

@@ -258,6 +258,7 @@ ul {
         flex-direction: row;
         justify-content: center;
         &__item {
+           
             &-link {
                 font-size: 0.65rem;
                 font-family: ubunturegular;
@@ -267,6 +268,12 @@ ul {
                 color: #ffffff;
                 text-decoration-line: none;
                 text-align: start;
+                transition: .6s;
+                &:hover{
+                    transition: .6s;
+                    color: #f9b43b;
+                    box-shadow: 0 0 14px rgba(245, 31, 31, 0.308);
+                 }
             }
             
             flex: .4;
@@ -287,6 +294,11 @@ ul {
                 @include point-bar;
                 position: static;
             }
+            &:hover{
+                &::before{
+                    color: #e45028;
+                }
+            }
         }
     }
     @include tablets {
@@ -301,6 +313,12 @@ ul {
         height: 2rem;
         border-radius: 0.4rem;
         text-align: center;
+        transition: .6s;
+        &:hover{
+            cursor: pointer;
+            transition: .6s;
+            background-color: #df3000;
+        }
         &-buttons {
             text-decoration-line: none;
             color: #fff;
@@ -484,6 +502,7 @@ ul {
         width: 1.85rem;
         height: 3rem;
         display: block;
+        fill: #ffffff;
     }
 }
 .webest {
@@ -608,10 +627,20 @@ ul {
         box-sizing: content-box;
         background-color: transparent;
         border: none;
+        
+        
         &-svg {
             transform: rotate(90deg);
             width: 2.5rem;
             height: 2.5rem;
+            transition: .6s;
+            fill: #ffffff;
+            &:hover{
+                transition: .6s;
+                cursor: pointer;
+                transform: rotate(90deg)+ translateY(.5rem);
+                fill: #e73504;
+            }
         }
     }
     &__scroll-btn-right {
@@ -626,6 +655,14 @@ ul {
             transform: rotate(-90deg);
             width: 2.5rem;
             height: 2.5rem;
+            transition: .6s;
+            fill: #ffffff;
+            &:hover{
+                transition: .6s;
+                cursor: pointer;
+                transform: rotate(-90deg)+ translateY(.5rem);
+                fill: #e73504;
+            }
         }
     }
     &__wrapper {
@@ -879,6 +916,12 @@ ul {
                     border-radius: 0.3rem;
                     letter-spacing: 0.0625rem;
                     font-size: 0.9rem;
+                    transition: .6s;
+                    cursor: pointer;
+                    &:hover{
+                        transition: .6s;
+                        background-color: #e73504;
+                    }
                     @include phones {
                         font-size: 0.7rem;
                     }
@@ -988,6 +1031,11 @@ ul {
         font-weight: 500;
         line-height: 30px;
         text-transform: uppercase;
+        transition: .6s;
+        &:hover {
+            transition: .6s;
+            background-color: #000;
+        }
         @include phones {
             width: 55%;
             height: 25%;
@@ -1049,10 +1097,10 @@ ul {
                         justify-content: center;
                         align-items: center;
                     }
+                   
                     &__photo {
                         overflow: hidden;
                         transition: height .6s;
-                        transform: translateY(5%);
                         height: 0;
                         float: left;
                         position: relative;
@@ -1095,6 +1143,7 @@ ul {
                         }
                     }
                     &-name {
+                        transition: .6s;
                         width: 100%;
                         text-align: left;
                         border-style: none;
@@ -1112,6 +1161,11 @@ ul {
                         }
                         @include phones {
                             font-size: 1.5rem;
+                        }
+                        &:hover{
+                            cursor: pointer;
+                            transition: .6s;
+                            color: #f9b43b;
                         }
                         &::before {
                             transition: .6s;
@@ -1241,6 +1295,12 @@ ul {
                     transform-origin: 0 0;
                     left: 50%;
                     top: 50%;
+                    transition: .6s;
+                    &:hover{
+                        cursor: pointer;
+                        transition: .6s;
+                        color: #f9b43b;
+                    }
                     @include tablets {
                         font-size: 2rem;
                     }
@@ -1466,6 +1526,12 @@ ul {
                 color: #ffffff;
                 font-family: ubuntulight;
                 width: 6rem;
+                transition: .6s;
+                &:hover {
+                    cursor: pointer;
+                    transition: .6s;
+                    background-color:  #e73504;
+                }
             }
             &-reset {
                 margin-left: 1rem;
@@ -1473,6 +1539,11 @@ ul {
                 @include input;
                 height: 2.3rem;
                 color: #ffffff;
+                transition: .6s;
+                &:hover{
+                    transition: .6s;
+                    color: #ff0000;
+                }
             }
         }
     }

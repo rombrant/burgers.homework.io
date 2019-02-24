@@ -507,7 +507,12 @@ ul li {
         text-transform: uppercase;
         color: #ffffff;
         text-decoration-line: none;
-        text-align: start; }
+        text-align: start;
+        transition: .6s; }
+        .menu__list__item-link:hover {
+          transition: .6s;
+          color: #f9b43b;
+          box-shadow: 0 0 14px rgba(245, 31, 31, 0.308); }
       .menu__list__item:nth-child(6) {
         flex: .7; }
       .menu__list__item:first-child {
@@ -528,6 +533,8 @@ ul li {
         width: 6px;
         border-radius: 50%;
         position: static; }
+      .menu__list__item:hover::before {
+        color: #e45028; }
   @media screen and (max-width: 768px) {
     .menu {
       display: none; } }
@@ -544,7 +551,12 @@ ul li {
     width: 6rem;
     height: 2rem;
     border-radius: 0.4rem;
-    text-align: center; }
+    text-align: center;
+    transition: .6s; }
+    .menu__order:hover {
+      cursor: pointer;
+      transition: .6s;
+      background-color: #df3000; }
     .menu__order-buttons {
       text-decoration-line: none;
       color: #fff; }
@@ -721,7 +733,8 @@ ul li {
   .scroll-button__block {
     width: 1.85rem;
     height: 3rem;
-    display: block; }
+    display: block;
+    fill: #ffffff; }
 
 .webest {
   margin: 0 auto;
@@ -976,7 +989,14 @@ ul li {
     .slider__scroll-btn-left-svg {
       transform: rotate(90deg);
       width: 2.5rem;
-      height: 2.5rem; }
+      height: 2.5rem;
+      transition: .6s;
+      fill: #ffffff; }
+      .slider__scroll-btn-left-svg:hover {
+        transition: .6s;
+        cursor: pointer;
+        transform: rotate(90deg)translateY(0.5rem);
+        fill: #e73504; }
   .slider__scroll-btn-right {
     display: inline-block;
     width: 2.5rem;
@@ -988,7 +1008,14 @@ ul li {
     .slider__scroll-btn-right-svg {
       transform: rotate(-90deg);
       width: 2.5rem;
-      height: 2.5rem; }
+      height: 2.5rem;
+      transition: .6s;
+      fill: #ffffff; }
+      .slider__scroll-btn-right-svg:hover {
+        transition: .6s;
+        cursor: pointer;
+        transform: rotate(-90deg)translateY(0.5rem);
+        fill: #e73504; }
   .slider__wrapper {
     position: relative;
     overflow: hidden;
@@ -1231,7 +1258,12 @@ ul li {
           padding: 0.9rem;
           border-radius: 0.3rem;
           letter-spacing: 0.0625rem;
-          font-size: 0.9rem; }
+          font-size: 0.9rem;
+          transition: .6s;
+          cursor: pointer; }
+          .slider__main__description-price__order:hover {
+            transition: .6s;
+            background-color: #e73504; }
           @media screen and (max-width: 480px) {
             .slider__main__description-price__order {
               font-size: 0.7rem; } }
@@ -1354,7 +1386,11 @@ ul li {
     font-size: 0.8125rem;
     font-weight: 500;
     line-height: 30px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    transition: .6s; }
+    .feedback-container-button:hover {
+      transition: .6s;
+      background-color: #000; }
     @media screen and (max-width: 480px) {
       .feedback-container-button {
         width: 55%;
@@ -1429,7 +1465,6 @@ ul li {
           .team-block__content-accordeon__list-item__photo {
             overflow: hidden;
             transition: height .6s;
-            transform: translateY(5%);
             height: 0;
             float: left;
             position: relative;
@@ -1463,6 +1498,7 @@ ul li {
               transform: rotate(180deg);
               border-bottom-color: #f9b43b; }
           .team-block__content-accordeon__list-item-name {
+            transition: .6s;
             width: 100%;
             text-align: left;
             border-style: none;
@@ -1481,6 +1517,10 @@ ul li {
             @media screen and (max-width: 480px) {
               .team-block__content-accordeon__list-item-name {
                 font-size: 1.5rem; } }
+            .team-block__content-accordeon__list-item-name:hover {
+              cursor: pointer;
+              transition: .6s;
+              color: #f9b43b; }
             .team-block__content-accordeon__list-item-name::before {
               transition: .6s;
               display: inline-block;
@@ -1609,7 +1649,12 @@ ul li {
           -ms-transform-origin: 0 0;
           transform-origin: 0 0;
           left: 50%;
-          top: 50%; }
+          top: 50%;
+          transition: .6s; }
+          .menu-accordeon__list-item__img-headline:hover {
+            cursor: pointer;
+            transition: .6s;
+            color: #f9b43b; }
           @media screen and (max-width: 768px) {
             .menu-accordeon__list-item__img-headline {
               font-size: 2rem; } }
@@ -1830,7 +1875,12 @@ ul li {
         background-color: #E45028;
         color: #ffffff;
         font-family: ubuntulight;
-        width: 6rem; }
+        width: 6rem;
+        transition: .6s; }
+        .main-form__second__buttons-order:hover {
+          cursor: pointer;
+          transition: .6s;
+          background-color: #e73504; }
       .main-form__second__buttons-reset {
         margin-left: 1rem;
         background-color: rgba(0, 0, 0, 0);
@@ -1838,7 +1888,11 @@ ul li {
         border-radius: 0.3rem;
         height: 2.2rem;
         height: 2.3rem;
-        color: #ffffff; }
+        color: #ffffff;
+        transition: .6s; }
+        .main-form__second__buttons-reset:hover {
+          transition: .6s;
+          color: #ff0000; }
 
 .main-form__radio-block {
   margin-top: 3rem;
