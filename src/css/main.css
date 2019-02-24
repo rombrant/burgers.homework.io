@@ -500,7 +500,7 @@ ul li {
       list-style-type: none;
       cursor: pointer; }
       .menu__list__item-link {
-        font-size: 0.65rem;
+        font-size: 0.5rem;
         font-family: ubunturegular;
         font-weight: 500;
         line-height: 1.8rem;
@@ -539,7 +539,7 @@ ul li {
     .menu {
       display: none; } }
   .menu__order {
-    margin-right: 3rem;
+    margin-right: 2rem;
     margin-top: 1.5%;
     font-family: ubunturegular;
     font-weight: 500;
